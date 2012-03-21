@@ -1,0 +1,192 @@
+html {
+  overflow-y: scroll; }
+
+body {
+  background-color: #E2E2E2;
+  font-family: 'Lato', arial, sans-serif;
+  color: #4D4D4D;
+  padding-bottom: 70px; }
+
+header.main {
+  margin-bottom: 100px; }
+
+.site {
+  width: 400px;
+  margin: auto;
+  position: relative;
+  display: block; }
+
+.clear {
+  clear: both; }
+
+h2 {
+  padding-bottom: 20px; }
+
+a {
+  color: #888;
+  text-decoration: none; }
+
+a:hover {
+  color: #666;
+  text-decoration: underline; }
+
+/*Logo*/
+#logo {
+  width: 380px;
+  height: 60px;
+  background: url(../img/duct_tape_logo.png) no-repeat;
+  position: relative;
+  margin: 20px auto; }
+
+#logo h1 {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+#logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -10000px;
+  outline: none; }
+
+/*End Logo*/
+/*Main Nav */
+nav.main {
+  float: right;
+  position: relative;
+  left: -50%;
+  text-align: left;
+  margin: 5px 0 20px; }
+
+nav.main ul {
+  position: relative;
+  left: 50%;
+  margin: 0;
+  padding: 0; }
+
+nav.main li {
+  float: left;
+  margin: 0 8px;
+  position: relative; }
+
+nav.main a {
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #666;
+  text-decoration: none;
+  display: block;
+  padding: 6px 10px 8px;
+  text-shadow: 0px -1px 1px #cbcbcb; }
+
+nav.main a:hover {
+  color: #333;
+  text-shadow: 0px -1px 1px #b2b2b2; }
+
+nav.main li.selected a {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #808080;
+  text-shadow: 0px 1px 0px #FFF;
+  background: #E5E5E5;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e5e5e5), color-stop(1, #f0f0f0));
+  background-image: -moz-linear-gradient(center bottom, #e5e5e5 0%, #f0f0f0 100%);
+  border: 1px solid #CBCBCB;
+  position: relative;
+  -webkit-box-shadow: #FFF 0px 0px 0px 1px inset;
+  -moz-box-shadow: #FFF 0px 0px 0px 1px inset;
+  box-shadow: #FFF 0px 0px 0px 1px inset; }
+
+nav.main li.selected a:hover {
+  color: #666;
+  background: #E5E5E5;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #e5e5e5), color-stop(0, #f0f0f0));
+  background-image: -moz-linear-gradient(center bottom, #e5e5e5 100%, #f0f0f0 0%); }
+
+/*End Main Nav*/
+/*Social Nav*/
+.social {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 250px;
+  display: block;
+  clear: both; }
+
+.social ul {
+  padding: 0;
+  margin: 0; }
+
+.social li {
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0 5px; }
+
+.social li a {
+  background-image: url(../img/social_icons.png);
+  background-repeat: no-repeat;
+  text-indent: -10000px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none; }
+
+.social .dribbble a {
+  background-position: 0 0; }
+
+.social .dribbble a:hover {
+  background-position: 0 -40px; }
+
+.social .forrst a {
+  background-position: -40px 0; }
+
+.social .forrst a:hover {
+  background-position: -40px -40px; }
+
+.social .twitter a {
+  background-position: -80px 0; }
+
+.social .twitter a:hover {
+  background-position: -80px -40px; }
+
+.social .tumblr a {
+  background-position: -120px 0; }
+
+.social .tumblr a:hover {
+  background-position: -120px -40px; }
+
+.social .google a {
+  background-position: -160px 0; }
+
+.social .google a:hover {
+  background-position: -160px -40px; }
+
+/*End Social Main Nav*/
+/*Footer*/
+footer.main {
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  background: #E5E5E5;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e5e5e5), color-stop(0.5, #f0f0f0));
+  background-image: -moz-linear-gradient(center bottom, #e5e5e5 0%, #f0f0f0 50%);
+  bottom: 0;
+  padding-top: 15px;
+  border-top: 1px solid #CBCBCB;
+  left: 0;
+  z-index: 3; }
+
+footer.main:before {
+  border-top: 1px solid white;
+  content: '';
+  width: 100%;
+  height: 69px;
+  position: absolute;
+  bottom: 0; }
+
+/*End Footer*/
