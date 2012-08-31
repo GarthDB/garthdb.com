@@ -1,0 +1,57 @@
+html
+	background url('../img/grand_canyon.jpg') no-repeat center center fixed
+	-webkit-background-size cover
+	-moz-background-size cover
+	background-size cover
+	font-family "league-gothic-1","league-gothic-2"
+	color rgba(0,0,0,0.7)
+
+body
+	margin-top 50%
+
+#content
+	text-align center
+	width 400px
+	height 400px
+	-webkit-border-radius 200px
+	-moz-border-radius 200px
+	border-radius 200px
+	background #FFF
+	position relative
+	margin -400px auto
+	box-shadow 0 0 0 2px rgba(255,255,255,0.9), 0 0 0 50px rgba(0,0,0,0.2)
+	background -webkit-radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
+	background -moz-radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
+	background radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
+	&:before
+		content url("../img/moon_400.png")
+		display block
+		width 400px
+		height 400px
+		top 0
+		left 0
+		position absolute
+		opacity 0.2
+		pointer-events none
+	hgroup
+		padding 90px 0 60px
+		h1
+			font-weight normal
+			font-size 84px
+			text-transform uppercase
+		h2
+			font-weight normal
+			font-size 40px
+			text-transform uppercase
+			margin-top -6px
+	nav
+		ul
+			li
+				display inline-block
+				margin 0 18px
+				a
+					text-decoration none
+					color rgba(0,0,0,0.7)
+					font-size 36px
+					&:hover
+						color hsla(200, 75%, 20%, 0.7) 
