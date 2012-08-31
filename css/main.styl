@@ -34,7 +34,15 @@ body
 		position absolute
 		opacity 0.2
 		pointer-events none
+	&:hover:before
+		-webkit-transform rotate(10deg)
 	hgroup
+		-webkit-touch-callout none
+		-webkit-user-select none
+		-khtml-user-select none
+		-moz-user-select none
+		-ms-user-select none
+		user-select none
 		padding 90px 0 60px
 		h1
 			font-weight normal
@@ -56,6 +64,37 @@ body
 				font-size 36px
 				&:hover
 					color hsla(200, 75%, 20%, 0.7)
+#footer
+	position absolute
+	bottom 0
+	width 100%
+	text-align center
+	padding-bottom 10px
+	nav li
+		display inline-block
+		margin 0 10px
+		&.forrst a
+			background url(../img/forrst_icon.svg) no-repeat center, rgba(255,255,255,0.1)
+			&:hover
+				background url(../img/forrst_icon.svg) no-repeat center, rgba(255,255,255,0.3)
+		&.twitter a
+			background url(../img/twitter_icon.svg) no-repeat center, rgba(255,255,255,0.1)
+			&:hover
+				background url(../img/twitter_icon.svg) no-repeat center, rgba(255,255,255,0.3)
+		&.google a
+			background url(../img/google_plus_icon.svg) no-repeat center, rgba(255,255,255,0.1)
+			&:hover
+				background url(../img/google_plus_icon.svg) no-repeat center, rgba(255,255,255,0.3)
+		a
+			display inline-block
+			padding 10px
+			height 20px
+			width 20px
+			-webkit-border-radius 20px
+			-moz-border-radius 20px
+			border-radius 20px
+			text-indent -100000px
+			background rgba(255,255,255,0.3)
 
 
 @media all and (-webkit-min-device-pixel-ratio : 2), (min-device-pixel-ratio : 2)
