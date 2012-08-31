@@ -30,7 +30,7 @@ body {
   height: 400px;
   top: 0;
   left: 0;
-  opacity: 0.2;
+  opacity: 0.3;
   position: absolute;
   pointer-events: none;
   -webkit-animation: orbit 120s linear infinite;
