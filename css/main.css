@@ -63,7 +63,7 @@ body {
 #content nav li a:hover {
   color: rgba(13,64,89,0.7);
 }
-@media all and (min-device-pixel-ratio : 2) {
+@media all and (-webkit-min-device-pixel-ratio : 2), (min-device-pixel-ratio : 2) {
   body {
     background: #000;
   }
