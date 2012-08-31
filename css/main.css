@@ -24,22 +24,19 @@ body {
   background: -moz-radial-gradient(rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.9) 100%);
   background: radial-gradient(rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.9) 100%);
 }
-#content:before {
-  content: '';
+#content #moon {
   background: url("../img/moon_400.png");
-  display: block;
   width: 400px;
   height: 400px;
   top: 0;
   left: 0;
-  position: absolute;
   opacity: 0.2;
+  position: absolute;
   pointer-events: none;
-}
-#content:hover:before {
-  -webkit-transform: rotate(10deg);
+  -webkit-animation: orbit 120s linear infinite;
 }
 #content hgroup {
+  cursor: default;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -71,6 +68,15 @@ body {
 }
 #content nav li a:hover {
   color: rgba(13,64,89,0.7);
+}
+@-webkit-keyframes orbit {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 #footer {
   position: absolute;
@@ -113,7 +119,7 @@ body {
   background: rgba(255,255,255,0.3);
 }
 @media all and (-webkit-min-device-pixel-ratio : 2), (min-device-pixel-ratio : 2) {
-  #content:before {
+  #moon {
     background: url("../img/moon_800.png");
     background-size: contain;
   }

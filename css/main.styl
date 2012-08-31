@@ -23,20 +23,18 @@ body
 	background -webkit-radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
 	background -moz-radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
 	background radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
-	&:before
-		content ''
+	#moon
 		background url("../img/moon_400.png")
-		display block
 		width 400px
 		height 400px
 		top 0
 		left 0
-		position absolute
 		opacity 0.2
+		position absolute
 		pointer-events none
-	&:hover:before
-		-webkit-transform rotate(10deg)
+		-webkit-animation orbit 120s linear infinite
 	hgroup
+		cursor default
 		-webkit-touch-callout none
 		-webkit-user-select none
 		-khtml-user-select none
@@ -64,6 +62,13 @@ body
 				font-size 36px
 				&:hover
 					color hsla(200, 75%, 20%, 0.7)
+
+@-webkit-keyframes orbit
+	from
+		-webkit-transform rotate(0deg)
+	to
+		-webkit-transform rotate(360deg)
+
 #footer
 	position absolute
 	bottom 0
@@ -98,6 +103,6 @@ body
 
 
 @media all and (-webkit-min-device-pixel-ratio : 2), (min-device-pixel-ratio : 2)
-	#content:before
+	#moon
 		background url("../img/moon_800.png")
 		background-size contain
