@@ -64,11 +64,7 @@ body {
   color: rgba(13,64,89,0.7);
 }
 @media all and (-webkit-min-device-pixel-ratio : 2), (min-device-pixel-ratio : 2) {
-  body {
-    background: #000;
-  }
   #content:before {
     background: url("../img/moon_800.png");
-    background-size: 50%;
   }
 }
