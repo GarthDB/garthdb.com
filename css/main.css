@@ -25,7 +25,8 @@ body {
   background: radial-gradient(rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.9) 100%);
 }
 #content:before {
-  content: url("../img/moon_400.png");
+  content: '';
+  background: url("../img/moon_400.png");
   display: block;
   width: 400px;
   height: 400px;
@@ -42,6 +43,7 @@ body {
   font-weight: normal;
   font-size: 84px;
   text-transform: uppercase;
+  text-shadow: #fff 0 0 1px;
 }
 #content hgroup h2 {
   font-weight: normal;
@@ -49,15 +51,21 @@ body {
   text-transform: uppercase;
   margin-top: -6px;
 }
-#content nav ul li {
+#content nav li {
   display: inline-block;
   margin: 0 18px;
 }
-#content nav ul li a {
+#content nav li a {
   text-decoration: none;
   color: rgba(0,0,0,0.7);
   font-size: 36px;
 }
-#content nav ul li a:hover {
+#content nav li a:hover {
   color: rgba(13,64,89,0.7);
+}
+@media all and (min-device-pixel-ratio : 2) {
+  #content:before {
+    background: url("../img/moon_800.png");
+    background-size: 50%;
+  }
 }
