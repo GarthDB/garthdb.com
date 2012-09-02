@@ -11,7 +11,11 @@ html
 		script(src = '/js/app.js')
 		script(type="text/javascript", src="//use.typekit.net/zya2gfs.js")
 		script(type="text/javascript")
-			try{Typekit.load();}catch(e){}
+			function onload () {
+				$('.typekit-badge').attr({src: '/img/typekit_colophon.svg'});
+				console.log($('.typekit-badge').attr('src'));
+			}
+			try{Typekit.load({active: onload});}catch(e){}
 		//if lt IE 9
 			script(src = 'http://html5shiv.googlecode.com/svn/trunk/html5.js')
 		script(type="text/javascript")
