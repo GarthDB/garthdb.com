@@ -16,7 +16,6 @@ body {
   -webkit-border-radius: 200px;
   -moz-border-radius: 200px;
   border-radius: 200px;
-  background: #fff;
   position: relative;
   margin: -400px auto;
   box-shadow: 0 0 0 2px rgba(255,255,255,0.9), 0 0 0 50px rgba(0,0,0,0.2);
@@ -33,7 +32,7 @@ body {
   opacity: 0.3;
   position: absolute;
   pointer-events: none;
-  -webkit-animation: orbit 120s linear infinite;
+  -webkit-animation: orbit 240s linear infinite;
 }
 #content hgroup {
   cursor: default;
@@ -49,7 +48,6 @@ body {
   font-weight: normal;
   font-size: 84px;
   text-transform: uppercase;
-  text-shadow: #fff 0 0 1px;
 }
 #content hgroup h2 {
   font-weight: normal;

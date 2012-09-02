@@ -1,3 +1,6 @@
+main-text-shadow()
+
+
 html
 	background url('../img/grand_canyon.jpg') no-repeat center center fixed
 	-webkit-background-size cover
@@ -16,13 +19,14 @@ body
 	-webkit-border-radius 200px
 	-moz-border-radius 200px
 	border-radius 200px
-	background #FFF
 	position relative
 	margin -400px auto
 	box-shadow 0 0 0 2px rgba(255,255,255,0.9), 0 0 0 50px rgba(0,0,0,0.2)
 	background -webkit-radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
 	background -moz-radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
 	background radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
+	// &:hover
+	//	background #000
 	#moon
 		background url("../img/moon_400.png")
 		width 400px
@@ -32,7 +36,7 @@ body
 		opacity 0.3
 		position absolute
 		pointer-events none
-		-webkit-animation orbit 120s linear infinite
+		-webkit-animation orbit 240s linear infinite
 	hgroup
 		cursor default
 		-webkit-touch-callout none
@@ -46,12 +50,13 @@ body
 			font-weight normal
 			font-size 84px
 			text-transform uppercase
-			text-shadow: #FFF 0 0 1px;
+			main-text-shadow()
 		h2
 			font-weight normal
 			font-size 40px
 			text-transform uppercase
 			margin-top -6px
+			main-text-shadow()
 	nav
 		li
 			display inline-block
@@ -60,6 +65,7 @@ body
 				text-decoration none
 				color rgba(0,0,0,0.7)
 				font-size 36px
+				main-text-shadow()
 				&:hover
 					color hsla(200, 75%, 20%, 0.7)
 
