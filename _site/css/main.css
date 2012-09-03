@@ -3,11 +3,11 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  font-family: "league-gothic-1", "league-gothic-2";
+  font-family: "League Gothic", "league-gothic-1", "league-gothic-2";
   color: rgba(0,0,0,0.7);
 }
 body {
-  margin-top: 50%;
+  margin-top: 60%;
 }
 #content {
   text-align: center;
@@ -32,6 +32,9 @@ body {
   opacity: 0.3;
   position: absolute;
   pointer-events: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   -webkit-animation: orbit 240s linear infinite;
 }
 #content hgroup {
@@ -120,5 +123,25 @@ body {
   #moon {
     background: url("../img/moon_800.png");
     background-size: contain;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    margin-top: 20px;
+  }
+  #content {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  #content #moon {
+    width: 200px;
+    height: 200px;
+  }
+  #content hgroup {
+    padding: 40px 0 60px;
+  }
+  #content nav li {
+    display: block;
   }
 }
