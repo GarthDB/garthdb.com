@@ -1,0 +1,134 @@
+main-text-shadow()
+
+
+html
+	background url('../img/grand_canyon.jpg') no-repeat center center fixed
+	-webkit-background-size cover
+	-moz-background-size cover
+	background-size cover
+	font-family "League Gothic","league-gothic-1","league-gothic-2"
+	color rgba(0,0,0,0.7)
+
+body
+	margin-top 60%
+
+#content
+	text-align center
+	width 400px
+	height 400px
+	-webkit-border-radius 200px
+	-moz-border-radius 200px
+	border-radius 200px
+	position relative
+	margin -400px auto
+	box-shadow 0 0 0 2px rgba(255,255,255,0.9), 0 0 0 50px rgba(0,0,0,0.2)
+	background -webkit-radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
+	background -moz-radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
+	background radial-gradient(rgba(255,255,255,0.6) 40%,rgba(255,255,255,0.9) 100%)
+	// &:hover
+	//	background #000
+	#moon
+		background url("../img/moon_400.png")
+		width 400px
+		height 400px
+		top 0
+		left 0
+		opacity 0.3
+		position absolute
+		pointer-events none
+		-webkit-background-size cover
+		-moz-background-size cover
+		background-size cover
+		-webkit-animation orbit 240s linear infinite
+	hgroup
+		cursor default
+		-webkit-touch-callout none
+		-webkit-user-select none
+		-khtml-user-select none
+		-moz-user-select none
+		-ms-user-select none
+		user-select none
+		padding 90px 0 60px
+		h1
+			font-weight normal
+			font-size 84px
+			text-transform uppercase
+			main-text-shadow()
+		h2
+			font-weight normal
+			font-size 40px
+			text-transform uppercase
+			margin-top -6px
+			main-text-shadow()
+	nav
+		li
+			display inline-block
+			margin 0 18px
+			a
+				text-decoration none
+				color rgba(0,0,0,0.7)
+				font-size 36px
+				main-text-shadow()
+				&:hover
+					color hsla(200, 75%, 20%, 0.7)
+
+@-webkit-keyframes orbit
+	from
+		-webkit-transform rotate(0deg)
+	to
+		-webkit-transform rotate(360deg)
+
+#footer
+	position absolute
+	bottom 0
+	width 100%
+	text-align center
+	padding-bottom 10px
+	nav li
+		display inline-block
+		margin 0 10px
+		&.forrst a
+			background url(../img/forrst_icon.svg) no-repeat center, rgba(255,255,255,0.1)
+			&:hover
+				background url(../img/forrst_icon.svg) no-repeat center, rgba(255,255,255,0.3)
+		&.twitter a
+			background url(../img/twitter_icon.svg) no-repeat center, rgba(255,255,255,0.1)
+			&:hover
+				background url(../img/twitter_icon.svg) no-repeat center, rgba(255,255,255,0.3)
+		&.google a
+			background url(../img/google_plus_icon.svg) no-repeat center, rgba(255,255,255,0.1)
+			&:hover
+				background url(../img/google_plus_icon.svg) no-repeat center, rgba(255,255,255,0.3)
+		a
+			display inline-block
+			padding 10px
+			height 20px
+			width 20px
+			-webkit-border-radius 20px
+			-moz-border-radius 20px
+			border-radius 20px
+			text-indent -100000px
+			background rgba(255,255,255,0.3)
+
+
+@media all and (-webkit-min-device-pixel-ratio : 2), (min-device-pixel-ratio : 2)
+	#moon
+		background url("../img/moon_800.png")
+		background-size contain
+
+@media screen and (max-width: 500px)
+	body
+		margin-top 20px
+	#content
+		width 200px
+		height 200px
+		margin 0 auto
+		#moon
+			width 200px
+			height 200px
+		hgroup
+			padding 40px 0 60px
+		nav li
+			display block
+	
+	
