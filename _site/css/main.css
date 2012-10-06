@@ -40,7 +40,7 @@ body > header nav ul {
 body > header nav ul li {
   display: inline-block;
   text-transform: uppercase;
-  margin-right: 95px;
+  margin-right: 40px;
   width: 74px;
   text-align: center;
 }
@@ -49,10 +49,14 @@ body > header nav ul li a {
   text-decoration: none;
   font-size: 21px;
 }
+body > header nav ul li a:hover {
+  color: #ddd;
+}
 body > header nav ul li:last-child {
   margin-right: 0;
 }
 #clouds {
+  pointer-events: none;
   position: absolute;
   height: 154px;
   width: 100%;
@@ -68,26 +72,75 @@ body > header nav ul li:last-child {
   bottom: 0;
 }
 #clouds .cloud:first-child {
-  -webkit-animation: moveCloudFront 12s linear infinite;
+  -webkit-animation: moveCloudFrontOne 24s linear infinite;
   height: 94px;
   opacity: 0.9;
 }
 #clouds .cloud:nth-child(2) {
-  -webkit-animation: moveCloudFront 26s linear infinite;
+  -webkit-animation: moveCloudFrontTwo 52s linear infinite;
   height: 104px;
   opacity: 0.8;
 }
 #clouds .cloud:last-child {
-  -webkit-animation: moveCloudFront 40s linear infinite;
-  height: 134px;
+  -webkit-animation: moveCloudFrontThree 80s linear infinite;
+  height: 124px;
   opacity: 0.7;
 }
-@-webkit-keyframes moveCloudFront {
+@-webkit-keyframes moveCloudFrontOne {
   0% {
     background-position: 0px 0px;
   }
 
   100% {
     background-position: 1280px 0px;
+  }
+}
+@-webkit-keyframes moveCloudFrontTwo {
+  0% {
+    background-position: 300px 0px;
+  }
+
+  100% {
+    background-position: 1580px 0px;
+  }
+}
+@-webkit-keyframes moveCloudFrontThree {
+  0% {
+    background-position: 600px 0px;
+  }
+
+  100% {
+    background-position: 1880px 0px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 570px) and (max-height: 500px) {
+  body header {
+    top: 10%;
+  }
+  body header hgroup {
+    margin: 0 auto 20px;
+  }
+  #clouds .cloud:first-child {
+    opacity: 0.3;
+    height: 54px;
+  }
+  #clouds .cloud:nth-child(2) {
+    opacity: 0.2;
+    height: 69px;
+  }
+  #clouds .cloud:last-child {
+    opacity: 0.1;
+    height: 84px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body header {
+    top: 15%;
+  }
+  body header hgroup {
+    margin: 0 auto 80px;
+  }
+  body header nav ul li {
+    margin-right: 20px;
   }
 }
