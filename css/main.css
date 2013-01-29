@@ -94,6 +94,19 @@ header.main nav li a {
 #designs img {
   border: none;
 }
+#design {
+  padding-left: 222px;
+  position: relative;
+}
+#design aside {
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+#design header,
+#design .description {
+  margin-bottom: 20px;
+}
 #design ul.gallery {
   list-style: none;
 }
