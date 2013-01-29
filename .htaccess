@@ -1,8 +1,7 @@
-ErrorDocument 404 errors/404.html
-
+Options +FollowSymLinks
+RewriteEngine On
 # not a file or directory
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
-# example.com/home => example.com/index.html#home
-RewriteRule (?!^index\.html)^(.+)$ /index.html#$1 [L,NC,R,NE]
+RewriteCond %{REQUEST_URI} !index
+RewriteRule (.*) index.html [L]
