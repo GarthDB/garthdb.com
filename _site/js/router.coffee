@@ -1,4 +1,4 @@
-define ["zepto","backbone", "views/header", "views/home", "views/designs", "views/design"], ($, Backbone, HeaderView, HomeView, DesignsView, DesignView) ->
+define ["jquery","backbone", "views/header", "views/home", "views/designs", "views/design"], ($, Backbone, HeaderView, HomeView, DesignsView, DesignView) ->
 	Router = Backbone.Router.extend
 		initialize: () ->
 			Backbone.history.start({pushState: true})

@@ -1,4 +1,4 @@
-define ['backbone', 'mustache', 'collections/project', 'text!templates/designTemplate.html'], (Backbone, Mustache, ProjectCollection, DesignTemplate) ->
+define ['backbone', 'mustache', 'collections/project', 'fancybox', 'text!templates/designTemplate.html'], (Backbone, Mustache, ProjectCollection, Fancybox, DesignTemplate) ->
 	View = Backbone.View.extend
 		el: $('<section id="design"/>')
 		initialize: ->
@@ -10,12 +10,14 @@ define ['backbone', 'mustache', 'collections/project', 'text!templates/designTem
 					@render()
 				})
 		render: ->
+			$(@el).html('')
 			for model in @collection.models
 				model.attributes.imgs = []
 				for module in model.attributes.modules
 					if module.type = "image"
 						model.attributes.imgs.push(module)
 				$(@el).html Mustache.render(DesignTemplate, model.attributes)
+			$(@el).find('a.fancybox').fancybox()
 		# render: ->
 		# 	list = $('<ul/>')
 		# 	for model in @collection.models

@@ -1,4 +1,4 @@
-define ['zepto', 'backbone'], ($, Backbone) ->
+define ['jquery', 'backbone'], ($, Backbone) ->
 	View = Backbone.View.extend
 		el: $('header.main')
 		events:
