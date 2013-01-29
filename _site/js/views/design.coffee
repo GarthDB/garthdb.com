@@ -18,12 +18,3 @@ define ['backbone', 'mustache', 'collections/project', 'fancybox', 'text!templat
 						model.attributes.imgs.push(module)
 				$(@el).html Mustache.render(DesignTemplate, model.attributes)
 			$(@el).find('a.fancybox').fancybox()
-		# render: ->
-		# 	list = $('<ul/>')
-		# 	for model in @collection.models
-		# 		$(list).append(@renderChild(model.attributes))
-		# 	$(@el).html(list)
-		# renderChild: (item) ->
-		# 	design = new DesignItemView({model:item})
-		# 	design.render()
-		# 	return design.el

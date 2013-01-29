@@ -5,6 +5,7 @@ require.config
 		"backbone": "libs/backbone"
 		"mustache": "libs/mustache"
 		"fancybox": "fancybox/jquery.fancybox.pack"
+		"timeago": "jquery.timeago"
 	shim:
 		"underscore":
 			"deps": ["jquery"]
@@ -19,6 +20,9 @@ require.config
 		"fancybox":
 			"deps": ["jquery"]
 			"exports": "fancybox"
+		"timeago":
+			"deps": ["jquery"]
+			"exports": "timeago"
 	
 require ['jquery','backbone','router','mustache'], ($, Backbone, Router, Mustache) ->
 	@router = new Router()

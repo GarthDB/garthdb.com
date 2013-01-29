@@ -7,7 +7,8 @@
       "underscore": "libs/underscore",
       "backbone": "libs/backbone",
       "mustache": "libs/mustache",
-      "fancybox": "fancybox/jquery.fancybox.pack"
+      "fancybox": "fancybox/jquery.fancybox.pack",
+      "timeago": "jquery.timeago"
     },
     shim: {
       "underscore": {
@@ -27,6 +28,10 @@
       "fancybox": {
         "deps": ["jquery"],
         "exports": "fancybox"
+      },
+      "timeago": {
+        "deps": ["jquery"],
+        "exports": "timeago"
       }
     }
   });

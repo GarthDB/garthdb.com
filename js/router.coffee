@@ -1,4 +1,4 @@
-define ["jquery","backbone", "views/header", "views/home", "views/designs", "views/design"], ($, Backbone, HeaderView, HomeView, DesignsView, DesignView) ->
+define ["jquery","backbone", "views/header", "views/home", "views/designs", "views/design", "views/code"], ($, Backbone, HeaderView, HomeView, DesignsView, DesignView, CodeView) ->
 	Router = Backbone.Router.extend
 		initialize: () ->
 			Backbone.history.start({pushState: true})
@@ -28,7 +28,10 @@ define ["jquery","backbone", "views/header", "views/home", "views/designs", "vie
 			@designView.render()
 			$('#content').html(@designView.el)
 		navCode: () ->
-			window.location.href = 'http://www.github.com/garthdb';
+			if !@codeView
+				@codeView = new CodeView
+			@codeView.render()
+			$('#content').html(@codeView.el)
 		navSpeak: () ->
 			window.location.href = 'http://lanyrd.com/profile/garthdb/';
 		navWrite: () ->
