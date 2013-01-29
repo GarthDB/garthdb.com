@@ -35,12 +35,10 @@
         return $('#content').html(this.designsView.el);
       },
       navDesign: function(slug, id) {
-        if (!this.designView) {
+        if (!this.designView || this.designView.id !== id) {
           this.designView = new DesignView({
             id: id
           });
-        } else {
-          this.designView.id = id;
         }
         this.designView.render();
         return $('#content').html(this.designView.el);

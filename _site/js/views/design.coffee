@@ -2,7 +2,6 @@ define ['backbone', 'mustache', 'collections/project', 'text!templates/designTem
 	View = Backbone.View.extend
 		el: $('<section id="design"/>')
 		initialize: ->
-
 			@collection = new ProjectCollection()
 			@collection.url += @id
 			@collection.fetch({

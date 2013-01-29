@@ -23,7 +23,7 @@ define ["zepto","backbone", "views/header", "views/home", "views/designs", "view
 			@designsView.render()
 			$('#content').html(@designsView.el)
 		navDesign: (slug, id) ->
-			if !@designView
+			if !@designView or @designView.id isnt id
 				@designView = new DesignView({id:id})
 			@designView.render()
 			$('#content').html(@designView.el)
