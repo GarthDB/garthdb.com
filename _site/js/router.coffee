@@ -17,6 +17,12 @@ define ["jquery","backbone", "views/header", "views/home", "views/designs", "vie
 				@homeView = new HomeView
 			@homeView.render()
 			$('#content').html(@homeView.el)
+			if !@designsView
+				@designsView = new DesignsView
+			@designsView.render()
+			if !@codeView
+				@codeView = new CodeView
+			@codeView.render()
 		navDesigns: () ->
 			if !@designsView
 				@designsView = new DesignsView

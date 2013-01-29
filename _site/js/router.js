@@ -25,7 +25,15 @@
           this.homeView = new HomeView;
         }
         this.homeView.render();
-        return $('#content').html(this.homeView.el);
+        $('#content').html(this.homeView.el);
+        if (!this.designsView) {
+          this.designsView = new DesignsView;
+        }
+        this.designsView.render();
+        if (!this.codeView) {
+          this.codeView = new CodeView;
+        }
+        return this.codeView.render();
       },
       navDesigns: function() {
         if (!this.designsView) {
