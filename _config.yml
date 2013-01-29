@@ -5,5 +5,5 @@ server_port: 4000
 baseurl:    /
 url:        http://localhost:4000
 exclude:    ['index.jade', 'main.styl', 'reset.styl', 'app.coffee', 'README', 'outlines', '404.jade']
-include:    [.htaccess]
+include:    ['.htaccess']
 permalink:	/:categories/:title
