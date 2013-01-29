@@ -12,6 +12,7 @@
         return this.strings[selectedIndex - 1];
       },
       render: function() {
+        this.random();
         return $(this.el).html($('<h2/>').append(this.random()));
       }
     });

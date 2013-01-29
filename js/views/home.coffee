@@ -14,4 +14,5 @@ define ['jquery', 'backbone'], ($, Backbone) ->
 			selectedIndex = Math.floor( ( Math.random() * @strings.length ) + 1 )
 			return @strings[selectedIndex-1]
 		render: ->
+			@random()
 			$(@el).html($('<h2/>').append(@random()))
