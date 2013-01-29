@@ -4,7 +4,7 @@ permalink: .htaccess
 ---
 Options +FollowSymLinks
 RewriteEngine On
-# check to see it is not a file or directory
+# please work
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !index
