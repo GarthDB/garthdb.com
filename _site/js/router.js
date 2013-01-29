@@ -44,10 +44,10 @@
         return $('#content').html(this.designView.el);
       },
       navCode: function() {
-        return console.log('list Code');
+        return window.location.href = 'http://www.github.com/garthdb';
       },
       navSpeak: function() {
-        return console.log('list Speak');
+        return window.location.href = 'http://lanyrd.com/profile/garthdb/';
       },
       navWrite: function() {
         return console.log('list Write');

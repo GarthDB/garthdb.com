@@ -28,9 +28,9 @@ define ["zepto","backbone", "views/header", "views/home", "views/designs", "view
 			@designView.render()
 			$('#content').html(@designView.el)
 		navCode: () ->
-			console.log 'list Code'
+			window.location.href = 'http://www.github.com/garthdb';
 		navSpeak: () ->
-			console.log 'list Speak'
+			window.location.href = 'http://lanyrd.com/profile/garthdb/';
 		navWrite: () ->
 			console.log 'list Write'
 	return Router
