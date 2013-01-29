@@ -20,7 +20,7 @@
       },
       render: function() {
         var model, module, _i, _j, _len, _len1, _ref, _ref1, _results;
-        $(el).html('');
+        $(this.el).html('');
         _ref = this.collection.models;
         _results = [];
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {

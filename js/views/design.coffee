@@ -10,7 +10,7 @@ define ['backbone', 'mustache', 'collections/project', 'text!templates/designTem
 					@render()
 				})
 		render: ->
-			$(el).html('')
+			$(@el).html('')
 			for model in @collection.models
 				model.attributes.imgs = []
 				for module in model.attributes.modules
