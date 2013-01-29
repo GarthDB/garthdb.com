@@ -25,6 +25,8 @@ define ["zepto","backbone", "views/header", "views/home", "views/designs", "view
 		navDesign: (slug, id) ->
 			if !@designView
 				@designView = new DesignView({id:id})
+			else
+				@designView.id = id
 			@designView.render()
 			$('#content').html(@designView.el)
 		navCode: () ->

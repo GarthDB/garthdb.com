@@ -39,6 +39,8 @@
           this.designView = new DesignView({
             id: id
           });
+        } else {
+          this.designView.id = id;
         }
         this.designView.render();
         return $('#content').html(this.designView.el);
