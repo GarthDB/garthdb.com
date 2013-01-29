@@ -1,146 +1,109 @@
-html {
-  height: 100%;
-  background-color: #1a1a1a;
-}
 body {
-  font-family: 'edmondsans';
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+  color: #333;
+  background: #333;
 }
-body > header {
-  position: absolute;
-  top: 20%;
+.site {
+  margin-top: 3px;
+  background: #fff;
+}
+h1,
+h2 {
+  font-weight: 400;
+}
+header.main {
+  font-size: 15px;
+font-style
   width: 100%;
-}
-body > header hgroup {
-  width: 150px;
-  height: 105px;
-  background: url("../img/moon.svg") no-repeat;
-  background-size: contain;
-  padding-top: 45px;
-  position: relative;
-  margin: 0 auto 120px;
-}
-body > header hgroup h1 {
-  font-weight: bold;
-  font-size: 36px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #333;
-  margin-bottom: -2px;
-}
-body > header hgroup h2 {
-  font-weight: bold;
-  font-size: 17px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #333;
-}
-body > header nav ul {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 55px 0 0;
   text-align: center;
 }
-body > header nav ul li {
+header.main h1 {
+  font-weight: 200;
+  float: left;
+  padding-top: 5px;
+}
+header.main nav {
+  float: right;
+  padding-top: 5px;
+}
+header.main nav li {
   display: inline-block;
-  text-transform: uppercase;
-  margin-right: 40px;
-  width: 74px;
+  margin-left: 30px;
+}
+header.main nav li a {
+  text-decoration: none;
+  color: #333;
+}
+#content {
+  clear: both;
+  max-width: 760px;
+  width: 100%;
+  margin: auto;
+  min-height: 400px;
+  -webkit-transition: height 1s ease-in;
+}
+#content > section {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+#content > section h2 {
+  font-size: 60px;
+  font-weight: 200;
+  font-style: italic;
+}
+#designs ul {
+  list-style: none;
   text-align: center;
 }
-body > header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 21px;
+#designs li {
+  display: inline-block;
+  margin: 20px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.8);
+  height: 158px;
 }
-body > header nav ul li a:hover {
-  color: #ddd;
+#designs li a {
+  display: block;
+  position: relative;
+  color: #333;
+  text-align: left;
 }
-body > header nav ul li:last-child {
-  margin-right: 0;
-}
-#clouds {
-  pointer-events: none;
+#designs li a .details {
+  display: none;
   position: absolute;
-  height: 154px;
-  width: 100%;
-  bottom: 0;
-}
-#clouds .cloud {
-  background-image: url("../img/clouds.svg");
-  background-repeat: repeat-x;
-  background-position: 0 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.8);
+}
+#designs li a h3 {
+  font-weight: 400;
   position: absolute;
   bottom: 0;
+  left: 0;
+  padding: 20px;
+  font-size: 36px;
 }
-#clouds .cloud:first-child {
-  -webkit-animation: moveCloudFrontOne 24s linear infinite;
-  height: 94px;
-  opacity: 0.9;
+#designs li a:hover .details {
+  display: block;
 }
-#clouds .cloud:nth-child(2) {
-  -webkit-animation: moveCloudFrontTwo 52s linear infinite;
-  height: 104px;
-  opacity: 0.8;
+#designs img {
+  border: none;
 }
-#clouds .cloud:last-child {
-  -webkit-animation: moveCloudFrontThree 80s linear infinite;
-  height: 124px;
-  opacity: 0.7;
+#design ul.gallery {
+  list-style: none;
 }
-@-webkit-keyframes moveCloudFrontOne {
-  0% {
-    background-position: 0px 0px;
-  }
-
-  100% {
-    background-position: 1280px 0px;
-  }
+#design ul.gallery li {
+  display: inline-block;
 }
-@-webkit-keyframes moveCloudFrontTwo {
-  0% {
-    background-position: 300px 0px;
-  }
-
-  100% {
-    background-position: 1580px 0px;
-  }
-}
-@-webkit-keyframes moveCloudFrontThree {
-  0% {
-    background-position: 600px 0px;
-  }
-
-  100% {
-    background-position: 1880px 0px;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 570px) and (max-height: 500px) {
-  body header {
-    top: 10%;
-  }
-  body header hgroup {
-    margin: 0 auto 20px;
-  }
-  #clouds .cloud:first-child {
-    opacity: 0.3;
-    height: 54px;
-  }
-  #clouds .cloud:nth-child(2) {
-    opacity: 0.2;
-    height: 69px;
-  }
-  #clouds .cloud:last-child {
-    opacity: 0.1;
-    height: 84px;
-  }
-}
-@media screen and (max-width: 480px) {
-  body header {
-    top: 15%;
-  }
-  body header hgroup {
-    margin: 0 auto 80px;
-  }
-  body header nav ul li {
-    margin-right: 20px;
-  }
+#design ul.gallery li a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
 }
