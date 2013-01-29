@@ -122,3 +122,32 @@ header.main nav li a {
   background-position: center;
   box-shadow: 0 0 2px rgba(0,0,0,0.8);
 }
+#code ul {
+  list-style: none;
+}
+#code ul li {
+  display: inline-block;
+  width: 50%;
+  min-width: 200px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+#code ul li a {
+  color: #4987d5;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 22px;
+}
+#code ul li a:hover {
+  text-decoration: underline;
+}
+#code header {
+  margin-bottom: 5px;
+}
+#code .description {
+  margin-bottom: 5px;
+}
+#code .updated {
+  font-size: 12px;
+}
