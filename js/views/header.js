@@ -16,6 +16,8 @@
         var nav;
         nav = $(event.target).html().toLowerCase();
         router.navigate(nav, true);
+        $('header.main').find('a').removeClass('selected');
+        $(event.currentTarget).addClass('selected');
         return false;
       },
       logoClickHandler: function(event) {

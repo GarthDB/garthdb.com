@@ -38,6 +38,9 @@ header.main nav li a {
   text-decoration: none;
   color: #333;
 }
+header.main nav li a.selected {
+  color: #4987d5;
+}
 #content {
   clear: both;
   max-width: 760px;
