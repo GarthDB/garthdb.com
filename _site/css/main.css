@@ -46,7 +46,7 @@ header.main nav li a {
   color: #333;
 }
 header.main nav li a:hover {
-  text-decoration: none;
+  border-bottom: 1px solid #4987d5;
 }
 header.main nav li a.selected {
   color: #4987d5;
@@ -170,4 +170,17 @@ header.main nav li a.selected {
   bottom: 0;
   width: 100%;
   background: #333;
+  text-align: center;
+  font-size: 10px;
+  color: #999;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+.site > footer a {
+  color: #4987d5;
+  text-decoration: none;
+  font-size: 10px;
+}
+.site > footer a:hover {
+  text-decoration: underline;
 }
