@@ -47,7 +47,7 @@ header.main nav li a {
 header.main nav li a:hover {
   text-decoration: none;
 }
-header.main nav li.selected {
+header.main nav li a.selected {
   color: #4987d5;
 }
 #content {
