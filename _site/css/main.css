@@ -1,12 +1,18 @@
+html,
+body {
+  height: 100%;
+}
 body {
   font-family: 'Source Sans Pro';
   font-weight: 200;
   color: #333;
-  background: #333;
 }
 .site {
-  margin-top: 3px;
   background: #fff;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  border-top: 3px solid #333;
 }
 h1,
 h2 {
@@ -38,7 +44,10 @@ header.main nav li a {
   text-decoration: none;
   color: #333;
 }
-header.main nav li a.selected {
+header.main nav li a:hover {
+  text-decoration: none;
+}
+header.main nav li.selected {
   color: #4987d5;
 }
 #content {
@@ -153,4 +162,11 @@ header.main nav li a.selected {
 }
 #code .updated {
   font-size: 12px;
+}
+body > footer {
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #333;
 }

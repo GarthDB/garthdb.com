@@ -1,12 +1,18 @@
+footer-height = 30px
+
+html, body
+	height 100%
 body
 	font-family 'Source Sans Pro'
 	font-weight 200
 	color #333
-	background #333
 
 .site
-	margin-top 3px
 	background #FFF
+	height 100%
+	box-sizing border-box
+	padding-bottom footer-height
+	border-top 3px solid #333
 
 h1, h2
 	font-weight 400
@@ -127,4 +133,9 @@ header.main
 		margin-bottom 5px
 	.updated
 		font-size 12px
-			
+body > footer
+	height footer-height
+	position absolute
+	bottom 0
+	width 100%
+	background #333	
