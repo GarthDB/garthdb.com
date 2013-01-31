@@ -10,7 +10,15 @@
           pushState: true
         });
         headerView = new HeaderView;
-        return headerView.render();
+        headerView.render();
+        if (!this.designsView) {
+          this.designsView = new DesignsView;
+        }
+        this.designsView.render();
+        if (!this.codeView) {
+          this.codeView = new CodeView;
+        }
+        return this.codeView.render();
       },
       routes: {
         'design': 'navDesigns',
@@ -26,15 +34,7 @@
           this.homeView = new HomeView;
         }
         this.homeView.render();
-        $('#content').html(this.homeView.el);
-        if (!this.designsView) {
-          this.designsView = new DesignsView;
-        }
-        this.designsView.render();
-        if (!this.codeView) {
-          this.codeView = new CodeView;
-        }
-        return this.codeView.render();
+        return $('#content').html(this.homeView.el);
       },
       navDesigns: function() {
         $('header.main').find('a').removeClass('selected');

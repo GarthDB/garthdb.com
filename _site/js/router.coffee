@@ -4,6 +4,12 @@ define ["jquery","backbone", "views/header", "views/home", "views/designs", "vie
 			Backbone.history.start({pushState: true})
 			headerView = new HeaderView
 			headerView.render()
+			if !@designsView
+				@designsView = new DesignsView
+			@designsView.render()
+			if !@codeView
+				@codeView = new CodeView
+			@codeView.render()
 		routes:
 			'design': 'navDesigns'
 			'design/:slug/:id': 'navDesign'
@@ -17,12 +23,6 @@ define ["jquery","backbone", "views/header", "views/home", "views/designs", "vie
 				@homeView = new HomeView
 			@homeView.render()
 			$('#content').html(@homeView.el)
-			if !@designsView
-				@designsView = new DesignsView
-			@designsView.render()
-			if !@codeView
-				@codeView = new CodeView
-			@codeView.render()
 		navDesigns: () ->
 			$('header.main').find('a').removeClass('selected')
 			$('header.main').find("a:contains('design')").addClass('selected')
