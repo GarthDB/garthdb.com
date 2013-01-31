@@ -103,14 +103,24 @@ header.main
 		list-style none
 		li
 			display inline-block
-			margin 5px
 			a
+				margin 5px
 				display block
 				width 100px
 				height 100px
 				background-size cover
 				background-position center
 				box-shadow 0 0 2px rgba(0,0,0,0.8)
+				transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out;
+				-moz-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out; /* Firefox 4 */
+				-webkit-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out; /* Safari and Chrome */
+				-o-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out; /* Opera */
+				&:hover
+					width 110px
+					height 110px
+					margin 0
+
+
 #code
 	ul
 		list-style none
