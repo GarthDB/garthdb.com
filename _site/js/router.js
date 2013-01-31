@@ -21,6 +21,7 @@
         "*actions": "defaultAction"
       },
       defaultAction: function() {
+        $('header.main').find('a').removeClass('selected');
         if (!this.homeView) {
           this.homeView = new HomeView;
         }
@@ -36,6 +37,8 @@
         return this.codeView.render();
       },
       navDesigns: function() {
+        $('header.main').find('a').removeClass('selected');
+        $('header.main').find("a:contains('design')").addClass('selected');
         if (!this.designsView) {
           this.designsView = new DesignsView;
         }
@@ -43,6 +46,8 @@
         return $('#content').html(this.designsView.el);
       },
       navDesign: function(slug, id) {
+        $('header.main').find('a').removeClass('selected');
+        $('header.main').find("a:contains('design')").addClass('selected');
         if (!this.designView || this.designView.id !== id) {
           this.designView = new DesignView({
             id: id
@@ -52,6 +57,8 @@
         return $('#content').html(this.designView.el);
       },
       navCode: function() {
+        $('header.main').find('a').removeClass('selected');
+        $('header.main').find("a:contains('code')").addClass('selected');
         if (!this.codeView) {
           this.codeView = new CodeView;
         }
@@ -59,6 +66,8 @@
         return $('#content').html(this.codeView.el);
       },
       navSpeak: function() {
+        $('header.main').find('a').removeClass('selected');
+        $('header.main').find("a:contains('speak')").addClass('selected');
         return window.location.href = 'http://lanyrd.com/profile/garthdb/';
       },
       navWrite: function() {

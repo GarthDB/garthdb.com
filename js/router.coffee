@@ -11,8 +11,8 @@ define ["jquery","backbone", "views/header", "views/home", "views/designs", "vie
 			'speak': 'navSpeak'
 			'write': 'navWrite'
 			"*actions": "defaultAction"
-
 		defaultAction: () ->
+			$('header.main').find('a').removeClass('selected')
 			if !@homeView
 				@homeView = new HomeView
 			@homeView.render()
@@ -24,21 +24,29 @@ define ["jquery","backbone", "views/header", "views/home", "views/designs", "vie
 				@codeView = new CodeView
 			@codeView.render()
 		navDesigns: () ->
+			$('header.main').find('a').removeClass('selected')
+			$('header.main').find("a:contains('design')").addClass('selected')
 			if !@designsView
 				@designsView = new DesignsView
 			@designsView.render()
 			$('#content').html(@designsView.el)
 		navDesign: (slug, id) ->
+			$('header.main').find('a').removeClass('selected')
+			$('header.main').find("a:contains('design')").addClass('selected')
 			if !@designView or @designView.id isnt id
 				@designView = new DesignView({id:id})
 			@designView.render()
 			$('#content').html(@designView.el)
 		navCode: () ->
+			$('header.main').find('a').removeClass('selected')
+			$('header.main').find("a:contains('code')").addClass('selected')
 			if !@codeView
 				@codeView = new CodeView
 			@codeView.render()
 			$('#content').html(@codeView.el)
 		navSpeak: () ->
+			$('header.main').find('a').removeClass('selected')
+			$('header.main').find("a:contains('speak')").addClass('selected')
 			window.location.href = 'http://lanyrd.com/profile/garthdb/';
 		navWrite: () ->
 			console.log 'list Write'
