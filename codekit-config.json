@@ -25,15 +25,15 @@
       "outputAbbreviatedPath" : "\/index.html",
       "fileType" : 512
     },
-    "\/js\/models\/project.coffee" : {
+    "\/js\/collections\/project.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/models\/project.coffee",
+      "inputAbbreviatedPath" : "\/js\/collections\/project.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/models\/project.js",
+      "outputAbbreviatedPath" : "\/js\/collections\/project.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -49,15 +49,15 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/collections\/project.coffee" : {
+    "\/js\/models\/project.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/project.coffee",
+      "inputAbbreviatedPath" : "\/js\/models\/project.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/project.js",
+      "outputAbbreviatedPath" : "\/js\/models\/project.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -73,17 +73,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/errors\/404.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/errors\/404.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/errors\/404.html",
-      "fileType" : 512
-    },
     "\/js\/models\/user.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -96,17 +85,16 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/views\/design.coffee" : {
+    "\/errors\/404.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/design.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/design.js",
+      "inputAbbreviatedPath" : "\/errors\/404.jade",
       "outputStyle" : 0,
-      "fileType" : 32
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/errors\/404.html",
+      "fileType" : 512
     },
     "\/js\/views\/designItem.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -117,30 +105,6 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/views\/designItem.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
-    "\/js\/collections\/user.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/user.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/user.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
-    "\/js\/views\/code.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/code.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/code.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -156,6 +120,18 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
+    "\/js\/collections\/user.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/collections\/user.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/collections\/user.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
     "\/js\/views\/home.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -165,6 +141,30 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/views\/home.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/js\/app.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/app.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/app.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/js\/views\/code.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/views\/code.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/views\/code.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -180,15 +180,27 @@
       "fileType" : 8,
       "debugStyle" : 0
     },
-    "\/js\/app.coffee" : {
+    "\/js\/router.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/app.coffee",
+      "inputAbbreviatedPath" : "\/js\/router.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/app.js",
+      "outputAbbreviatedPath" : "\/js\/router.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/js\/views\/design.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/views\/design.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/views\/design.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -201,18 +213,6 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/views\/designs.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
-    "\/js\/router.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/router.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/router.js",
       "outputStyle" : 0,
       "fileType" : 32
     }

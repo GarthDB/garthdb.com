@@ -8,7 +8,8 @@
       "backbone": "libs/backbone",
       "mustache": "libs/mustache",
       "fancybox": "fancybox/jquery.fancybox.pack",
-      "timeago": "jquery.timeago"
+      "timeago": "jquery.timeago",
+      "backbone_analytics": "backbone.analytics"
     },
     shim: {
       "underscore": {
@@ -32,11 +33,15 @@
       "timeago": {
         "deps": ["jquery"],
         "exports": "timeago"
+      },
+      "backbone_analytics": {
+        "deps": ["backbone"],
+        "exports": "backbone_analytics"
       }
     }
   });
 
-  require(['jquery', 'backbone', 'router', 'mustache'], function($, Backbone, Router, Mustache) {
+  require(['jquery', 'backbone', 'router', 'mustache', 'backbone_analytics'], function($, Backbone, Router, Mustache, Analytics) {
     return this.router = new Router();
   });
 
