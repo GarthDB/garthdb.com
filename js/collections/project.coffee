@@ -6,5 +6,6 @@ define ['backbone', 'models/project'], (Backbone, ProjectModel) ->
 			options.dataType = "jsonp";
 			return Backbone.sync(method, model, options);
 		parse: (response) ->
+			console.log response.project
 			return response.project
 	return ProjectCollection

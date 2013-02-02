@@ -11,6 +11,7 @@
         return Backbone.sync(method, model, options);
       },
       parse: function(response) {
+        console.log(response.project);
         return response.project;
       }
     });

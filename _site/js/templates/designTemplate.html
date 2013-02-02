@@ -7,6 +7,10 @@
 <div class="description">{{description}}</div>
 <ul class="gallery">
 	{{#imgs}}
-		<li><a class="fancybox" href="{{ & src }}" rel="group" style="background-image: url({{ & src }});"></a></li>
+		<li><a class="fancybox" href="{{ & src }}" rel="group" style="background-image: url({{ & src }});"
+		{{#caption}}
+		 data-fancybox-title="{{caption}}"
+		{{/caption}}
+		></a></li>
 	{{/imgs}}
 </ul>
