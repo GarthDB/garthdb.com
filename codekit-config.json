@@ -2,26 +2,12 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8248",
   "files" : {
-    "\/js\/models\/repository.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/models\/repository.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/models\/repository-ck.js",
-      "fileType" : 64
-    },
-    "\/js\/app.coffee" : {
+    "\/css\/reset.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/app.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/app.js",
+      "inputAbbreviatedPath" : "\/css\/reset.styl",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -69,15 +55,12 @@
       "outputAbbreviatedPath" : "\/js\/fancybox\/jquery.fancybox-ck.js",
       "fileType" : 64
     },
-    "\/js\/views\/code.coffee" : {
+    "\/index.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/code.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/code.js",
+      "inputAbbreviatedPath" : "\/index.jade",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -197,10 +180,10 @@
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/designItem.coffee",
+      "inputAbbreviatedPath" : "\/js\/collections\/repository.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/designItem.js",
+      "outputAbbreviatedPath" : "\/js\/collections\/repository.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -221,10 +204,10 @@
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/router.coffee",
+      "inputAbbreviatedPath" : "\/js\/collections\/project.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/router.js",
+      "outputAbbreviatedPath" : "\/js\/collections\/project.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -244,10 +227,10 @@
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/header.coffee",
+      "inputAbbreviatedPath" : "\/js\/models\/repository.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/header.js",
+      "outputAbbreviatedPath" : "\/js\/models\/repository.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -267,10 +250,10 @@
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/designs.coffee",
+      "inputAbbreviatedPath" : "\/js\/models\/user.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/designs.js",
+      "outputAbbreviatedPath" : "\/js\/models\/user.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -290,10 +273,10 @@
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/home.coffee",
+      "inputAbbreviatedPath" : "\/js\/views\/designItem.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/home.js",
+      "outputAbbreviatedPath" : "\/js\/views\/designItem.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -353,51 +336,51 @@
       "outputAbbreviatedPath" : "\/js\/models\/project-ck.js",
       "fileType" : 64
     },
-    "\/js\/collections\/repository.coffee" : {
+    "\/js\/router.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/repository.coffee",
+      "inputAbbreviatedPath" : "\/js\/router.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/repository.js",
+      "outputAbbreviatedPath" : "\/js\/router.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/collections\/project.coffee" : {
+    "\/js\/collections\/user.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/project.coffee",
+      "inputAbbreviatedPath" : "\/js\/collections\/user.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/project.js",
+      "outputAbbreviatedPath" : "\/js\/collections\/user.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/models\/project.coffee" : {
+    "\/js\/app.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/models\/project.coffee",
+      "inputAbbreviatedPath" : "\/js\/app.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/models\/project.js",
+      "outputAbbreviatedPath" : "\/js\/app.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/models\/repository.coffee" : {
+    "\/js\/views\/designs.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/models\/repository.coffee",
+      "inputAbbreviatedPath" : "\/js\/views\/designs.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/models\/repository.js",
+      "outputAbbreviatedPath" : "\/js\/views\/designs.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -428,7 +411,7 @@
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/errors\/404.jade",
+      "inputAbbreviatedPath" : "\/css\/main.styl",
       "outputStyle" : 0,
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/errors\/404.html",
@@ -461,7 +444,10 @@
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.jade",
+      "inputAbbreviatedPath" : "\/js\/views\/home.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/views\/home.js",
       "outputStyle" : 0,
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/index.html",
@@ -500,40 +486,29 @@
       "outputAbbreviatedPath" : "\/js\/jquery.timeago-ck.js",
       "fileType" : 64
     },
-    "\/js\/collections\/user.coffee" : {
+    "\/js\/views\/code.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/user.coffee",
+      "inputAbbreviatedPath" : "\/js\/views\/code.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/user.js",
+      "outputAbbreviatedPath" : "\/js\/views\/code.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/css\/main.styl" : {
+    "\/js\/views\/header.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/main.styl",
+      "inputAbbreviatedPath" : "\/js\/views\/header.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/views\/header.js",
       "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/main.css",
-      "fileType" : 8,
-      "debugStyle" : 0
-    },
-    "\/js\/fancybox\/helpers\/jquery.fancybox-media.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/fancybox\/helpers\/jquery.fancybox-media.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/fancybox\/helpers\/jquery.fancybox-media-ck.js",
-      "fileType" : 64
+      "fileType" : 32
     }
   },
   "manualImportLinks" : [
