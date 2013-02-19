@@ -25,15 +25,15 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/fancybox\/jquery.fancybox.js" : {
+    "\/js\/fancybox\/helpers\/jquery.fancybox-thumbs.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/fancybox\/jquery.fancybox.js",
+      "inputAbbreviatedPath" : "\/js\/fancybox\/helpers\/jquery.fancybox-thumbs.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/fancybox\/jquery.fancybox-ck.js",
+      "outputAbbreviatedPath" : "\/js\/fancybox\/helpers\/jquery.fancybox-thumbs-ck.js",
       "fileType" : 64
     },
     "\/js\/collections\/project.js" : {
@@ -47,26 +47,26 @@
       "outputAbbreviatedPath" : "\/js\/collections\/project-ck.js",
       "fileType" : 64
     },
-    "\/js\/fancybox\/helpers\/jquery.fancybox-thumbs.js" : {
+    "\/js\/views\/design.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/fancybox\/helpers\/jquery.fancybox-thumbs.js",
+      "inputAbbreviatedPath" : "\/js\/views\/design.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/fancybox\/helpers\/jquery.fancybox-thumbs-ck.js",
+      "outputAbbreviatedPath" : "\/js\/views\/design-ck.js",
       "fileType" : 64
     },
-    "\/js\/libs\/backbone.js" : {
+    "\/js\/fancybox\/jquery.fancybox.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/backbone.js",
+      "inputAbbreviatedPath" : "\/js\/fancybox\/jquery.fancybox.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/backbone-ck.js",
+      "outputAbbreviatedPath" : "\/js\/fancybox\/jquery.fancybox-ck.js",
       "fileType" : 64
     },
     "\/js\/views\/code.coffee" : {
@@ -81,16 +81,17 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/views\/home.js" : {
+    "\/js\/models\/user.coffee" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/home.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/views\/home-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/js\/models\/user.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/models\/user.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     },
     "\/js\/router.js" : {
       "ignoreWasSetByUser" : 0,
@@ -114,51 +115,6 @@
       "outputAbbreviatedPath" : "\/js\/views\/header-ck.js",
       "fileType" : 64
     },
-    "\/js\/views\/designs.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/designs.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/views\/designs-ck.js",
-      "fileType" : 64
-    },
-    "\/js\/models\/user.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/models\/user.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/models\/user.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
-    "\/js\/views\/design.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/design.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/views\/design-ck.js",
-      "fileType" : 64
-    },
-    "\/js\/libs\/mustache.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/mustache.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/mustache-ck.js",
-      "fileType" : 64
-    },
     "\/js\/text.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -179,6 +135,50 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/libs\/jquery-1.9.0.min-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/views\/home.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/views\/home.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/views\/home-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/views\/designs.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/views\/designs.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/views\/designs-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/libs\/backbone.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/libs\/backbone.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/libs\/backbone-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/libs\/mustache.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/libs\/mustache.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/libs\/mustache-ck.js",
       "fileType" : 64
     },
     "\/css\/fonts\/SourceSansPro\/specimen_files\/easytabs.js" : {
@@ -216,17 +216,6 @@
       "fileType" : 8,
       "debugStyle" : 0
     },
-    "\/js\/collections\/repository.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/repository.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/collections\/repository-ck.js",
-      "fileType" : 64
-    },
     "\/js\/router.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -239,6 +228,17 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
+    "\/resume.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/resume.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/resume.html",
+      "fileType" : 512
+    },
     "\/js\/views\/header.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -250,6 +250,17 @@
       "outputAbbreviatedPath" : "\/js\/views\/header.js",
       "outputStyle" : 0,
       "fileType" : 32
+    },
+    "\/js\/collections\/repository.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/collections\/repository.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/collections\/repository-ck.js",
+      "fileType" : 64
     },
     "\/js\/views\/designs.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -272,17 +283,6 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/models\/user-ck.js",
-      "fileType" : 64
-    },
-    "\/js\/require.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/require.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/require-ck.js",
       "fileType" : 64
     },
     "\/js\/views\/home.coffee" : {
@@ -309,6 +309,17 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
+    "\/js\/require.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/require.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/require-ck.js",
+      "fileType" : 64
+    },
     "\/js\/backbone.analytics.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -320,17 +331,6 @@
       "outputAbbreviatedPath" : "\/js\/backbone.analytics-ck.js",
       "fileType" : 64
     },
-    "\/js\/models\/project.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/models\/project.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/models\/project-ck.js",
-      "fileType" : 64
-    },
     "\/js\/views\/designItem.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -340,6 +340,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/views\/designItem-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/models\/project.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/models\/project.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/models\/project-ck.js",
       "fileType" : 64
     },
     "\/js\/collections\/repository.coffee" : {
@@ -390,17 +401,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/collections\/user.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/user.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/collections\/user-ck.js",
-      "fileType" : 64
-    },
     "\/js\/fancybox\/jquery.fancybox.pack.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -410,6 +410,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/fancybox\/jquery.fancybox.pack-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/collections\/user.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/collections\/user.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/collections\/user-ck.js",
       "fileType" : 64
     },
     "\/errors\/404.jade" : {
@@ -445,17 +456,6 @@
       "outputAbbreviatedPath" : "\/js\/fancybox\/helpers\/jquery.fancybox-buttons-ck.js",
       "fileType" : 64
     },
-    "\/js\/libs\/underscore.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/underscore.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/underscore-ck.js",
-      "fileType" : 64
-    },
     "\/index.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -466,6 +466,17 @@
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/index.html",
       "fileType" : 512
+    },
+    "\/js\/libs\/underscore.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/libs\/underscore.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/libs\/underscore-ck.js",
+      "fileType" : 64
     },
     "\/js\/views\/code.js" : {
       "ignoreWasSetByUser" : 0,
