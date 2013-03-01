@@ -1,4 +1,5 @@
-define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/designs", "views/design", "views/code", "text!templates/resumeTemplate.html"], ($, Mustache, Backbone, HeaderView, HomeView, DesignsView, DesignView, CodeView, ResumeHTML) ->
+define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/designs", "views/design", "views/code", "views/speak", "text!templates/resumeTemplate.html"],
+($, Mustache, Backbone, HeaderView, HomeView, DesignsView, DesignView, CodeView, SpeakView, ResumeHTML) ->
 	Router = Backbone.Router.extend
 		initialize: () ->
 			Backbone.history.start({pushState: true})
@@ -10,6 +11,9 @@ define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
 			if !@codeView
 				@codeView = new CodeView
 			@codeView.render()
+			if !@speakView
+				@speakView = new SpeakView
+			@speakView.render()
 			if !@resumeView
 				@resumeView = Mustache.render(ResumeHTML)
 		routes:
@@ -55,7 +59,11 @@ define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
 		navSpeak: () ->
 			$('header.main').find('a').removeClass('selected')
 			$('header.main').find("a:contains('speak')").addClass('selected')
-			window.location.href = 'http://lanyrd.com/profile/garthdb/';
+			if !@speakView
+				@speakView = new SpeakView
+			@speakView.render()
+			$('#content').html(@speakView)
+			$('title').html("#{@defaultTitle} | Speak")
 		navResume: () ->
 			$('header.main').find('a').removeClass('selected')
 			$('header.main').find("a:contains('resume')").addClass('selected')
