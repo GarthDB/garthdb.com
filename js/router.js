@@ -84,8 +84,7 @@
         if (!this.speakView) {
           this.speakView = new SpeakView;
         }
-        this.speakView.render();
-        $('#content').html(this.speakView);
+        $('#content').html(this.speakView.el);
         return $('title').html("" + this.defaultTitle + " | Speak");
       },
       navResume: function() {

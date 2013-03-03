@@ -17,7 +17,7 @@
             "lanyrdurl": "http://lanyrd.com/2013/mwdcon-sanfrancisco/",
             "sessionurl":"http://mobilewebdevconference.com/san-francisco-2013/agenda/day-three/mobile-web-web-development/1030-1115.html",
             "conference": {
-                "title": "Mobile+Web Developer Conference San Francisco 2013",
+                "title": "Mobile+Web Developer Conference",
                 "url": "http://www.mobilewebdevconference.com/",
                 "startdate": "2013-01-29",
                 "enddate": "2013-01-31",
@@ -27,7 +27,7 @@
         {
             "id":2,
             "title":"Rapid HTML Prototypes",
-            "date":"2013-01-31T10:30:00-0800",
+            "date":"2012-11-08T10:30:00-0800",
             "description":"Experience design is hard. Design compositions are inconsistent with the final rendered product and interactions are complicated to communicate. As the experience design lead on Brackets, an open-source code editor created by Adobe, we’ve incorporated html prototypes to overcome these workflow gaps; in this session we will cover the pros and cons of this workflow, how it works in an iterative process (AGILED!), and the tools that we use to ease the pain.",
             "tags": [
                 "HTML",
@@ -59,6 +59,7 @@
                 "UX"
             ],
             "lanyrdurl": "http://lanyrd.com/2012/r2bcreative/sxrhg/",
+            "imgurl": "/img/adobe_open_source.svg",
             "conference": {
                 "title": "Reasons to be Creative",
                 "url": "http://www.mobilewebdevconference.com/",
@@ -66,7 +67,7 @@
                 "enddate": "2012-09-05",
                 "location": "Brighton"
             }
-        },
+        }
 
     ]
 }

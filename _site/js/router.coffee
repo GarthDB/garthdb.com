@@ -61,8 +61,7 @@ define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
 			$('header.main').find("a:contains('speak')").addClass('selected')
 			if !@speakView
 				@speakView = new SpeakView
-			@speakView.render()
-			$('#content').html(@speakView)
+			$('#content').html(@speakView.el)
 			$('title').html("#{@defaultTitle} | Speak")
 		navResume: () ->
 			$('header.main').find('a').removeClass('selected')
