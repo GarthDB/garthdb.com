@@ -67,6 +67,7 @@ header.main nav li a.selected {
   width: 100%;
   margin: auto;
   min-height: 400px;
+  font-size: 18px;
   -webkit-transition: height 1s ease-in;
 }
 #content > section {
