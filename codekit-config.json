@@ -50,15 +50,15 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/collections\/user.coffee" : {
+    "\/js\/views\/maxview.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/user.coffee",
+      "inputAbbreviatedPath" : "\/js\/views\/maxview.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/user.js",
+      "outputAbbreviatedPath" : "\/js\/views\/maxview.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -71,6 +71,18 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/models\/project.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/js\/collections\/user.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/collections\/user.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/collections\/user.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
