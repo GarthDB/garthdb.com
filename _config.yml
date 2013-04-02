@@ -4,6 +4,6 @@ server:      true
 server_port: 4000
 baseurl:    /
 url:        http://localhost:4000
-exclude:    ['index.jade', 'main.styl', 'reset.styl', 'app.coffee', 'README', 'outlines', '404.jade', 'codekit-config.json']
+exclude:    ['index.jade', 'main.styl', 'reset.styl', 'app.coffee', 'README', 'outlines', '404.jade', 'codekit-config.json', 'node_modules', 'Gruntfile.coffee', 'package.json']
 include:    ['.htaccess']
 permalink:	/:categories/:title
