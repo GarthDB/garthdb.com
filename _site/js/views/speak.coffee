@@ -16,5 +16,4 @@ define ['backbone', 'mustache', 'collections/session', 'text!templates/sessionTe
 				$.timeago.settings.allowFuture = true
 				model.attributes.date_ago = $.timeago(model.attributes.date)
 				model.attributes.tagger = model.attributes.tags.join(", ")
-				console.log model.attributes
 				$(@el).append(Mustache.render(SessionTemplate, model.attributes))
