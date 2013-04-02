@@ -98,6 +98,18 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
+    "\/js\/collections\/session.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/collections\/session.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/collections\/session.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
     "\/errors\/404.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -118,18 +130,6 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/router.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
-    "\/js\/collections\/session.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/session.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/session.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
