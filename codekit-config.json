@@ -13,6 +13,17 @@
       "outputAbbreviatedPath" : "\/errors\/404.html",
       "fileType" : 512
     },
+    "\/js\/models\/repository.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/models\/repository.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/models\/repository-ck.js",
+      "fileType" : 64
+    },
     "\/js\/views\/code.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -24,17 +35,6 @@
       "outputAbbreviatedPath" : "\/js\/views\/code.js",
       "outputStyle" : 0,
       "fileType" : 32
-    },
-    "\/js\/models\/repository.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/models\/repository.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/models\/repository-ck.js",
-      "fileType" : 64
     },
     "\/js\/collections\/user.js" : {
       "ignoreWasSetByUser" : 0,
@@ -294,17 +294,6 @@
       "outputAbbreviatedPath" : "\/js\/views\/designItem-ck.js",
       "fileType" : 64
     },
-    "\/js\/views\/maxview.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/maxview.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/views\/maxview-ck.js",
-      "fileType" : 64
-    },
     "\/js\/app.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -466,30 +455,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/collections\/project.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/project.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/project.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
-    "\/js\/views\/maxview.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/maxview.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/maxview.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
     "\/js\/views\/home.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -499,6 +464,18 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/views\/home.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/js\/collections\/project.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/collections\/project.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/collections\/project.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
