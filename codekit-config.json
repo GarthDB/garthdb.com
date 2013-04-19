@@ -50,6 +50,18 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
+    "\/js\/views\/maxview.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/views\/maxview.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/views\/maxview.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
     "\/js\/collections\/user.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -74,18 +86,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/views\/maxview.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/maxview.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/maxview.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
     "\/js\/models\/user.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -95,18 +95,6 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/models\/user.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
-    "\/js\/collections\/session.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/session.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/session.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -130,6 +118,18 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/router.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/js\/collections\/session.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/collections\/session.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/collections\/session.js",
       "outputStyle" : 0,
       "fileType" : 32
     },

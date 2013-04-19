@@ -29,7 +29,6 @@
           $.timeago.settings.allowFuture = true;
           model.attributes.date_ago = $.timeago(model.attributes.date);
           model.attributes.tagger = model.attributes.tags.join(", ");
-          console.log(model.attributes);
           _results.push($(this.el).append(Mustache.render(SessionTemplate, model.attributes)));
         }
         return _results;
