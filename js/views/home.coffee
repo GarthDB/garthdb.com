@@ -8,9 +8,10 @@ define ['jquery', 'backbone'], ($, Backbone) ->
 			'Me? I\'m a social media guru;<br/>I have a twitter account and everything.'
 			'I enjoy semicolons; just not in my code.'
 			'You\'re not hardcore,<br/>Unless you live hardcore.'
-			'You have revisions?</br>Yeah, I don\'t do those.'
+			'You have revisions?</br>Yeah, I\'m pretty sure it was perfect the first time'
 			'I make it Pop.'
 			'I have 30 years of mobile web experience.'
+			'I don\'t write bugs,<br/>just unintentional features'
 		]
 		random: ->
 			selectedIndex = Math.floor( ( Math.random() * @strings.length ) + 1 )
