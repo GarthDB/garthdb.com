@@ -1,11 +1,10 @@
-define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/designs", "views/design", "views/code", "views/speak", "views/maxview", "text!templates/resumeTemplate.html"],
-($, Mustache, Backbone, HeaderView, HomeView, DesignsView, DesignView, CodeView, SpeakView, MAXView, ResumeHTML) ->
+define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/designs", "views/design", "views/code", "views/speak", "text!templates/resumeTemplate.html"],
+($, Mustache, Backbone, HeaderView, HomeView, DesignsView, DesignView, CodeView, SpeakView, ResumeHTML) ->
 	Router = Backbone.Router.extend
 		initialize: () ->
 			Backbone.history.start({pushState: true})
 			headerView = new HeaderView
 			headerView.render()
-			maxView = new MAXView
 			if !@designsView
 				@designsView = new DesignsView
 			@designsView.render()

@@ -50,18 +50,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/views\/maxview.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/maxview.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/maxview.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
     "\/js\/collections\/user.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,

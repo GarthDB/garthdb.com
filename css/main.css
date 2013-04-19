@@ -18,7 +18,7 @@ a:hover {
   background: #fff;
   min-height: 100%;
   box-sizing: border-box;
-  padding-bottom: 130px;
+  padding-bottom: 30px;
   border-top: 3px solid #333;
   position: relative;
 }
@@ -231,13 +231,13 @@ header.main nav li a.selected {
   font-size: 12px;
 }
 .site > footer {
-  height: 130px;
+  height: 30px;
   position: absolute;
   bottom: 0;
   width: 100%;
   background: #333;
   text-align: center;
-  font-size: 10px;
+  font-size: 11px;
   color: #999;
   box-sizing: border-box;
   padding-top: 10px;
@@ -274,25 +274,4 @@ header.main nav li a.selected {
 }
 #speak .session footer {
   margin-top: 30px;
-}
-.max {
-  width: 100px;
-  position: relative;
-  margin: 0 auto;
-  text-align: left;
-  color: #fff;
-  height: 100px;
-}
-.max p:first-child {
-  padding-top: 12px;
-  font-size: 14px;
-}
-.max p:last-child {
-  font-size: 12px;
-}
-.max p:last-child a {
-  font-size: 12px;
-}
-.max img {
-  padding: 5px 0;
 }
