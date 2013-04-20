@@ -1,26 +1,44 @@
+body {
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+  color: #333;
+}
+a {
+  color: #4987d5;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.site {
+  border-top: 3px solid #333;
+}
+header.main {
+  font-size: 15px;
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+  padding: 20px 0 0;
+}
+header.main h1 {
+  font-weight: 200;
+  padding-top: 10px;
+}
+header.main nav {
+  padding-top: 10px;
+}
+header.main nav li {
+  display: inline-block;
+}
 @media only screen and (min-width: 780px) {
   html,
   body {
     height: 100%;
   }
-  body {
-    font-family: 'Source Sans Pro';
-    font-weight: 200;
-    color: #333;
-  }
-  a {
-    color: #4987d5;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
   .site {
-    background: #fff;
     min-height: 100%;
     box-sizing: border-box;
     padding-bottom: 30px;
-    border-top: 3px solid #333;
     position: relative;
   }
   .clear {
@@ -31,16 +49,12 @@
     font-weight: 400;
   }
   header.main {
-    font-size: 15px;
-font-style
-    width: 100%;
-    max-width: 760px;
+    text-align: right;
     margin: 0 auto;
     padding: 55px 0 0;
     text-align: center;
   }
   header.main h1 {
-    font-weight: 200;
     float: left;
     padding-top: 5px;
   }
@@ -49,7 +63,6 @@ font-style
     padding-top: 5px;
   }
   header.main nav li {
-    display: inline-block;
     margin-left: 30px;
   }
   header.main nav li a {

@@ -13,6 +13,17 @@
       "outputAbbreviatedPath" : "\/errors\/404.html",
       "fileType" : 512
     },
+    "\/js\/models\/repository.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/models\/repository.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/models\/repository-ck.js",
+      "fileType" : 64
+    },
     "\/js\/views\/code.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -24,17 +35,6 @@
       "outputAbbreviatedPath" : "\/js\/views\/code.js",
       "outputStyle" : 0,
       "fileType" : 32
-    },
-    "\/js\/models\/repository.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/models\/repository.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/models\/repository-ck.js",
-      "fileType" : 64
     },
     "\/js\/collections\/user.js" : {
       "ignoreWasSetByUser" : 0,
@@ -92,16 +92,17 @@
       "outputAbbreviatedPath" : "\/css\/fonts\/SourceSansPro\/specimen_files\/easytabs-ck.js",
       "fileType" : 64
     },
-    "\/js\/libs\/underscore.js" : {
+    "\/js\/collections\/user.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/underscore.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/underscore-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/js\/collections\/user.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/collections\/user.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     },
     "\/js\/models\/project.js" : {
       "ignoreWasSetByUser" : 0,
@@ -114,17 +115,16 @@
       "outputAbbreviatedPath" : "\/js\/models\/project-ck.js",
       "fileType" : 64
     },
-    "\/js\/collections\/user.coffee" : {
+    "\/js\/libs\/underscore.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/collections\/user.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/collections\/user.js",
-      "outputStyle" : 0,
-      "fileType" : 32
+      "inputAbbreviatedPath" : "\/js\/libs\/underscore.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/libs\/underscore-ck.js",
+      "fileType" : 64
     },
     "\/js\/collections\/session.js" : {
       "ignoreWasSetByUser" : 0,
@@ -317,17 +317,16 @@
       "outputAbbreviatedPath" : "\/js\/collections\/repository-ck.js",
       "fileType" : 64
     },
-    "\/js\/views\/speak.coffee" : {
+    "\/js\/views\/header.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/speak.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/views\/speak.js",
-      "outputStyle" : 0,
-      "fileType" : 32
+      "inputAbbreviatedPath" : "\/js\/views\/header.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/views\/header-ck.js",
+      "fileType" : 64
     },
     "\/js\/views\/design.js" : {
       "ignoreWasSetByUser" : 0,
@@ -340,17 +339,6 @@
       "outputAbbreviatedPath" : "\/js\/views\/design-ck.js",
       "fileType" : 64
     },
-    "\/js\/views\/header.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/views\/header.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/views\/header-ck.js",
-      "fileType" : 64
-    },
     "\/js\/views\/header.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -360,6 +348,18 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/views\/header.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/js\/views\/speak.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/views\/speak.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/views\/speak.js",
       "outputStyle" : 0,
       "fileType" : 32
     },

@@ -1,25 +1,39 @@
 footer-height = 30px
 
+body
+	font-family 'Source Sans Pro'
+	font-weight 200
+	color #333
+a
+	color #4987D5
+	text-decoration none
+	&:hover
+		text-decoration underline
+
+.site
+	border-top 3px solid #333
+
+header.main
+	font-size 15px
+	width 100%
+	max-width 760px
+	text-align center
+	padding 20px 0 0
+	h1
+		font-weight 200
+		padding-top 10px
+	nav
+		padding-top 10px
+		li
+			display inline-block
+
 @media only screen and (min-width: 780px)
 	html, body
 		height 100%
-	body
-		font-family 'Source Sans Pro'
-		font-weight 200
-		color #333
-
-	a
-		color #4987D5
-		text-decoration none
-		&:hover
-			text-decoration underline
-
 	.site
-		background #FFF
 		min-height 100%
 		box-sizing border-box
 		padding-bottom footer-height
-		border-top 3px solid #333
 		position relative
 	.clear
 		clear both
@@ -27,22 +41,17 @@ footer-height = 30px
 		font-weight 400
 
 	header.main
-		font-size 15px
-		font-style
-		width 100%
-		max-width 760px
+		text-align right
 		margin 0 auto
 		padding 55px 0 0
 		text-align center
 		h1
-			font-weight 200
 			float left
 			padding-top 5px
 		nav
 			float right
 			padding-top 5px
 			li
-				display inline-block
 				margin-left 30px
 				a
 					text-decoration none
