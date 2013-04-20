@@ -12,6 +12,7 @@ define ['backbone', 'collections/user', 'views/designItem'], (Backbone, UserColl
 			for model in @collection.models
 				$(list).append(@renderChild(model.attributes))
 			$(@el).html(list)
+			$(@el).append('<footer>View my complete portfolio and works in progress on <a href="http://be.net/GarthDB">Behance</a></footer>')
 		renderChild: (item) ->
 			design = new DesignItemView({model:item})
 			design.render()
