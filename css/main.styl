@@ -1,5 +1,7 @@
 footer-height = 30px
 
+html, body
+	height 100%
 body
 	font-family 'Source Sans Pro'
 	font-weight 200
@@ -11,8 +13,11 @@ a
 		text-decoration underline
 
 .site
+	min-height 100%
 	border-top 3px solid #333
-
+	padding-bottom footer-height * 2
+	box-sizing border-box
+	position relative
 header.main
 	font-size 15px
 	width 100%
@@ -20,62 +25,47 @@ header.main
 	text-align center
 	padding 20px 0 0
 	h1
-		font-weight 200
+		font-weight normal
 		padding-top 10px
 	nav
-		padding-top 10px
+		padding-top 30px
 		li
 			display inline-block
-
-@media only screen and (min-width: 780px)
-	html, body
-		height 100%
-	.site
-		min-height 100%
+			margin 0 10px
+			a
+				font-weight normal
+.site > footer
+	height footer-height * 2
+	position absolute
+	bottom 0
+	width 100%
+	background #333
+	text-align center
+	font-size 15px
+	color #999
+	box-sizing border-box
+	padding-top 15px
+	font-weight normal
+	span
+		display block
+	a
+		color #4987D5
+		text-decoration none
+		&:hover
+			text-decoration underline
+#content
+	max-width 600px
+	width 100%
+	margin 0 auto
+	font-size 18px
+	& > section
+		padding 30px 20px
 		box-sizing border-box
-		padding-bottom footer-height
-		position relative
-	.clear
-		clear both
-	h1, h2
-		font-weight 400
-
-	header.main
-		text-align right
-		margin 0 auto
-		padding 55px 0 0
-		text-align center
-		h1
-			float left
-			padding-top 5px
-		nav
-			float right
-			padding-top 5px
-			li
-				margin-left 30px
-				a
-					text-decoration none
-					color #333
-					&:hover
-						border-bottom 1px solid #4987D5
-					&.selected
-						color #4987D5
-	#content
-		clear both
-		max-width 760px
-		width 100%
-		margin auto
-		min-height 400px
-		font-size 18px
-		-webkit-transition height 1s ease-in
-		& > section
-			padding-top 100px
-			padding-bottom 100px
-			h2
-				font-size 60px
-				font-weight 200
-				font-style italic
-	#designs
+		h2
+			font-size 40px
+			font-weight 200
+			font-style italic
+#designs
 		ul
 			list-style none
 			text-align center
@@ -108,6 +98,50 @@ header.main
 					display block
 		img
 			border none
+
+@media only screen and (min-width: 780px)
+	.site
+		padding-bottom footer-height
+	.clear
+		clear both
+	h1, h2
+		font-weight 400
+
+	header.main
+		text-align right
+		margin 0 auto
+		padding 55px 0 0
+		text-align center
+		h1
+			float left
+			padding-top 5px
+			font-weight 200
+		nav
+			float right
+			padding-top 5px
+			li
+				margin 0 0 0 30px
+				margin-left 30px
+				a
+					text-decoration none
+					color #333
+					font-weight 200
+					&:hover
+						border-bottom 1px solid #4987D5
+					&.selected
+						color #4987D5
+	#content
+		clear both
+		max-width 760px
+		width 100%
+		min-height 400px
+		font-size 18px
+		& > section
+			padding 100px 0
+			h2
+				font-size 60px
+				font-weight 200
+				font-style italic
 	#design
 		padding-left 222px
 		position relative
@@ -195,22 +229,10 @@ header.main
 			font-size 12px
 	.site > footer
 		height footer-height
-		position absolute
-		bottom 0
-		width 100%
-		background #333
-		text-align center
 		font-size 11px
-		color #999
-		box-sizing border-box
 		padding-top 10px
-		a
-			color #4987D5
-			text-decoration none
-			font-size 10px
-			&:hover
-				text-decoration underline
-
+		span
+			display inline
 	#speak
 		.session
 			margin-bottom 30px

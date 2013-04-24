@@ -1,3 +1,7 @@
+html,
+body {
+  height: 100%;
+}
 body {
   font-family: 'Source Sans Pro';
   font-weight: 200;
@@ -11,7 +15,11 @@ a:hover {
   text-decoration: underline;
 }
 .site {
+  min-height: 100%;
   border-top: 3px solid #333;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  position: relative;
 }
 header.main {
   font-size: 15px;
@@ -21,25 +29,99 @@ header.main {
   padding: 20px 0 0;
 }
 header.main h1 {
-  font-weight: 200;
+  font-weight: normal;
   padding-top: 10px;
 }
 header.main nav {
-  padding-top: 10px;
+  padding-top: 30px;
 }
 header.main nav li {
   display: inline-block;
+  margin: 0 10px;
+}
+header.main nav li a {
+  font-weight: normal;
+}
+.site > footer {
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #333;
+  text-align: center;
+  font-size: 15px;
+  color: #999;
+  box-sizing: border-box;
+  padding-top: 15px;
+  font-weight: normal;
+}
+.site > footer span {
+  display: block;
+}
+.site > footer a {
+  color: #4987d5;
+  text-decoration: none;
+}
+.site > footer a:hover {
+  text-decoration: underline;
+}
+#content {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+}
+#content > section {
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+#content > section h2 {
+  font-size: 40px;
+  font-weight: 200;
+  font-style: italic;
+}
+#designs ul {
+  list-style: none;
+  text-align: center;
+}
+#designs li {
+  display: inline-block;
+  margin: 20px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.8);
+  height: 158px;
+}
+#designs li a {
+  display: block;
+  position: relative;
+  color: #333;
+  text-align: left;
+}
+#designs li a .details {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.8);
+}
+#designs li a h3 {
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  font-size: 36px;
+}
+#designs li a:hover .details {
+  display: block;
+}
+#designs img {
+  border: none;
 }
 @media only screen and (min-width: 780px) {
-  html,
-  body {
-    height: 100%;
-  }
   .site {
-    min-height: 100%;
-    box-sizing: border-box;
     padding-bottom: 30px;
-    position: relative;
   }
   .clear {
     clear: both;
@@ -57,17 +139,20 @@ header.main nav li {
   header.main h1 {
     float: left;
     padding-top: 5px;
+    font-weight: 200;
   }
   header.main nav {
     float: right;
     padding-top: 5px;
   }
   header.main nav li {
+    margin: 0 0 0 30px;
     margin-left: 30px;
   }
   header.main nav li a {
     text-decoration: none;
     color: #333;
+    font-weight: 200;
   }
   header.main nav li a:hover {
     border-bottom: 1px solid #4987d5;
@@ -79,58 +164,16 @@ header.main nav li {
     clear: both;
     max-width: 760px;
     width: 100%;
-    margin: auto;
     min-height: 400px;
     font-size: 18px;
-    -webkit-transition: height 1s ease-in;
   }
   #content > section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
   #content > section h2 {
     font-size: 60px;
     font-weight: 200;
     font-style: italic;
-  }
-  #designs ul {
-    list-style: none;
-    text-align: center;
-  }
-  #designs li {
-    display: inline-block;
-    margin: 20px;
-    box-shadow: 0 0 2px rgba(0,0,0,0.8);
-    height: 158px;
-  }
-  #designs li a {
-    display: block;
-    position: relative;
-    color: #333;
-    text-align: left;
-  }
-  #designs li a .details {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255,255,255,0.8);
-  }
-  #designs li a h3 {
-    font-weight: 400;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 20px;
-    font-size: 36px;
-  }
-  #designs li a:hover .details {
-    display: block;
-  }
-  #designs img {
-    border: none;
   }
   #design {
     padding-left: 222px;
@@ -246,23 +289,11 @@ header.main nav li {
   }
   .site > footer {
     height: 30px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #333;
-    text-align: center;
     font-size: 11px;
-    color: #999;
-    box-sizing: border-box;
     padding-top: 10px;
   }
-  .site > footer a {
-    color: #4987d5;
-    text-decoration: none;
-    font-size: 10px;
-  }
-  .site > footer a:hover {
-    text-decoration: underline;
+  .site > footer span {
+    display: inline;
   }
   #speak .session {
     margin-bottom: 30px;

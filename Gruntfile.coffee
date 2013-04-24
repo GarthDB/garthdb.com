@@ -25,9 +25,12 @@ module.exports = (grunt) ->
           'index.html': 'index.jade'
     coffee:
       compile:
+        options:
+          sourceMap: true
         files:
           'js/app.js': 'js/app.coffee'
           'js/collections/project.js': 'js/collections/project.coffee'
+          'js/router.js': 'js/router.coffee'
     connect:
       livereload:
         options:

@@ -7,11 +7,9 @@
       url: "http://www.behance.net/v2/projects/",
       sync: function(method, model, options) {
         options.dataType = "jsonp";
-        console.log('sync');
         return Backbone.sync(method, model, options);
       },
       parse: function(response) {
-        console.log(response);
         return response.project;
       }
     });
@@ -19,3 +17,7 @@
   });
 
 }).call(this);
+
+/*
+//@ sourceMappingURL=project.js.map
+*/
