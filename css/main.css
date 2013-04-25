@@ -138,6 +138,7 @@ section#design {
 section#design aside {
   position: relative;
   display: inline-block;
+  margin-bottom: 20px;
 }
 section#design header,
 section#design .description {
@@ -146,7 +147,6 @@ section#design .description {
 }
 section#design ul.gallery {
   list-style: none;
-  text-align: left;
   text-align: center;
 }
 section#design ul.gallery li {
@@ -241,6 +241,9 @@ section#design ul.gallery li a:hover {
     left: 0;
     top: 100px;
     display: block;
+  }
+  section#design ul.gallery {
+    text-align: left;
   }
   #resume {
     padding-top: 100px;
