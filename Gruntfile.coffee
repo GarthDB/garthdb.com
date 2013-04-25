@@ -47,7 +47,7 @@ module.exports = (grunt) ->
         files: ['*.jade']
         tasks: ['jade', 'livereload']
       coffee:
-        files: ['js/*.coffee']
+        files: ['**/*.coffee']
         tasks: ['coffee', 'livereload']
       image:
         files: ['img/*']
