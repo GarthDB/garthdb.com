@@ -6,7 +6,6 @@ body
 	font-family 'Source Sans Pro'
 	font-weight 200
 	color #333
-
 a
 	color #4987D5
 	text-decoration none
@@ -14,215 +13,246 @@ a
 		text-decoration underline
 
 .site
-	background #FFF
 	min-height 100%
-	box-sizing border-box
-	padding-bottom footer-height
 	border-top 3px solid #333
+	padding-bottom footer-height * 2
+	box-sizing border-box
 	position relative
-.clear
-	clear both
-h1, h2
-	font-weight 400
-
 header.main
 	font-size 15px
-	font-style
 	width 100%
 	max-width 760px
-	margin 0 auto
-	padding 55px 0 0
 	text-align center
+	padding 20px 0 0
 	h1
-		font-weight 200
-		float left
-		padding-top 5px
+		font-weight normal
+		padding-top 10px
 	nav
-		float right
-		padding-top 5px
+		padding-top 30px
 		li
 			display inline-block
-			margin-left 30px
+			margin 0 10px
 			a
-				text-decoration none
-				color #333
-				&:hover
-					border-bottom 1px solid #4987D5
-				&.selected
-					color #4987D5
-#content
-	clear both
-	max-width 760px
-	width 100%
-	margin auto
-	min-height 400px
-	font-size 18px
-	-webkit-transition height 1s ease-in
-	& > section
-		padding-top 100px
-		padding-bottom 100px
-		h2
-			font-size 60px
-			font-weight 200
-			font-style italic
-#designs
-	ul
-		list-style none
-		text-align center
-	li
-		display inline-block
-		margin 20px
-		box-shadow 0 0 2px rgba(0,0,0,0.8)
-		height 158px
-		a
-			display block
-			position relative
-			color #333
-			text-align left
-			.details
-				display none
-				position absolute
-				width 100%
-				height 100%
-				top 0
-				left 0
-				background rgba(255,255,255,0.8)
-			h3
-				font-weight 400
-				position absolute
-				bottom 0
-				left 0
-				padding 20px
-				font-size 36px
-				line-height 34px
-			&:hover .details
-				display block
-	footer
-		padding-top 20px
-		text-align center
-	img
-		border none
-#design
-	padding-left 222px
-	position relative
-	aside
-		position absolute
-		left 0
-		top 100px
-	header, & .description
-		margin-bottom 20px
-	ul.gallery
-		list-style none
-		li
-			display inline-block
-		a
-			margin 5px
-			display block
-			width 100px
-			height 100px
-			background-size cover
-			background-position center
-			box-shadow 0 0 2px rgba(0,0,0,0.8)
-			transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out;
-			-moz-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out; /* Firefox 4 */
-			-webkit-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out; /* Safari and Chrome */
-			-o-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out; /* Opera */
-			&:hover
-				width 110px
-				height 110px
-				margin 0
-
-#resume
-	padding-top 100px
-	& > section
-		margin-bottom 30px
-		h2
-			font-style italic
-			font-size 22px
-			font-weight normal
-			margin-bottom 10px
-		.job
-			clear both
-			margin-bottom 20px
-			aside
-				width 200px
-				float left
-		h3
-			font-weight 600
-		.class
-			width 25%
-			float left
-		.award
-			width 50%
-			float left
-		.publication
-			width 24%
-			float left
-		.presentation
-			width 33%
-			float left
-			margin-bottom 20px
-		&.presentations
-			margin-bottom 10px
-
-#code
-	ul
-		list-style none
-		li
-			display inline-block
-			width 50%
-			min-width 200px
-			padding 20px 30px
-			box-sizing border-box
-			vertical-align top
-			a
-				color #4987D5
-				text-decoration none
-				font-weight 400
-				font-size 22px
-				&:hover
-					text-decoration underline
-	header
-		margin-bottom 5px
-	.description
-		margin-bottom 5px
-	.updated
-		font-size 12px
+				font-weight normal
 .site > footer
-	height footer-height
+	height footer-height * 2
 	position absolute
 	bottom 0
 	width 100%
 	background #333
 	text-align center
-	font-size 11px
+	font-size 15px
 	color #999
 	box-sizing border-box
-	padding-top 10px
+	padding-top 15px
+	font-weight normal
+	span
+		display block
 	a
 		color #4987D5
 		text-decoration none
-		font-size 10px
 		&:hover
 			text-decoration underline
-
-#speak
-	.session
-		margin-bottom 30px
-		width 100%
-		aside
-			width 30%
-			display inline-block
-			box-sizing border-box
-			padding-right 25px
-			vertical-align top
-		article
-			display inline-block
-			width 69%
-			vertical-align top
-		header
-			margin-bottom 10px
+#content
+	max-width 600px
+	width 100%
+	margin 0 auto
+	font-size 18px
+	& > section
+		padding 30px 20px
+		box-sizing border-box
 		h2
-			font-size 22px
+			font-size 40px
+			font-weight 200
+			font-style italic
+#designs
+		ul
+			list-style none
+			text-align center
+		li
+			display inline-block
+			margin 20px
+			box-shadow 0 0 2px rgba(0,0,0,0.8)
+			height 158px
+			a
+				display block
+				position relative
+				color #333
+				text-align left
+				.details
+					display none
+					position absolute
+					width 100%
+					height 100%
+					top 0
+					left 0
+					background rgba(255,255,255,0.8)
+				h3
+					font-weight 400
+					position absolute
+					bottom 0
+					left 0
+					padding 20px
+					font-size 36px
+				&:hover .details
+					display block
+		img
+			border none
 		footer
-			margin-top 30px
+			padding-top 20px
+			text-align center
+
+@media only screen and (min-width: 780px)
+	.site
+		padding-bottom footer-height
+	.clear
+		clear both
+	h1, h2
+		font-weight 400
+
+	header.main
+		text-align right
+		margin 0 auto
+		padding 55px 0 0
+		text-align center
+		h1
+			float left
+			padding-top 5px
+			font-weight 200
+		nav
+			float right
+			padding-top 5px
+			li
+				margin 0 0 0 30px
+				margin-left 30px
+				a
+					text-decoration none
+					color #333
+					font-weight 200
+					&:hover
+						border-bottom 1px solid #4987D5
+					&.selected
+						color #4987D5
+	#content
+		clear both
+		max-width 760px
+		width 100%
+		min-height 400px
+		font-size 18px
+		& > section
+			padding 100px 0
+			h2
+				font-size 60px
+				font-weight 200
+				font-style italic
+	#design
+		padding-left 222px
+		position relative
+		aside
+			position absolute
+			left 0
+			top 100px
+		header, & .description
+			margin-bottom 20px
+		ul.gallery
+			list-style none
+			li
+				display inline-block
+				a
+					margin 5px
+					display block
+					width 100px
+					height 100px
+					background-size cover
+					background-position center
+					box-shadow 0 0 2px rgba(0,0,0,0.8)
+					transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out;
+					-moz-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out; /* Firefox 4 */
+					-webkit-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out; /* Safari and Chrome */
+					-o-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out; /* Opera */
+					&:hover
+						width 110px
+						height 110px
+						margin 0
+	#resume
+		padding-top 100px
+		& > section
+			margin-bottom 30px
+			h2
+				font-style italic
+				font-size 22px
+				font-weight normal
+				margin-bottom 10px
+			.job
+				clear both
+				margin-bottom 20px
+				aside
+					width 200px
+					float left
+			h3
+				font-weight 600
+			.class
+				width 25%
+				float left
+			.award
+				width 50%
+				float left
+			.publication
+				width 24%
+				float left
+			.presentation
+				width 33%
+				float left
+				margin-bottom 20px
+			&.presentations
+				margin-bottom 10px
+
+	#code
+		ul
+			list-style none
+			li
+				display inline-block
+				width 50%
+				min-width 200px
+				padding 20px 30px
+				box-sizing border-box
+				vertical-align top
+				a
+					color #4987D5
+					text-decoration none
+					font-weight 400
+					font-size 22px
+					&:hover
+						text-decoration underline
+		header
+			margin-bottom 5px
+		.description
+			margin-bottom 5px
+		.updated
+			font-size 12px
+	.site > footer
+		height footer-height
+		font-size 11px
+		padding-top 10px
+		span
+			display inline
+	#speak
+		.session
+			margin-bottom 30px
+			width 100%
+			aside
+				width 30%
+				display inline-block
+				box-sizing border-box
+				padding-right 25px
+				vertical-align top
+			article
+				display inline-block
+				width 69%
+				vertical-align top
+			header
+				margin-bottom 10px
+			h2
+				font-size 22px
+			footer
+				margin-top 30px

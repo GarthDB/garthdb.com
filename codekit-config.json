@@ -68,16 +68,17 @@
       "outputAbbreviatedPath" : "\/node_modules\/grunt\/lib\/grunt-ck.js",
       "fileType" : 64
     },
-    "\/node_modules\/grunt\/node_modules\/lodash\/vendor\/tar\/lib\/buffer-entry.js" : {
+    "\/js\/collections\/user.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/node_modules\/grunt\/node_modules\/lodash\/vendor\/tar\/lib\/buffer-entry.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/node_modules\/grunt\/node_modules\/lodash\/vendor\/tar\/lib\/buffer-entry-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/js\/collections\/user.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/collections\/user.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     },
     "\/node_modules\/grunt-contrib-jade\/node_modules\/grunt-lib-contrib\/lib\/contrib.js" : {
       "ignoreWasSetByUser" : 0,
@@ -90,15 +91,15 @@
       "outputAbbreviatedPath" : "\/node_modules\/grunt-contrib-jade\/node_modules\/grunt-lib-contrib\/lib\/contrib-ck.js",
       "fileType" : 64
     },
-    "\/node_modules\/grunt-regarde\/node_modules\/gaze\/test\/watch_test.js" : {
+    "\/js\/libs\/underscore.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/node_modules\/grunt-regarde\/node_modules\/gaze\/test\/watch_test.js",
+      "inputAbbreviatedPath" : "\/js\/libs\/underscore.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/node_modules\/grunt-regarde\/node_modules\/gaze\/test\/watch_test-ck.js",
+      "outputAbbreviatedPath" : "\/js\/libs\/underscore-ck.js",
       "fileType" : 64
     },
     "\/node_modules\/grunt\/node_modules\/glob\/test\/zz-cleanup.js" : {
@@ -123,7 +124,18 @@
       "outputAbbreviatedPath" : "\/node_modules\/grunt\/node_modules\/findup-sync\/node_modules\/lodash\/build-ck.js",
       "fileType" : 64
     },
-    "\/node_modules\/grunt-contrib-stylus\/node_modules\/stylus\/lib\/nodes\/if.js" : {
+    "\/js\/backbone.analytics.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/backbone.analytics.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/backbone.analytics-ck.js",
+      "fileType" : 64
+    },
+    "\/css\/main.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
@@ -134,18 +146,7 @@
       "outputAbbreviatedPath" : "\/node_modules\/grunt-contrib-stylus\/node_modules\/stylus\/lib\/nodes\/if-ck.js",
       "fileType" : 64
     },
-    "\/node_modules\/grunt-contrib-connect\/node_modules\/connect\/node_modules\/formidable\/node-gently\/test\/simple\/test-gently.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/node_modules\/grunt-contrib-connect\/node_modules\/connect\/node_modules\/formidable\/node-gently\/test\/simple\/test-gently.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/node_modules\/grunt-contrib-connect\/node_modules\/connect\/node_modules\/formidable\/node-gently\/test\/simple\/test-gently-ck.js",
-      "fileType" : 64
-    },
-    "\/js\/views\/speak.js" : {
+    "\/js\/collections\/project.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
