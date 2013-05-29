@@ -1,7 +1,7 @@
 {
   "name": "GarthDB",
-  "version": "0.1.0",
-  "description": "New DocPad project without using a skeleton",
+  "version": "0.5.0",
+  "description": "Personal Website for Garth Braithwaite",
   "engines": {
     "node": "0.10",
     "npm": "1.2"
