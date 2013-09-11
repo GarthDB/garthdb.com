@@ -1,6 +1,6 @@
 {
   "name": "GarthDB",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "New DocPad project without using a skeleton",
   "engines": {
     "node": "0.10",
