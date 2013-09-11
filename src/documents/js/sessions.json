@@ -2,6 +2,29 @@
     "sessions": [
         {
             "id":1,
+            "title":"Designers Can Open Source",
+            "date":"2013-09-07T10:30:00-0800",
+            "description":"This session covers a few topics in relation to open source design, including: Open source licenses, Benefits of open sourcing design work, How to open source work, How to contribute design to open source projects, How to make friends with other designers.<br> This topic is aimed at designers and covers some development practices will be discussed.",
+            "tags": [
+                "Open Source",
+                "Design",
+                "HTML/CSS"
+            ],
+            "speakerdeck": {
+                "id":"cc97bfb0fd45013028412ea85c7f8b0b",
+                "ratio":"1.29456384323641"
+                },
+            "sessionurl":"http://mobilewebdevconference.com/san-francisco-2013/agenda/day-three/mobile-web-web-development/1030-1115.html",
+            "conference": {
+                "title": "Blend Conf",
+                "url": "http://www.blendconf.com/speakers/garth-braithwaite/",
+                "startdate": "2013-09-05",
+                "enddate": "2013-09-07",
+                "location": "Charlotte, NC"
+            }
+        },
+        {
+            "id":2,
             "title":"Retina Ready",
             "date":"2013-01-31T10:30:00-0800",
             "description":"HiDPI displays are coming to the desktop, and the majority of the web is not ready. In this session we'll look at the importance of being retina ready and we'll compare different methods for leveraging HiDPI and DPI agnostic assets.",
@@ -25,7 +48,7 @@
             }
         },
         {
-            "id":2,
+            "id":3,
             "title":"Rapid HTML Prototypes",
             "date":"2012-11-08T10:30:00-0800",
             "description":"Experience design is hard. Design compositions are inconsistent with the final rendered product and interactions are complicated to communicate. As the experience design lead on Brackets, an open-source code editor created by Adobe, we’ve incorporated html prototypes to overcome these workflow gaps; in this session we will cover the pros and cons of this workflow, how it works in an iterative process (AGILED!), and the tools that we use to ease the pain.",
@@ -49,7 +72,7 @@
             }
         },
         {
-            "id":3,
+            "id":4,
             "title":"Adobe? Open Source?",
             "date":"2012-09-05T10:30:00-0800",
             "description":"<p>Adobe recently released Brackets, an open sourced, code editor for the web, written in HTML/CSS/JS.</p><p>As the User Experience Designer on the project, Garth has leveraged rapid HTML prototypes to help nail down interaction and visual design.</p><p>In this session, Garth will discuss the benefits of the workflow, how to use it in an iterative process, and what tools can be used to ease the web development pains.</p>",
