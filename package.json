@@ -10,7 +10,8 @@
     "express": "3.4.7",
     "jade": "*",
     "stylus": "*",
-    "coffee-script": "*"
+    "coffee-script": "*",
+    "request": "~2.30.0"
   },
   "devDependencies": {
     "coffee-script": "~1.6.3"

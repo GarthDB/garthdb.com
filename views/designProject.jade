@@ -1,0 +1,8 @@
+aside
+  img(src="#{project.covers.404}", alt="#{name}", width="202", height="158")
+header
+  h2=project.name
+.description=project.description
+ul.gallery
+  each img in .project.imgs
+    li: a.fancybox(href=img.src, rel="group", style="background-image: url(#{img.src});", data-fancybox-title=project.caption)

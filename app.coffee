@@ -1,6 +1,6 @@
 express = require("express")
 routes = require("./routes")
-user = require("./routes/user")
+design = require("./routes/design")
 http = require("http")
 path = require("path")
 app = express()
@@ -21,6 +21,7 @@ app.use express.static(path.join(__dirname, "public"))
 # development only
 app.use express.errorHandler()  if "development" is app.get("env")
 app.get "/", routes.index
-app.get "/users", user.list
+app.get "/design/:name/:id", design.project
+app.get "/design", design.list
 http.createServer(app).listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")
