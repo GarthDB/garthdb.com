@@ -1,16 +1,18 @@
 {
   "name": "GarthDB",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Personal Website for Garth Braithwaite",
-  "engines": {
-    "node": "0.10",
-    "npm": "1.2"
+  "private": true,
+  "scripts": {
+    "start": "coffee app.coffee"
   },
   "dependencies": {
-    "docpad": "6.x",
-    "docpad-plugin-coffeescript": "~2.2.1",
-    "docpad-plugin-jade": "~2.3.1",
-    "docpad-plugin-stylus": "~2.3.0"
+    "express": "3.4.7",
+    "jade": "*",
+    "stylus": "*",
+    "coffee-script": "*"
   },
-  "main": "node_modules/docpad/bin/docpad-server"
+  "devDependencies": {
+    "coffee-script": "~1.6.3"
+  }
 }
