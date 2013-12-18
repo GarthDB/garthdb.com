@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  section#code
+    ul
+      each repo in repos
+        li
+          header: a(href=repo.html_url)=repo.name
+          .description=repo.description
+          .updated last updated #{repo.updated_at_ago}

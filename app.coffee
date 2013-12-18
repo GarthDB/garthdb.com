@@ -1,6 +1,8 @@
 express = require("express")
 routes = require("./routes")
 design = require("./routes/design")
+code = require("./routes/code")
+speak = require("./routes/speak")
 http = require("http")
 path = require("path")
 app = express()
@@ -23,5 +25,7 @@ app.use express.errorHandler()  if "development" is app.get("env")
 app.get "/", routes.index
 app.get "/design/:name/:id", design.project
 app.get "/design", design.list
+app.get "/code", code.list
+app.get "/speak", speak.list
 http.createServer(app).listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")

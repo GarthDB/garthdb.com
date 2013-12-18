@@ -28,9 +28,9 @@ exports.project = (req, res) ->
   request options, (error, response, body) ->
     if (!error && response.statusCode == 200)
       project = JSON.parse(body).project
+      project.imgs = []
       for module in project.modules
         if module.type = "image"
           project.imgs.push(module)
       res.render "designProject", 
         project: project
-  # res.send req.params.name
