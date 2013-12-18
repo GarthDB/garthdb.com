@@ -1,10 +1,11 @@
 extends layout
 
 block content
-	section#designs
-		ul
-			each project in projects
-				li: .details
-					h3=project.name
-					a(href='/design/#{project.slug}/#{project.id}')
-						img(src=project.imgURL, width='202', height='158', alt=project.caption)
+  section#designs
+    ul
+      each project in projects
+        li
+          a(href='/design/#{project.slug}/#{project.id}')
+            img(src=project.imgURL, width='202', height='158', alt=project.caption)
+            .details
+              h3=project.name
