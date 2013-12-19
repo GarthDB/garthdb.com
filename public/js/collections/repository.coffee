@@ -1,7 +1,7 @@
 define ['backbone', 'models/repository', 'timeago'], (Backbone, RepositoryModel, TimeAgo) ->
 	RepositoryCollection = Backbone.Collection.extend 
 		model: RepositoryModel
-		url: "https://api.github.com/users/garthdb/repos"
+		url: "https://api.github.com/users/garthdb/repos?sort=updated"
 		sync: (method, model, options) ->
 			options.dataType = "jsonp";
 			return Backbone.sync(method, model, options);

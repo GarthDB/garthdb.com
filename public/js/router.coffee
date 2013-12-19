@@ -1,6 +1,7 @@
 define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/designs", "views/design", "views/code", "views/speak", "text!templates/resumeTemplate.html"],
 ($, Mustache, Backbone, HeaderView, HomeView, DesignsView, DesignView, CodeView, SpeakView, ResumeHTML) ->
 	Router = Backbone.Router.extend
+		first: true
 		initialize: () ->
 			Backbone.history.start({pushState: true})
 			headerView = new HeaderView
@@ -26,50 +27,68 @@ define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
 			"*actions": "defaultAction"
 		defaultTitle: "Garth Braithwaite"
 		defaultAction: () ->
-			$('header.main').find('a').removeClass('selected')
-			if !@homeView
-				@homeView = new HomeView
-			@homeView.render()
-			$('#content').html(@homeView.el)
-			$('title').html(@defaultTitle)
+			if(@first)
+				@first = false
+			else
+				$('header.main').find('a').removeClass('selected')
+				if !@homeView
+					@homeView = new HomeView
+				@homeView.render()
+				$('#content').html(@homeView.el)
+				$('title').html(@defaultTitle)
 		navDesigns: () ->
 			$('header.main').find('a').removeClass('selected')
 			$('header.main').find("a:contains('design')").addClass('selected')
-			if !@designsView
-				@designsView = new DesignsView
-			@designsView.render()
-			$('#content').html(@designsView.el)
-			$('title').html("#{@defaultTitle} | Design")
+			if(@first)
+				@first = false
+			else
+				if !@designsView
+					@designsView = new DesignsView
+				@designsView.render()
+				$('#content').html(@designsView.el)
+				$('title').html("#{@defaultTitle} | Design")
 		navDesign: (slug, id) ->
 			$('header.main').find('a').removeClass('selected')
 			$('header.main').find("a:contains('design')").addClass('selected')
-			if !@designView or @designView.id isnt id
-				@designView = new DesignView({id:id})
-			@designView.render()
-			$('#content').html(@designView.el)
-			$('title').html("#{@defaultTitle} | Design")
+			if(@first)
+				@first = false
+			else
+				if !@designView or @designView.id isnt id
+					@designView = new DesignView({id:id})
+				@designView.render()
+				$('#content').html(@designView.el)
+				$('title').html("#{@defaultTitle} | Design")
 		navCode: () ->
 			$('header.main').find('a').removeClass('selected')
 			$('header.main').find("a:contains('code')").addClass('selected')
-			if !@codeView
-				@codeView = new CodeView
-			@codeView.render()
-			$('#content').html(@codeView.el)
-			$('title').html("#{@defaultTitle} | Code")
+			if(@first)
+				@first = false
+			else
+				if !@codeView
+					@codeView = new CodeView
+				@codeView.render()
+				$('#content').html(@codeView.el)
+				$('title').html("#{@defaultTitle} | Code")
 		navSpeak: () ->
 			$('header.main').find('a').removeClass('selected')
 			$('header.main').find("a:contains('speak')").addClass('selected')
-			if !@speakView
-				@speakView = new SpeakView
-			$('#content').html(@speakView.el)
-			$('title').html("#{@defaultTitle} | Speak")
+			if(@first)
+				@first = false
+			else
+				if !@speakView
+					@speakView = new SpeakView
+				$('#content').html(@speakView.el)
+				$('title').html("#{@defaultTitle} | Speak")
 		navResume: () ->
 			$('header.main').find('a').removeClass('selected')
 			$('header.main').find("a:contains('resume')").addClass('selected')
-			if !@resumeView
-				@resumeView = Mustache.render(ResumeHTML)
-			$('#content').html(@resumeView)
-			$('title').html("#{@defaultTitle} | Resumé")
+			if(@first)
+				@first = false
+			else
+				if !@resumeView
+					@resumeView = Mustache.render(ResumeHTML)
+				$('#content').html(@resumeView)
+				$('title').html("#{@defaultTitle} | Resumé")
 		navWrite: () ->
 			console.log 'list Write'
 	return Router
