@@ -1,6 +1,6 @@
 {
   "name": "GarthDB",
-  "version": "0.6.0",
+  "version": "0.5.1",
   "description": "Personal Website for Garth Braithwaite",
   "scripts": {
     "start": "coffee app.coffee"
