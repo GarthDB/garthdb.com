@@ -1,8 +1,8 @@
 require.config({
   paths: {
-    "jquery": "libs/jquery-1.9.0.min",
+    "jquery": "libs/zepto.min",
     "underscore": "libs/underscore",
-    "backbone": "libs/backbone",
+    "backbone": "libs/exoskeleton.min",
     "mustache": "libs/mustache",
     "fancybox": "fancybox/jquery.fancybox.pack",
     "timeago": "jquery.timeago",
