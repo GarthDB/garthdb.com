@@ -12,13 +12,10 @@
     "express": "3.4.7",
     "jade": "*",
     "stylus": "*",
-    "coffee-script": "1.1.2",
     "request": "~2.30.0",
     "moment": "~2.4.0",
     "coffee-middleware": "~0.2.1",
-    "connect-coffee-script": "~0.1.6"
-  },
-  "devDependencies": {
-    "coffee-script": "1.1.2"
+    "connect-coffee-script": "~0.1.6",
+    "coffee-script": "~1.6.3"
   }
 }
