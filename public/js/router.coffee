@@ -38,7 +38,7 @@ define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
 				$('title').html(@defaultTitle)
 		navDesigns: () ->
 			$('header.main').find('a').removeClass('selected')
-			$('header.main').find("a:contains('design')").addClass('selected')
+			$('header.main').find("a.designNavItem").addClass('selected')
 			if(@first)
 				@first = false
 			else
@@ -49,7 +49,7 @@ define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
 				$('title').html("#{@defaultTitle} | Design")
 		navDesign: (slug, id) ->
 			$('header.main').find('a').removeClass('selected')
-			$('header.main').find("a:contains('design')").addClass('selected')
+			$('header.main').find("a.designNavItem").addClass('selected')
 			if(@first)
 				@first = false
 			else
@@ -60,7 +60,7 @@ define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
 				$('title').html("#{@defaultTitle} | Design")
 		navCode: () ->
 			$('header.main').find('a').removeClass('selected')
-			$('header.main').find("a:contains('code')").addClass('selected')
+			$('header.main').find("a.codeNavItem").addClass('selected')
 			if(@first)
 				@first = false
 			else
@@ -71,7 +71,7 @@ define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
 				$('title').html("#{@defaultTitle} | Code")
 		navSpeak: () ->
 			$('header.main').find('a').removeClass('selected')
-			$('header.main').find("a:contains('speak')").addClass('selected')
+			$('header.main').find("a.speakNavItem").addClass('selected')
 			if(@first)
 				@first = false
 			else
@@ -81,7 +81,7 @@ define ["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
 				$('title').html("#{@defaultTitle} | Speak")
 		navResume: () ->
 			$('header.main').find('a').removeClass('selected')
-			$('header.main').find("a:contains('resume')").addClass('selected')
+			$('header.main').find("a.resumeNavItem").addClass('selected')
 			if(@first)
 				@first = false
 			else

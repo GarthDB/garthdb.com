@@ -4,8 +4,8 @@ require.config({
     "underscore": "libs/underscore",
     "backbone": "libs/exoskeleton.min",
     "mustache": "libs/mustache",
-    "fancybox": "fancybox/jquery.fancybox.pack",
-    "timeago": "jquery.timeago",
+    "magnific": "magnific/magnific.min",
+    "moment": "libs/moment.min",
     "backbone_analytics": "backbone.analytics"
   },
   shim: {
@@ -23,13 +23,13 @@ require.config({
     "mustache": {
       "exports": "Mustache"
     },
-    "fancybox": {
+    "magnific": {
       "deps": ["jquery"],
-      "exports": "fancybox"
+      "exports": "magnific"
     },
-    "timeago": {
+    "moment": {
       "deps": ["jquery"],
-      "exports": "timeago"
+      "exports": "moment"
     },
     "backbone_analytics": {
       "deps": ["backbone"],

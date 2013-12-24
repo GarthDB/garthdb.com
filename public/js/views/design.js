@@ -1,4 +1,4 @@
-define(['backbone', 'mustache', 'collections/project', 'fancybox', 'text!templates/designTemplate.html'], function(Backbone, Mustache, ProjectCollection, Fancybox, DesignTemplate) {
+define(['backbone', 'collections/project', 'magnific'], function(Backbone, ProjectCollection, Magnific) {
   var View;
   return View = Backbone.View.extend({
     el: $('<section id="design"/>'),
@@ -16,9 +16,10 @@ define(['backbone', 'mustache', 'collections/project', 'fancybox', 'text!templat
       });
     },
     render: function() {
-      var model, module, _i, _j, _len, _len1, _ref, _ref1;
+      var elHTML, image, model, module, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _results;
       $(this.el).html('');
       _ref = this.collection.models;
+      _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         model = _ref[_i];
         model.attributes.imgs = [];
@@ -29,9 +30,38 @@ define(['backbone', 'mustache', 'collections/project', 'fancybox', 'text!templat
             model.attributes.imgs.push(module);
           }
         }
-        $(this.el).html(Mustache.render(DesignTemplate, model.attributes));
+        elHTML = "          <aside>            <img src='" + model.attributes.covers['404'] + "' alt='" + model.attributes.name + "' width='202' height='158'/>          </aside>          <header>            <h2>" + model.attributes.name + "</h2>          </header>          <div class='description'>" + model.attributes.description + "</div>          <ul class='gallery'>";
+        _ref2 = model.attributes.imgs;
+        for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+          image = _ref2[_k];
+          elHTML += "<li><a href='" + image.src + "' style='background-image: url(" + image.src + ");' ";
+          if (image.caption) {
+            elHTML += "title='" + image.caption + "'";
+          }
+          elHTML += "></a></li>";
+        }
+        elHTML += "</ul>";
+        $(this.el)[0].innerHTML = elHTML;
+        console.log($('.gallery a'));
+        _results.push($('.gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          tLoading: 'Loading image #%curr%...',
+          mainClass: 'mfp-img-mobile',
+          gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1]
+          },
+          image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+              return item.el.attr('title') + "<div><a href=" + item.el.attr('href') + ">view full size</a></div>";
+            }
+          }
+        }));
       }
-      return $(this.el).find('a.fancybox').fancybox();
+      return _results;
     }
   });
 });
