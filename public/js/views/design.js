@@ -1,4 +1,4 @@
-define(['backbone', 'collections/project', 'magnific'], function(Backbone, ProjectCollection, Magnific) {
+define(['backbone', 'mustache', 'collections/project', 'magnific', 'text!templates/designTemplate.html'], function(Backbone, Mustache, ProjectCollection, Magnific, DesignTemplate) {
   var View;
   return View = Backbone.View.extend({
     el: $('<section id="design"/>'),
@@ -16,7 +16,7 @@ define(['backbone', 'collections/project', 'magnific'], function(Backbone, Proje
       });
     },
     render: function() {
-      var elHTML, image, model, module, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _results;
+      var model, module, _i, _j, _len, _len1, _ref, _ref1, _results;
       $(this.el).html('');
       _ref = this.collection.models;
       _results = [];
@@ -30,19 +30,7 @@ define(['backbone', 'collections/project', 'magnific'], function(Backbone, Proje
             model.attributes.imgs.push(module);
           }
         }
-        elHTML = "          <aside>            <img src='" + model.attributes.covers['404'] + "' alt='" + model.attributes.name + "' width='202' height='158'/>          </aside>          <header>            <h2>" + model.attributes.name + "</h2>          </header>          <div class='description'>" + model.attributes.description + "</div>          <ul class='gallery'>";
-        _ref2 = model.attributes.imgs;
-        for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-          image = _ref2[_k];
-          elHTML += "<li><a href='" + image.src + "' style='background-image: url(" + image.src + ");' ";
-          if (image.caption) {
-            elHTML += "title='" + image.caption + "'";
-          }
-          elHTML += "></a></li>";
-        }
-        elHTML += "</ul>";
-        $(this.el)[0].innerHTML = elHTML;
-        console.log($('.gallery a'));
+        $(this.el).html(Mustache.render(DesignTemplate, model.attributes));
         _results.push($('.gallery').magnificPopup({
           delegate: 'a',
           type: 'image',
