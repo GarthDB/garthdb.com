@@ -1,4 +1,4 @@
-define ['backbone', 'mustache', 'collections/session', 'text!templates/sessionTemplate.html', 'timeago'], (Backbone, Mustache, SessionCollection, SessionTemplate, TimeAgo) ->
+define ['backbone', 'mustache', 'collections/session', 'text!templates/sessionTemplate.html', 'moment'], (Backbone, Mustache, SessionCollection, SessionTemplate, Moment) ->
 	View = Backbone.View.extend
 		el: $('<section id="speak"/>')
 		initialize: ->
@@ -13,7 +13,7 @@ define ['backbone', 'mustache', 'collections/session', 'text!templates/sessionTe
 				bDate = new Date(b.attributes.date)
 				return bDate - aDate
 			for model in @collection.models
-				$.timeago.settings.allowFuture = true
-				model.attributes.date_ago = $.timeago(model.attributes.date)
+				# $.timeago.settings.allowFuture = true
+				model.attributes.date_ago = moment(model.attributes.date).fromNow()
 				model.attributes.tagger = model.attributes.tags.join(", ")
 				$(@el).append(Mustache.render(SessionTemplate, model.attributes))

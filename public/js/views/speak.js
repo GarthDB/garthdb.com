@@ -1,4 +1,4 @@
-define(['backbone', 'mustache', 'collections/session', 'text!templates/sessionTemplate.html', 'timeago'], function(Backbone, Mustache, SessionCollection, SessionTemplate, TimeAgo) {
+define(['backbone', 'mustache', 'collections/session', 'text!templates/sessionTemplate.html', 'moment'], function(Backbone, Mustache, SessionCollection, SessionTemplate, Moment) {
   var View;
   return View = Backbone.View.extend({
     el: $('<section id="speak"/>'),
@@ -23,8 +23,7 @@ define(['backbone', 'mustache', 'collections/session', 'text!templates/sessionTe
       _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         model = _ref[_i];
-        $.timeago.settings.allowFuture = true;
-        model.attributes.date_ago = $.timeago(model.attributes.date);
+        model.attributes.date_ago = moment(model.attributes.date).fromNow();
         model.attributes.tagger = model.attributes.tags.join(", ");
         _results.push($(this.el).append(Mustache.render(SessionTemplate, model.attributes)));
       }

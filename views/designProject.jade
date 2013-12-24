@@ -9,4 +9,4 @@ block content
     .description=project.description
     ul.gallery
       each img in project.imgs
-        li: a.fancybox(href=img.src, rel="group", style="background-image: url(#{img.src});", data-fancybox-title=project.caption)
+        li: a(href=img.src, style="background-image: url(#{img.src});", title=project.caption, onclick="return false;")

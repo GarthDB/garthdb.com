@@ -1,4 +1,4 @@
-define ['backbone', 'models/repository', 'timeago'], (Backbone, RepositoryModel, TimeAgo) ->
+define ['backbone', 'models/repository', 'moment'], (Backbone, RepositoryModel, Moment) ->
 	RepositoryCollection = Backbone.Collection.extend 
 		model: RepositoryModel
 		url: "https://api.github.com/users/garthdb/repos?sort=updated"
@@ -7,6 +7,6 @@ define ['backbone', 'models/repository', 'timeago'], (Backbone, RepositoryModel,
 			return Backbone.sync(method, model, options);
 		parse: (response) ->
 			for repo in response.data
-				repo.updated_at_ago = $.timeago(repo.updated_at)
+				repo.updated_at_ago = moment(repo.updated_at).fromNow()
 			return response.data
 	return RepositoryCollection

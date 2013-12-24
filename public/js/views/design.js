@@ -1,4 +1,4 @@
-define(['backbone', 'mustache', 'collections/project', 'fancybox', 'text!templates/designTemplate.html'], function(Backbone, Mustache, ProjectCollection, Fancybox, DesignTemplate) {
+define(['backbone', 'mustache', 'collections/project', 'magnific', 'text!templates/designTemplate.html'], function(Backbone, Mustache, ProjectCollection, Magnific, DesignTemplate) {
   var View;
   return View = Backbone.View.extend({
     el: $('<section id="design"/>'),
@@ -16,9 +16,10 @@ define(['backbone', 'mustache', 'collections/project', 'fancybox', 'text!templat
       });
     },
     render: function() {
-      var model, module, _i, _j, _len, _len1, _ref, _ref1;
+      var model, module, _i, _j, _len, _len1, _ref, _ref1, _results;
       $(this.el).html('');
       _ref = this.collection.models;
+      _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         model = _ref[_i];
         model.attributes.imgs = [];
@@ -30,8 +31,25 @@ define(['backbone', 'mustache', 'collections/project', 'fancybox', 'text!templat
           }
         }
         $(this.el).html(Mustache.render(DesignTemplate, model.attributes));
+        _results.push($('.gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          tLoading: 'Loading image #%curr%...',
+          mainClass: 'mfp-img-mobile',
+          gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1]
+          },
+          image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+              return item.el.attr('title') + "<div><a href=" + item.el.attr('href') + ">view full size</a></div>";
+            }
+          }
+        }));
       }
-      return $(this.el).find('a.fancybox').fancybox();
+      return _results;
     }
   });
 });

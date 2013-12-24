@@ -50,7 +50,7 @@ define(["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
     },
     navDesigns: function() {
       $('header.main').find('a').removeClass('selected');
-      $('header.main').find("a:contains('design')").addClass('selected');
+      $('header.main').find("a.designNavItem").addClass('selected');
       if (this.first) {
         return this.first = false;
       } else {
@@ -64,7 +64,7 @@ define(["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
     },
     navDesign: function(slug, id) {
       $('header.main').find('a').removeClass('selected');
-      $('header.main').find("a:contains('design')").addClass('selected');
+      $('header.main').find("a.designNavItem").addClass('selected');
       if (this.first) {
         return this.first = false;
       } else {
@@ -80,7 +80,7 @@ define(["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
     },
     navCode: function() {
       $('header.main').find('a').removeClass('selected');
-      $('header.main').find("a:contains('code')").addClass('selected');
+      $('header.main').find("a.codeNavItem").addClass('selected');
       if (this.first) {
         return this.first = false;
       } else {
@@ -94,7 +94,7 @@ define(["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
     },
     navSpeak: function() {
       $('header.main').find('a').removeClass('selected');
-      $('header.main').find("a:contains('speak')").addClass('selected');
+      $('header.main').find("a.speakNavItem").addClass('selected');
       if (this.first) {
         return this.first = false;
       } else {
@@ -107,7 +107,7 @@ define(["jquery", 'mustache', "backbone", "views/header", "views/home", "views/d
     },
     navResume: function() {
       $('header.main').find('a').removeClass('selected');
-      $('header.main').find("a:contains('resume')").addClass('selected');
+      $('header.main').find("a.resumeNavItem").addClass('selected');
       if (this.first) {
         return this.first = false;
       } else {

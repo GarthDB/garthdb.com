@@ -1,4 +1,4 @@
-define(['backbone', 'models/repository', 'timeago'], function(Backbone, RepositoryModel, TimeAgo) {
+define(['backbone', 'models/repository', 'moment'], function(Backbone, RepositoryModel, Moment) {
   var RepositoryCollection;
   RepositoryCollection = Backbone.Collection.extend({
     model: RepositoryModel,
@@ -12,7 +12,7 @@ define(['backbone', 'models/repository', 'timeago'], function(Backbone, Reposito
       _ref = response.data;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         repo = _ref[_i];
-        repo.updated_at_ago = $.timeago(repo.updated_at);
+        repo.updated_at_ago = moment(repo.updated_at).fromNow();
       }
       return response.data;
     }
