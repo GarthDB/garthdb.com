@@ -8,7 +8,6 @@ HeaderView = Backbone.View.extend
   initialize: ->
     @render()
   navigate: (event) ->
-    console.log 'click nav a'
     nav = $(event.target).html().toLowerCase()
     Backbone.history.navigate nav, true
     return false
