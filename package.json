@@ -2,6 +2,7 @@
   "name": "GarthDB",
   "version": "0.6.0",
   "description": "Personal Website for Garth Braithwaite",
+  "main": "./app.coffee",
   "scripts": {
     "start": "coffee app.coffee"
   },
@@ -16,6 +17,13 @@
     "moment": "~2.4.0",
     "coffee-middleware": "~0.2.1",
     "connect-coffee-script": "~0.1.6",
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.6.3",
+    "exoskeleton": "~0.6.3",
+    "underscore": "~1.5.2",
+    "stringify": "~1.0.0",
+    "coffeeify": "~0.5.2",
+    "handlebars": "~1.0.12",
+    "hbsfy": "~1.0.0",
+    "browserify": "~3.14.1"
   }
 }

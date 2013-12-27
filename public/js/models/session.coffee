@@ -1,5 +1,7 @@
-define ['backbone'], (Backbone) ->
-	SessionModel = Backbone.Model.extend
-		defaults: {
-    	}
-	return SessionModel
+Backbone = require('../libs/exoskeleton.js')
+
+SessionModel = Backbone.Model.extend
+  defaults: {
+  }
+
+module.exports = SessionModel
