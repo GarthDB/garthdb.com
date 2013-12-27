@@ -12,7 +12,7 @@ View = Backbone.View.extend
     $(linkEl).append(detailsEl)
     $(@el).html(linkEl)
     $(linkEl).click (event)->
-      router.navigate $(event.currentTarget).attr('href'), true
+      Backbone.history.navigate $(event.currentTarget).attr('href'), true
       return false
 
 module.exports = View
