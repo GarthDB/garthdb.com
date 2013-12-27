@@ -1,5 +1,7 @@
-define ['backbone'], (Backbone) ->
-	ProjectModel = Backbone.Model.extend
-		defaults: {
-    	}
-	return ProjectModel
+Backbone = require('../libs/exoskeleton.js')
+	
+ProjectModel = Backbone.Model.extend
+	defaults: {
+	}
+
+module.exports = ProjectModel

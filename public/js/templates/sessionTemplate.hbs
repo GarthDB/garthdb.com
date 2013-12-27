@@ -1,18 +1,17 @@
 <section class="session">
-	{{#speakerdeck}}
+	{{#if speakerdeck}}
 	<aside class="speakerdeck">
-		<script async class="speakerdeck-embed" data-id="{{id}}" data-ratio="{{ratio}}" src="//speakerdeck.com/assets/embed.js"></script>
+		<script async class="speakerdeck-embed" data-id="{{speakerdeck.id}}" data-ratio="{{speakerdeck.ratio}}" src="//speakerdeck.com/assets/embed.js"></script>
 	</aside>
-	{{/speakerdeck}}
-	{{^speakerdeck}}
+	{{else}}
 	<aside class="image">
 		<img src="{{imgurl}}" style="width: 100%; height: auto;" alt="image"/>
 	</aside>
-	{{/speakerdeck}}
+	{{/if}}
 	<article>
 		<header>
-			{{#sessionurl}}<h2><a href="{{sessionurl}}">{{title}}</a></h2>{{/sessionurl}}
-			{{^sessionurl}}<h2><a href="{{lanyrdurl}}">{{title}}</a></h2>{{/sessionurl}}
+			{{#if sessionurl}}<h2><a href="{{sessionurl}}">{{title}}</a></h2>
+			{{else}}<h2><a href="{{lanyrdurl}}">{{title}}</a></h2>{{/if}}
 			{{#conference}}
 			<div>Presented {{date_ago}} at <a href="{{conference.url}}">{{conference.title}}</a></div>
 			{{/conference}}

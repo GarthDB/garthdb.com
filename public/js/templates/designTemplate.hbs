@@ -1,5 +1,5 @@
 <aside>
-	<img src="{{ & covers.404}}" alt="{{name}}" width="202" height="158"/>
+	<img src="{{{covers.[404]}}}" alt="{{name}}" width="202" height="158"/>
 </aside>
 <header>
 	<h2>{{name}}</h2>
@@ -7,7 +7,7 @@
 <div class="description">{{description}}</div>
 <ul class="gallery">
 	{{#imgs}}
-		<li><a href="{{ & src }}" style="background-image: url({{ & src }});" 
+		<li><a href="{{{src}}}" style="background-image: url({{{ src }}});" 
 		{{#caption}}
 			title="{{caption}}"
 		{{/caption}}

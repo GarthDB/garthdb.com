@@ -1,5 +1,7 @@
-define ['backbone'], (Backbone) ->
-	UserModel = Backbone.Model.extend
-		defaults: {
-    	}
-	return UserModel
+Backbone = require('../libs/exoskeleton.js')
+
+UserModel = Backbone.Model.extend
+	defaults: {
+	}
+
+module.exports = UserModel
