@@ -10,7 +10,13 @@ html
     link(rel = 'stylesheet', type = 'text/css', href = '/css/reset.css')
     link(rel = 'stylesheet', type = 'text/css', href = '/css/main.css')
     link(rel = 'stylesheet', type = 'text/css', href = '/js/libs/magnific/magnific.css')
-    script(src="/js/app.build.js")
+    
+    | <script>
+
+    include ../public/js/app.build.js
+
+    | </script>
+    
     //if lt IE 9
       script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
     script(type="text/javascript").
