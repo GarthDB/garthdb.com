@@ -14,6 +14,9 @@
                 "id":"cc97bfb0fd45013028412ea85c7f8b0b",
                 "ratio":"1.29456384323641"
                 },
+            "haikudeck": {
+                "id": "4qyIbbJVyx"
+                },
             "sessionurl":"http://www.blendconf.com/speakers/garth-braithwaite/",
             "conference": {
                 "title": "Blend Conf",
@@ -36,6 +39,9 @@
             "speakerdeck": {
                 "id":"147938004dbf01305d8612313d17fe34",
                 "ratio":"1.33333333333333"
+                },
+            "haikudeck": {
+                "id": "64HO7Oj8x9"
                 },
             "lanyrdurl": "http://lanyrd.com/2013/mwdcon-sanfrancisco/",
             "sessionurl":"http://mobilewebdevconference.com/san-francisco-2013/agenda/day-three/mobile-web-web-development/1030-1115.html",
@@ -60,6 +66,9 @@
             "speakerdeck": {
                 "id":"d2a270100ca70130c43112313940cc16",
                 "ratio":"1.33333333333333"
+                },
+            "haikudeck":{
+                "id":"hlP2yb1G5M"
                 },
             "lanyrdurl": "http://lanyrd.com/2012/webu/",
             "sessionurl":"http://fitc.ca/presentation/rapid-html-prototypes/",

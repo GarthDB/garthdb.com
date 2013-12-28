@@ -1,6 +1,6 @@
 Backbone = require('../libs/exoskeleton.js')
 SessionCollection = require('../collections/session')
-SessionTemplate = require('../templates/sessionTemplate.hbs')
+SessionTemplate = require('../../../views/partials/session.jade')
 Moment = require('moment')
 
 View = Backbone.View.extend
@@ -19,6 +19,6 @@ View = Backbone.View.extend
     for model in @collection.models
       model.attributes.date_ago = moment(model.attributes.date).fromNow()
       model.attributes.tagger = model.attributes.tags.join(", ")
-      $(@el).append(SessionTemplate(model.attributes))
+      $(@el).append(SessionTemplate({session: model.attributes}))
 
 module.exports = View
