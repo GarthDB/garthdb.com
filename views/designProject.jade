@@ -2,11 +2,4 @@ extends layout
 
 block content
   section#design
-    aside
-      img(src=project.covers['404'], alt="#{name}", width="202", height="158")
-    header
-      h2=project.name
-    .description=project.description
-    ul.gallery
-      each img in project.imgs
-        li: a(href=img.src, style="background-image: url(#{img.src});", title=project.caption, onclick="return false;")
+    include partials/design

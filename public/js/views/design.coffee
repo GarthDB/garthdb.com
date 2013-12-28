@@ -1,7 +1,7 @@
 Backbone = require('../libs/exoskeleton.js')
 ProjectCollection = require('../collections/project')
 Magnific = require('../libs/magnific/magnific.min.js')
-DesignTemplate = require('../templates/designTemplate.hbs')
+DesignTemplate = require('../../../views/partials/design.jade') 
 
 View = Backbone.View.extend
   el: $('<section id="design"/>')
@@ -20,7 +20,7 @@ View = Backbone.View.extend
       for module in model.attributes.modules
         if module.type = "image"
           model.attributes.imgs.push(module)
-      $(@el).html DesignTemplate(model.attributes)
+      $(@el).html DesignTemplate({project: model.attributes})
       $('.gallery').magnificPopup
         delegate: 'a'
         type: 'image'

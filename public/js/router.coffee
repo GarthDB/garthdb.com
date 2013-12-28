@@ -6,7 +6,7 @@ DesignsView = require('./views/designs')
 DesignView = require('./views/design')
 CodeView = require('./views/code')
 SpeakView = require('./views/speak')
-ResumeHTML = require('./templates/resumeTemplate.hbs')
+ResumeHTML = require('../../views/partials/resume.jade') 
 
 Router = Backbone.Router.extend
 	first: true

@@ -1,0 +1,16 @@
+section.session
+  if session.haikudeck
+    aside.haikudeck
+      iframe.haikudeck-embed(src="http://www.haikudeck.com/e/#{session.haikudeck.id}/?isUrlHashEnabled=false&isPreviewEnabled=false&isHeaderVisible=false", frameborder="0", marginheight="0", marginwidth="0")
+  else
+    aside.image
+      img(src=session.imgurl, style="width: 100%; height: auto;", alt="image")
+  article
+    header
+      if session.sessionurl
+        h2: a(href=session.sessionurl)=session.title
+      else
+        h2: a(href=session.lanyrdurl)=session.title
+      div Presented #{session.date_ago} at <a href="#{session.conference.url}">#{session.conference.title}</a>
+    div.description!=session.description
+    footer Topics: #{session.tagger}
