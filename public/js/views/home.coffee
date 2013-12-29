@@ -9,7 +9,7 @@ View = Backbone.View.extend
     'Me? I\'m a social media guru;<br/>I have a twitter account and everything.'
     # 'I enjoy semicolons; just not in my code.'
     'You\'re not hardcore,<br/>Unless you live hardcore.'
-    'You have revisions?</br>Yeah, I\'m pretty sure it was perfect the first time'
+    'You have revisions?<br/>Yeah, I\'m pretty sure it was perfect the first time'
     'I make it Pop.'
     'I have 30 years of<br/>mobile web experience.'
     'I don\'t write bugs,<br/>just unintentional features'
