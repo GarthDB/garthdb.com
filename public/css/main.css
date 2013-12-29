@@ -68,10 +68,11 @@ section#design ul.gallery{text-align:left}
 #code .updated{font-size:12px}
 .site > footer{height:30px;font-size:11px;padding-top:10px;}
 .site > footer span{display:inline}
-#speak .session{margin-bottom:30px;width:100%;}
-#speak .session aside{width:30%;display:inline-block;box-sizing:border-box;padding-right:25px;vertical-align:top}
-#speak .session article{display:inline-block;width:69%;vertical-align:top}
+#speak .session{position:relative;margin:0 auto 60px;max-width:493px;width:100%;border-bottom:1px solid #dbdbdb;padding-bottom:40px;}
+#speak .session aside{width:100%;display:block;box-sizing:border-box;vertical-align:top;height:400px;margin-bottom:20px;}
+#speak .session aside iframe{width:100%;height:100%}
+#speak .session article{display:block;vertical-align:top}
 #speak .session header{margin-bottom:10px}
-#speak .session h2{font-size:22px}
+#speak .session h2{font-size:40px}
 #speak .session footer{margin-top:30px}
 }
