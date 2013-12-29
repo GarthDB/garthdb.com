@@ -1,353 +1,77 @@
-html,
-body {
-  height: 100%;
-}
-body {
-  font-family: 'Source Sans Pro';
-  font-weight: 200;
-  color: #333;
-}
-a {
-  color: #4987d5;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-.site {
-  min-height: 100%;
-  border-top: 3px solid #333;
-  padding-bottom: 60px;
-  box-sizing: border-box;
-  position: relative;
-}
-header.main {
-  font-size: 15px;
-  width: 100%;
-  max-width: 760px;
-  text-align: center;
-  padding: 100px 0 0;
-  position: relative;
-}
-header.main h1 {
-  font-weight: normal;
-  padding-top: 10px;
-}
-header.main nav {
-  padding-top: 30px;
-}
-header.main nav li {
-  display: inline-block;
-  margin: 0 10px;
-}
-header.main nav li a {
-  font-weight: normal;
-}
-header.main .logo {
-  position: absolute;
-  left: 50%;
-  margin-left: -21px;
-  top: 52px;
-}
-.site > footer {
-  height: 60px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #333;
-  text-align: center;
-  font-size: 15px;
-  color: #999;
-  box-sizing: border-box;
-  padding-top: 15px;
-  font-weight: normal;
-}
-.site > footer span {
-  display: block;
-}
-.site > footer a {
-  color: #4987d5;
-  text-decoration: none;
-}
-.site > footer a:hover {
-  text-decoration: underline;
-}
-#content {
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-  font-size: 18px;
-}
-#content > section {
-  padding: 30px 20px;
-  box-sizing: border-box;
-}
-#content > section h2 {
-  font-size: 40px;
-  font-weight: 200;
-  font-style: italic;
-}
-#designs ul {
-  list-style: none;
-  text-align: center;
-}
-#designs li {
-  display: inline-block;
-  margin: 20px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.8);
-  height: 158px;
-}
-#designs li a {
-  display: block;
-  position: relative;
-  color: #333;
-  text-align: left;
-}
-#designs li a .details {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(255,255,255,0.8);
-}
-#designs li a h3 {
-  font-weight: 400;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 20px;
-  font-size: 36px;
-}
-#designs li a:hover .details {
-  display: block;
-}
-#designs img {
-  border: none;
-}
-#designs footer {
-  padding-top: 20px;
-  text-align: center;
-}
-section#design {
-  padding: 50px 20px;
-  position: relative;
-  text-align: center;
-}
-section#design aside {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-section#design header,
-section#design .description {
-  margin-bottom: 20px;
-  text-align: left;
-}
-section#design ul.gallery {
-  list-style: none;
-  text-align: center;
-}
-section#design ul.gallery li {
-  display: inline-block;
-}
-section#design ul.gallery li a {
-  margin: 5px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 2px rgba(0,0,0,0.8);
-  transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out;
-  -moz-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out;
-/* Firefox 4 */
-  -webkit-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out;
-/* Safari and Chrome */
-  -o-transition: width 0.05s ease-in-out, height 0.05s ease-in-out, margin 0.05s ease-in-out;
-/* Opera */
-}
-section#design ul.gallery li a:hover {
-  width: 110px;
-  height: 110px;
-  margin: 0;
-}
-@media only screen and (min-width: 780px) {
-  .site {
-    padding-bottom: 30px;
-  }
-  .clear {
-    clear: both;
-  }
-  h1,
-  h2 {
-    font-weight: 400;
-  }
-  header.main {
-    margin: 0 auto;
-    padding: 55px 0 0;
-    text-align: center;
-    width: auto;
-  }
-  header.main h1 {
-    float: left;
-    padding-top: 5px;
-    font-weight: 200;
-  }
-  header.main nav {
-    float: right;
-    padding-top: 5px;
-  }
-  header.main nav li {
-    margin: 0 0 0 30px;
-    margin-left: 30px;
-  }
-  header.main nav li:first-child {
-    margin-left: 0;
-  }
-  header.main nav li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 200;
-  }
-  header.main nav li a:hover {
-    border-bottom: 1px solid #4987d5;
-  }
-  header.main nav li a.selected {
-    color: #4987d5;
-  }
-  #content {
-    clear: both;
-    max-width: 760px;
-    width: 100%;
-    min-height: 400px;
-    font-size: 18px;
-  }
-  #content > section {
-    padding: 100px 0;
-  }
-  #content > section h2 {
-    font-size: 60px;
-    font-weight: 200;
-    font-style: italic;
-  }
-  section#design {
-    padding: 100px 0 100px 222px;
-    text-align: left;
-  }
-  section#design aside {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    display: block;
-  }
-  section#design ul.gallery {
-    text-align: left;
-  }
-  #resume {
-    padding-top: 100px;
-  }
-  #resume > section {
-    margin-bottom: 30px;
-  }
-  #resume > section h2 {
-    font-style: italic;
-    font-size: 22px;
-    font-weight: normal;
-    margin-bottom: 10px;
-  }
-  #resume > section .job {
-    clear: both;
-    margin-bottom: 20px;
-  }
-  #resume > section .job aside {
-    width: 200px;
-    float: left;
-  }
-  #resume > section h3 {
-    font-weight: 600;
-  }
-  #resume > section .class {
-    width: 25%;
-    float: left;
-  }
-  #resume > section .award {
-    width: 50%;
-    float: left;
-  }
-  #resume > section .publication {
-    width: 24%;
-    float: left;
-  }
-  #resume > section .presentation {
-    width: 33%;
-    float: left;
-    margin-bottom: 20px;
-  }
-  #resume > section.presentations {
-    margin-bottom: 10px;
-  }
-  #code ul {
-    list-style: none;
-  }
-  #code ul li {
-    display: inline-block;
-    width: 50%;
-    min-width: 200px;
-    padding: 20px 30px;
-    box-sizing: border-box;
-    vertical-align: top;
-  }
-  #code ul li a {
-    color: #4987d5;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 22px;
-  }
-  #code ul li a:hover {
-    text-decoration: underline;
-  }
-  #code header {
-    margin-bottom: 5px;
-  }
-  #code .description {
-    margin-bottom: 5px;
-  }
-  #code .updated {
-    font-size: 12px;
-  }
-  .site > footer {
-    height: 30px;
-    font-size: 11px;
-    padding-top: 10px;
-  }
-  .site > footer span {
-    display: inline;
-  }
-  #speak .session {
-    margin-bottom: 30px;
-    width: 100%;
-  }
-  #speak .session aside {
-    width: 30%;
-    display: inline-block;
-    box-sizing: border-box;
-    padding-right: 25px;
-    vertical-align: top;
-  }
-  #speak .session article {
-    display: inline-block;
-    width: 69%;
-    vertical-align: top;
-  }
-  #speak .session header {
-    margin-bottom: 10px;
-  }
-  #speak .session h2 {
-    font-size: 22px;
-  }
-  #speak .session footer {
-    margin-top: 30px;
-  }
+html,body{height:100%}
+body{font-family:'Source Sans Pro';font-weight:200;color:#333}
+a{color:#4987d5;text-decoration:none;}
+a:hover{text-decoration:underline}
+.site{min-height:100%;border-top:3px solid #333;padding-bottom:60px;box-sizing:border-box;position:relative}
+header.main{font-size:15px;width:100%;max-width:760px;text-align:center;padding:100px 0 0;position:relative;}
+header.main h1{font-weight:normal;padding-top:10px}
+header.main nav{padding-top:30px;}
+header.main nav li{display:inline-block;margin:0 10px;}
+header.main nav li a{font-weight:normal}
+header.main .logo{position:absolute;left:50%;margin-left:-21px;top:52px}
+.site > footer{height:60px;position:absolute;bottom:0;width:100%;background:#333;text-align:center;font-size:15px;color:#999;box-sizing:border-box;padding-top:15px;font-weight:normal;}
+.site > footer span{display:block}
+.site > footer a{color:#4987d5;text-decoration:none;}
+.site > footer a:hover{text-decoration:underline}
+#content{max-width:600px;width:100%;margin:0 auto;font-size:18px;}
+#content > section{padding:30px 20px;box-sizing:border-box;}
+#content > section h2{font-size:40px;font-weight:200;font-style:italic}
+#designs ul{list-style:none;text-align:center}
+#designs li{display:inline-block;margin:20px;box-shadow:0 0 2px rgba(0,0,0,0.8);height:158px;}
+#designs li a{display:block;position:relative;color:#333;text-align:left;}
+#designs li a .details{display:none;position:absolute;width:100%;height:100%;top:0;left:0;background:rgba(255,255,255,0.8)}
+#designs li a h3{font-weight:400;position:absolute;bottom:0;left:0;padding:20px;font-size:36px}
+#designs li a:hover .details{display:block}
+#designs img{border:none}
+#designs footer{padding-top:20px;text-align:center}
+section#design{padding:50px 20px;position:relative;text-align:center;}
+section#design aside{position:relative;display:inline-block;margin-bottom:20px}
+section#design header,section#design .description{margin-bottom:20px;text-align:left}
+section#design ul.gallery{list-style:none;text-align:center;}
+section#design ul.gallery li{display:inline-block;}
+section#design ul.gallery li a{margin:5px;display:block;width:100px;height:100px;background-size:cover;background-position:center;box-shadow:0 0 2px rgba(0,0,0,0.8);transition:width .05s ease-in-out,height .05s ease-in-out,margin .05s ease-in-out;-moz-transition:width .05s ease-in-out,height .05s ease-in-out,margin .05s ease-in-out;-webkit-transition:width .05s ease-in-out,height .05s ease-in-out,margin .05s ease-in-out;-o-transition:width .05s ease-in-out,height .05s ease-in-out,margin .05s ease-in-out;}
+section#design ul.gallery li a:hover{width:110px;height:110px;margin:0}
+@media only screen and (min-width: 780px){.site{padding-bottom:30px}
+.clear{clear:both}
+h1,h2{font-weight:400}
+header.main{margin:0 auto;padding:55px 0 0;text-align:center;width:auto;}
+header.main h1{float:left;padding-top:5px;font-weight:200}
+header.main nav{float:right;padding-top:5px;}
+header.main nav li{margin:0 0 0 30px;margin-left:30px;}
+header.main nav li:first-child{margin-left:0}
+header.main nav li a{text-decoration:none;color:#333;font-weight:200;}
+header.main nav li a:hover{border-bottom:1px solid #4987d5}
+header.main nav li a.selected{color:#4987d5}
+#content{clear:both;max-width:760px;width:100%;min-height:400px;font-size:18px;}
+#content > section{padding:100px 0;}
+#content > section h2{font-size:60px;font-weight:200;font-style:italic}
+section#design{padding:100px 0 100px 222px;text-align:left;}
+section#design aside{position:absolute;left:0;top:100px;display:block}
+section#design ul.gallery{text-align:left}
+#resume{padding-top:100px;}
+#resume > section{margin-bottom:30px;}
+#resume > section h2{font-style:italic;font-size:22px;font-weight:normal;margin-bottom:10px}
+#resume > section .job{clear:both;margin-bottom:20px;}
+#resume > section .job aside{width:200px;float:left}
+#resume > section h3{font-weight:600}
+#resume > section .class{width:25%;float:left}
+#resume > section .award{width:50%;float:left}
+#resume > section .publication{width:24%;float:left}
+#resume > section .presentation{width:33%;float:left;margin-bottom:20px}
+#resume > section.presentations{margin-bottom:10px}
+#code ul{list-style:none;}
+#code ul li{display:inline-block;width:50%;min-width:200px;padding:20px 30px;box-sizing:border-box;vertical-align:top;}
+#code ul li a{color:#4987d5;text-decoration:none;font-weight:400;font-size:22px;}
+#code ul li a:hover{text-decoration:underline}
+#code header{margin-bottom:5px}
+#code .description{margin-bottom:5px}
+#code .updated{font-size:12px}
+.site > footer{height:30px;font-size:11px;padding-top:10px;}
+.site > footer span{display:inline}
+#speak .session{margin-bottom:30px;width:100%;}
+#speak .session aside{width:30%;display:inline-block;box-sizing:border-box;padding-right:25px;vertical-align:top}
+#speak .session article{display:inline-block;width:69%;vertical-align:top}
+#speak .session header{margin-bottom:10px}
+#speak .session h2{font-size:22px}
+#speak .session footer{margin-top:30px}
 }
