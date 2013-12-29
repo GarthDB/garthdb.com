@@ -6,10 +6,15 @@ html
     meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
     meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
     title Garth Braithwaite
-    link(rel = 'stylesheet', type = 'text/css', href = '/css/fonts/SourceSansPro/stylesheet.css')
-    link(rel = 'stylesheet', type = 'text/css', href = '/css/reset.css')
-    link(rel = 'stylesheet', type = 'text/css', href = '/css/main.css')
-    link(rel = 'stylesheet', type = 'text/css', href = '/js/libs/magnific/magnific.css')
+
+    | <style type="text/css">
+
+    include ../public/css/fonts/SourceSansPro/stylesheet.css
+    include ../public/css/reset.css
+    include ../public/css/main.css
+    include ../public/js/libs/magnific/magnific.css
+
+    | </style>
     
     | <script>
 

@@ -6,6 +6,7 @@ speak = require("./routes/speak")
 http = require("http")
 path = require("path")
 app = express()
+stylus = require("stylus")
 
 # all environments
 app.set "port", process.env.PORT or 3000
@@ -18,7 +19,13 @@ app.use express.json()
 app.use express.urlencoded()
 app.use express.methodOverride()
 app.use app.router
-app.use require("stylus").middleware(path.join(__dirname, "public"))
+app.use stylus.middleware({
+	src: path.join(__dirname, "public")
+	compile: (str, path) ->
+        stylus(str)
+            .set('filename', path)
+            .set('compress', true)
+	})
 app.use express.static(path.join(__dirname, "public"))
 
 # development only
