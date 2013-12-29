@@ -25,7 +25,8 @@
     "hbsfy": "~1.0.0",
     "browserify": "~3.14.1",
     "underscore": "~1.5.2",
-    "simple-jadeify": "~2.1.0"
+    "simple-jadeify": "~2.1.0",
+    "express-uglify": "~0.3.1"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
