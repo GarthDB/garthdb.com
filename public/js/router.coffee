@@ -6,7 +6,11 @@ DesignsView = require('./views/designs')
 DesignView = require('./views/design')
 CodeView = require('./views/code')
 SpeakView = require('./views/speak')
-ResumeHTML = require('../../views/partials/resume.jade') 
+ResumeHTML = require('../../views/partials/resume.jade')
+ga = require("ga-browserify")
+
+tracker = ga('UA-5471744-1')
+# tracker._trackPageview()
 
 Router = Backbone.Router.extend
 	first: true
@@ -25,6 +29,8 @@ Router = Backbone.Router.extend
 		@speakView.render()
 		if !@resumeView
 			@resumeView = ResumeHTML()
+		@.bind 'all', (route,router)->
+			tracker._trackPageview(window.location.pathname)
 	routes:
 		'resume': 'navResume'
 		'design': 'navDesigns'
