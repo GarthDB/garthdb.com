@@ -20,7 +20,8 @@
     "moment": "~2.4.0",
     "coffee-script": "~1.6.3",
     "underscore": "~1.5.2",
-    "request": "~2.30.0"
+    "request": "~2.30.0",
+    "sitemap": "~0.7.1"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
