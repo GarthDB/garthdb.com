@@ -53,11 +53,11 @@ a.logo:hover #gpath{fill:#4987d5}
 #content{max-width:800px;position:relative;margin:0 auto;padding:60px 0}
 a.logo{order:2;-webkit-order:2;min-width:43px}
 header.main{max-width:800px;padding:55px 20px 0;width:auto;box-sizing:border-box;}
-header.main h1{padding-top:7px;font-weight:200;order:1;-webkit-order:1;width:100%;text-align:left}
+header.main h1{padding-top:7px;font-weight:inherit;order:1;-webkit-order:1;width:100%;text-align:left}
 header.main nav{padding-top:7px;order:3;-webkit-order:3;width:100%;text-align:right;}
 header.main nav li{margin:0 0 0 30px;margin-left:30px;}
 header.main nav li:first-child{margin-left:0}
-header.main nav li a{text-decoration:none;color:#333;font-weight:200;}
+header.main nav li a{text-decoration:none;color:#333;font-weight:inherit;}
 header.main nav li a:hover{border-bottom:1px solid #4987d5}
 header.main nav li a.selected{color:#4987d5}
 #designs{margin-top:-20px;}
