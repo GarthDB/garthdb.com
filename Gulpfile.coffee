@@ -50,7 +50,10 @@ gulp.task 'img', ->
   gulp.src 'src/img/*'
     .pipe imagemin {
       progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
+      svgoPlugins: [
+        {removeViewBox: false}
+        {cleanupIDs: false}
+        ],
       use: [pngcrush()]
       }
     .pipe gulp.dest 'public/img'
