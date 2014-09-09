@@ -8,6 +8,9 @@ minifyHTML = require 'gulp-minify-html'
 imagemin = require 'gulp-imagemin'
 pngcrush = require 'imagemin-pngcrush'
 sourcemaps = require 'gulp-sourcemaps'
+browserSync = require 'browser-sync'
+reload = browserSync.reload
+filter = require('gulp-filter');
 
 # Create your CSS from Sass, Autoprexif it to target 99%
 #  of web browsers, minifies it.
@@ -17,19 +20,19 @@ gulp.task 'css', ->
       sourcemap: {
         inline: true,
         sourceRoot: '.',
-        basePath: 'css/build'
+        basePath: 'public/css'
       }
     }
     .pipe sourcemaps.init {
       loadMaps: true
     }
-    .pipe sourcemaps.write '.', {
-      includeConent: false,
-      sourceRoot: '.'
+    .pipe prefix "> 1%"
+    .pipe cssmin keepSpecialComments: 0
+    .pipe sourcemaps.write './', {
     }
-    .pipe prefix "> 1%", { map: true }
-    # .pipe cssmin keepSpecialComments: 0
     .pipe gulp.dest 'public/css'
+    .pipe filter '**/*.css'
+    .pipe reload {stream:true}
 
 # Create you HTML from Jade, Adds an additional step of
 #  minification for filters (like markdown) that are not
@@ -39,6 +42,7 @@ gulp.task 'html', ->
     .pipe jade()
     .pipe minifyHTML()
     .pipe gulp.dest 'public'
+    .pipe reload {stream:true}
 
 # Minify your SVG.
 gulp.task 'img', ->
@@ -55,7 +59,16 @@ gulp.task 'copy', ->
   gulp.src 'src/fonts/*'
     .pipe gulp.dest 'public/fonts'
 
+#host and reload browser on change
+gulp.task 'browser-sync', ->
+  browserSync {
+    server: {
+      baseDir: "./public"
+    }
+  }
 
 
 # Default task call every tasks created so far.
-gulp.task 'default', ['css', 'html', 'img', 'copy']
+gulp.task 'default', ['css', 'html', 'img', 'copy', 'browser-sync'], ->
+  gulp.watch 'src/css/*.styl', ['css']
+  gulp.watch 'src/*.jade', ['html']
