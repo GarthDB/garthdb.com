@@ -74,6 +74,7 @@ gulp.task 'browser-sync', ->
     server: {
       baseDir: "./public"
     }
+    open: false
   }
 
 # Default task call every tasks created so far.
