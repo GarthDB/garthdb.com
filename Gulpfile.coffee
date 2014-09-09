@@ -5,15 +5,30 @@ prefix = require 'gulp-autoprefixer'
 cssmin = require 'gulp-cssmin'
 jade = require 'gulp-jade'
 minifyHTML = require 'gulp-minify-html'
-svgmin = require 'gulp-svgmin'
+imagemin = require 'gulp-imagemin'
+pngcrush = require 'imagemin-pngcrush'
+sourcemaps = require 'gulp-sourcemaps'
 
 # Create your CSS from Sass, Autoprexif it to target 99%
 #  of web browsers, minifies it.
 gulp.task 'css', ->
-  gulp.src 'src/css/*.stylus'
-    .pipe stylus()
-    .pipe prefix "> 1%"
-    .pipe cssmin keepSpecialComments: 0
+  gulp.src 'src/css/*.styl'
+    .pipe stylus {
+      sourcemap: {
+        inline: true,
+        sourceRoot: '.',
+        basePath: 'css/build'
+      }
+    }
+    .pipe sourcemaps.init {
+      loadMaps: true
+    }
+    .pipe sourcemaps.write '.', {
+      includeConent: false,
+      sourceRoot: '.'
+    }
+    .pipe prefix "> 1%", { map: true }
+    # .pipe cssmin keepSpecialComments: 0
     .pipe gulp.dest 'public/css'
 
 # Create you HTML from Jade, Adds an additional step of
@@ -26,9 +41,13 @@ gulp.task 'html', ->
     .pipe gulp.dest 'public'
 
 # Minify your SVG.
-gulp.task 'svg', ->
-  gulp.src 'src/img/*.svg'
-    .pipe svgmin()
+gulp.task 'img', ->
+  gulp.src 'src/img/*'
+    .pipe imagemin {
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngcrush()]
+      }
     .pipe gulp.dest 'public/img'
 
 # Copy the fonts using streams.
@@ -36,5 +55,7 @@ gulp.task 'copy', ->
   gulp.src 'src/fonts/*'
     .pipe gulp.dest 'public/fonts'
 
+
+
 # Default task call every tasks created so far.
-gulp.task 'default', ['css', 'html', 'svg', 'copy']
+gulp.task 'default', ['css', 'html', 'img', 'copy']
