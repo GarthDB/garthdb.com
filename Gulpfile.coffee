@@ -2,7 +2,6 @@
 gulp = require 'gulp'
 stylus = require 'gulp-stylus'
 prefix = require 'gulp-autoprefixer'
-cssmin = require 'gulp-cssmin'
 jade = require 'gulp-jade'
 minifyHTML = require 'gulp-minify-html'
 imagemin = require 'gulp-imagemin'
@@ -10,16 +9,19 @@ pngcrush = require 'imagemin-pngcrush'
 sourcemaps = require 'gulp-sourcemaps'
 browserSync = require 'browser-sync'
 reload = browserSync.reload
-filter = require('gulp-filter');
+filter = require 'gulp-filter'
+coffee = require 'gulp-coffee'
+gutil = require 'gulp-util'
 
 # Create your CSS from Sass, Autoprexif it to target 99%
 #  of web browsers, minifies it.
 gulp.task 'css', ->
   gulp.src 'src/css/*.styl'
     .pipe stylus {
+      compress: true
       sourcemap: {
-        inline: true,
-        sourceRoot: '.',
+        inline: true
+        sourceRoot: '.'
         basePath: 'public/css'
       }
     }
@@ -27,7 +29,6 @@ gulp.task 'css', ->
       loadMaps: true
     }
     .pipe prefix "> 1%"
-    .pipe cssmin keepSpecialComments: 0
     .pipe sourcemaps.write './', {
     }
     .pipe gulp.dest 'public/css'
@@ -54,6 +55,14 @@ gulp.task 'img', ->
       }
     .pipe gulp.dest 'public/img'
 
+gulp.task 'js', ->
+  gulp.src 'src/js/*.coffee'
+    .pipe sourcemaps.init()
+    .pipe coffee({bare: true}).on('error', gutil.log)
+    .pipe sourcemaps.write('./')
+    .pipe gulp.dest 'public/js'
+
+
 # Copy the fonts using streams.
 gulp.task 'copy', ->
   gulp.src 'src/fonts/*'
@@ -67,8 +76,8 @@ gulp.task 'browser-sync', ->
     }
   }
 
-
 # Default task call every tasks created so far.
-gulp.task 'default', ['css', 'html', 'img', 'copy', 'browser-sync'], ->
+gulp.task 'default', ['css', 'html', 'img', 'js', 'copy', 'browser-sync'], ->
   gulp.watch 'src/css/*.styl', ['css']
   gulp.watch 'src/*.jade', ['html']
+  gulp.watch 'src/js/*.coffee', ['js']
