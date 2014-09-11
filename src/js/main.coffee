@@ -1,15 +1,20 @@
 $ ->
   s = Snap "#max"
-  m = s.path "M155.4,212.9L129,172.3l3.7-15l14.2-53.9l16.9-65.3L138,31.1L110,24l-26.1-8.5l-15.7-4.3L44.5,5L29.8,0l-3.3,9.8l-0.3,15.5
-    L15.5,49.8l-6.4,5.4l-0.7,2.4l-3.7,1.7l-3,8.7L0,74.6l5.7,8.7l3.4,8.7l2.4,7.4l-0.7,13.4l-3.7,6.4l-1.3,12.1c0,0-1.9,6.2-2,7.7
-    s3.7,8.1,3.7,8.1l5.7,9.4l4.7,10.1l2.7,8.4l-0.7,6.7l-0.7,1v4.4l11.8,13.1l-1,5l-1.3,4.7l-1.3,4l0.3,17.1l4.4,7.7l4,5.4l5.7,1l2,5.7
-    l-2.4,7.3l-4.4,3.2h-2.4l-1.7,8.2l1,6.1l6.7,9.1L44,296l3,9.7l2.7,6.4l7.1,12.1l3,5.4l0.6,3.4l115.4-90.1L155.4,212.9z"
-  m.click ->
-    console.log "clicked"
-    m.animate {
-      d: "M153.9,210.8l-26.1-40.2l3.7-14.8l14-53.4l16.7-64.7l-25.4-6.9L109,23.8l-25.9-8.5l-15.5-4.2L44,5L29.5,0
-        l-3.3,9.7L25.9,25L15.3,49.3L9,54.6L8.3,57l-3.7,1.7l-3,8.6L0,73.9l5.7,8.6L9,91.2l2.3,7.3l-0.7,13.3L7,118.2l-0.6,5.3l62.6,6.7
-        l-56.6,24.1l0.6,0.9c0,0,3.9,8.2,4.7,10c0.8,1.8,2.7,8.3,2.7,8.3l-0.7,6.7l-0.7,1v4.3l11.6,13l-1,5l-1.3,4.7l-1,3.1l45-4.8
-        L34.2,240l1.4,1.9l5.7,1l2,5.7l-2.3,7.3l-4.3,3.3h-2.3l-1.7,8l1,6l6.7,9l3.3,11l3,9.6l2.7,6.3l7,12l3,5.3l0.8,4.8l114.6-89.9
-        L153.9,210.8z"
-    }, 1000
+  g = s.group()
+  maxmap = Snap.load "../img/max_map.svg", (f) ->
+    prem = f.select '#prem'
+    prea = f.select '#prea'
+    prex = f.select '#prex'
+    state = f.select '#state'
+    g.append state
+    postm = f.select('#postm').attr('d')
+    posta = f.select('#posta').attr('d')
+    postx = f.select("#postx").attr('d')
+    s.click ->
+      g.append(prem)
+      g.append(prea)
+      g.append(prex)
+      state.remove()
+      prem.animate {d: postm}, 1000, mina.elastic
+      prea.animate {d: posta}, 1000, mina.elastic
+      prex.animate {d: postx}, 1000, mina.elastic
