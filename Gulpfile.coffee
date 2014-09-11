@@ -70,7 +70,7 @@ gulp.task 'js', ->
 
 # Copy the fonts using streams.
 gulp.task 'copy', ->
-  gulp.src 'src/fonts/*'
+  gulp.src 'src/fonts/**'
     .pipe gulp.dest 'public/fonts'
 
 #host and reload browser on change
