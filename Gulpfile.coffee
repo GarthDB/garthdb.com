@@ -85,3 +85,4 @@ gulp.task 'default', ['css', 'html', 'img', 'js', 'copy', 'browser-sync'], ->
   gulp.watch 'src/css/*.styl', ['css']
   gulp.watch 'src/*.jade', ['html']
   gulp.watch 'src/js/*.coffee', ['js']
+  gulp.watch 'src/img/*', ['img']
