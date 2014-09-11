@@ -57,6 +57,7 @@ gulp.task 'img', ->
       use: [pngcrush()]
       }
     .pipe gulp.dest 'public/img'
+    .pipe reload {stream:true}
 
 gulp.task 'js', ->
   gulp.src 'src/js/*.coffee'
@@ -64,6 +65,7 @@ gulp.task 'js', ->
     .pipe coffee({bare: true}).on('error', gutil.log)
     .pipe sourcemaps.write('./')
     .pipe gulp.dest 'public/js'
+    .pipe reload {stream:true}
 
 
 # Copy the fonts using streams.
@@ -85,3 +87,4 @@ gulp.task 'default', ['css', 'html', 'img', 'js', 'copy', 'browser-sync'], ->
   gulp.watch 'src/css/*.styl', ['css']
   gulp.watch 'src/*.jade', ['html']
   gulp.watch 'src/js/*.coffee', ['js']
+  gulp.watch 'src/img/*', ['img']
