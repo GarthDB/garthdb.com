@@ -1,37 +1,43 @@
 doctype html
 head
   title Garth Braithwaite
+  meta(name="viewport", content="width=device-width, initial-scale=1.0, minimal-ui")
   link(rel="stylesheet", href='css/main.css')
   link(rel="stylesheet", href='css/reset.css')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/mobile-detect/0.4.0/mobile-detect.min.js')
   script(src='//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js')
   script(src='//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-probe.min.js')
   script(src='js/main.js')
+  script(src='js/vminpoly.js')
 body
-  header.main
-    .bounds
-      .top
-        .logo Garth Braithwaite
-        .hamburger
-          a(href="http://www.fiveguys.com/order-online.aspx", target="_blank", title="get a hamburger")
-      .main
-        .tada
-          h1 I’m speaking at<br/>some conferences
-          h2 about design and open source.
-          h2 Come to my sessions; </br>I'll bring donuts.
-      .bottom
-        img(src='/img/ca_map.svg', alt="California")
-        img(src='/img/va_map.svg', alt="Virginia")
-        img(src='/img/nc_map.svg', alt="North Carolina")
-  main
-    section.max
-      .bounds
-        svg#max
-          defs
-    section.convergerva
-      .bounds
-        svg#convergerva
-          defs
-    section.allthingsopen
-      .bounds
-        svg#allthingsopen
-          defs
+  #wrapper
+    #scroller
+      header.main
+        .bounds
+          .top
+            .logo Garth Braithwaite
+            .hamburger
+              a(href="http://www.fiveguys.com/order-online.aspx", target="_blank", title="get a hamburger")
+          .main
+            .tada
+              h1 I’m speaking at<br/>some conferences
+              h2 about design and open source.
+              h2 Come to my sessions; </br>I'll bring donuts.
+          .bottom
+            include ../public/img/ca_map.svg
+            include ../public/img/va_map.svg
+            include ../public/img/nc_map.svg
+      main
+        section.max
+          .bounds
+            svg#max
+              defs
+        section.convergerva
+          .bounds
+            svg#convergerva
+              defs
+        section.allthingsopen
+          .bounds
+            svg#allthingsopen
+              defs
