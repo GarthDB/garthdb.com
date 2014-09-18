@@ -20,12 +20,30 @@ updatePositionMobile = ()=>
     $('body').addClass output
 updatePosition = ()=>
   output = 'top'
-  console.log
   y = $(window).scrollTop() + @transitionPadding
   if y < @maxTop
     output = 'top'
   else if y >= @maxTop && y <= @convergervatop
     output = 'max'
+    if !@maxOpen
+      g = @max.select('g')
+      console.log @maxmap.select '#prem'
+      prem = @maxmap.select '#prem'
+      prea = @maxmap.select '#prea'
+      prex = @maxmap.select '#prex'
+      state = @maxmap.select '#state'
+      @maxmap.append state
+      postm = @maxmap.select('#postm').attr('d')
+      posta = @maxmap.select('#posta').attr('d')
+      postx = @maxmap.select("#postx").attr('d')
+      g.append(prem)
+      g.append(prea)
+      g.append(prex)
+      state.remove()
+      prem.animate {d: postm}, 1000, mina.elastic
+      prea.animate {d: posta}, 1000, mina.elastic
+      prex.animate {d: postx}, 1000, mina.elastic
+      @maxOpen = true
   else if y >= @convergervatop && y <= @allthingsopentop
     output = 'convergerva'
   else if y >= @allthingsopentop
@@ -34,6 +52,9 @@ updatePosition = ()=>
     $('body').removeClass()
     $('body').addClass output
 $ ->
+  @maxOpen = false
+  @convergervaOpen = false
+  @allthingsopenOpen = false
   @md = new MobileDetect(window.navigator.userAgent)
   if @md.mobile()
     $('#wrapper').addClass('mobile')
@@ -50,23 +71,38 @@ $ ->
   calculateSectionPositions()
   window.onresize = ()->
     calculateSectionPositions()
-  setInterval ( =>
-    @maps = $('.bottom svg')
-    for map in maps
+  @maps = $('.bottom svg')
+  setTimeout ( =>
+    for map in @maps
       map = Snap map
       path = map.select('*')
       smallScale = new Snap.Matrix()
       smallScale.scale(0.8,0.8, path.getBBox().cx, path.getBBox().cy)
       path.animate {transform: smallScale}, 2000, mina.elastic
   ),1000
-  $('.bottom path').on "mouseover", (e)->
-    map = Snap e.target
-    fullScale = new Snap.Matrix()
-    fullScale.scale(1,1,map.getBBox().cx,map.getBBox().cy)
-    map.animate {transform: fullScale}, 2000, mina.elastic
-  max = Snap "#max"
-  g = max.group()
-  maxmap = Snap.load "../img/max_map.svg", (f) ->
+  for map in @maps
+    map = Snap map
+    map.hover ((e)->
+      s = Snap e.target
+      p = s.select('path')
+      midScale = new Snap.Matrix()
+      midScale.scale(0.9, 0.9, p.getBBox().cx, p.getBBox().cy)
+      p.animate {
+        transform: midScale
+      }, 2000, mina.elastic
+    ), ((e)->
+      s = Snap e.target
+      p = s.select('path')
+      midScale = new Snap.Matrix()
+      midScale.scale(0.8, 0.8, p.getBBox().cx, p.getBBox().cy)
+      p.animate {
+        transform: midScale
+      }, 2000, mina.elastic
+    )
+  @max = Snap "#max"
+  g = @max.group()
+  @maxmap = Snap.load "../img/max_map.svg", (f) ->
+    @maxmap = f
     prem = f.select '#prem'
     prea = f.select '#prea'
     prex = f.select '#prex'
