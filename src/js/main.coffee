@@ -1,10 +1,9 @@
 _ = require 'underscore'
-$ = require 'browserify-zepto'
+$ = require 'jquery'
 Backbone = require 'exoskeleton'
 
 Router = require './router/router'
 
 
 $ ->
-  console.log 'ready'
   router = new Router()
