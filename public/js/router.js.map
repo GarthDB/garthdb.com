@@ -1,0 +1,1 @@
+{"version":3,"file":"router.js","names":[],"mappings":"","sources":["router.coffee"],"sourcesContent":["Backbone = require 'exoskeleton'\n\nRouter = Backbone.Router.extend\n  initialize: () ->\n    console.log 'boo'\n\nmodule.exports = Router\n"],"sourceRoot":"/source/"}

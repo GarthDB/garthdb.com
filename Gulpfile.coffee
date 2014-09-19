@@ -10,7 +10,7 @@ sourcemaps = require 'gulp-sourcemaps'
 browserSync = require 'browser-sync'
 reload = browserSync.reload
 filter = require 'gulp-filter'
-coffee = require 'gulp-coffee'
+coffeeify = require 'gulp-coffeeify'
 gutil = require 'gulp-util'
 
 # Create your CSS from Sass, Autoprexif it to target 99%
@@ -62,7 +62,7 @@ gulp.task 'img', ->
 gulp.task 'js', ->
   gulp.src 'src/js/*.coffee'
     .pipe sourcemaps.init()
-    .pipe coffee({bare: true}).on('error', gutil.log)
+    .pipe(coffeeify({ignoreMissing:true, debug:true}))
     .pipe sourcemaps.write('./')
     .pipe gulp.dest 'public/js'
   gulp.src 'src/js/*.js'
@@ -88,6 +88,6 @@ gulp.task 'browser-sync', ->
 gulp.task 'default', ['css', 'html', 'img', 'js', 'copy', 'browser-sync'], ->
   gulp.watch 'src/css/*.styl', ['css']
   gulp.watch 'src/*.jade', ['html']
-  gulp.watch 'src/js/*.coffee', ['js']
+  gulp.watch 'src/js/**/*.coffee', ['js']
   gulp.watch 'src/js/*.js', ['js']
   gulp.watch 'src/img/*', ['img']
