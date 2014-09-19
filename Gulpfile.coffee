@@ -10,8 +10,8 @@ sourcemaps = require 'gulp-sourcemaps'
 browserSync = require 'browser-sync'
 reload = browserSync.reload
 filter = require 'gulp-filter'
-coffee = require 'gulp-coffee'
 gutil = require 'gulp-util'
+coffeeify = require 'gulp-coffeeify'
 
 # Create your CSS from Sass, Autoprexif it to target 99%
 #  of web browsers, minifies it.
@@ -34,6 +34,18 @@ gulp.task 'css', ->
     .pipe gulp.dest 'public/css'
     .pipe filter '**/*.css'
     .pipe reload {stream:true}
+
+gulp.task 'js', ->
+  gulp.src 'src/js/*.coffee'
+    .pipe sourcemaps.init()
+    .pipe(coffeeify({
+      debug:true
+      }))
+    .pipe sourcemaps.write('./')
+    .pipe(gulp.dest('./public/js'));
+  gulp.src 'src/js/*.js'
+    .pipe gulp.dest 'public/js'
+  .pipe reload {stream:true}
 
 # Create you HTML from Jade, Adds an additional step of
 #  minification for filters (like markdown) that are not
@@ -59,17 +71,6 @@ gulp.task 'img', ->
     .pipe gulp.dest 'public/img'
     .pipe reload {stream:true}
 
-gulp.task 'js', ->
-  gulp.src 'src/js/*.coffee'
-    .pipe sourcemaps.init()
-    .pipe coffee({bare: true}).on('error', gutil.log)
-    .pipe sourcemaps.write('./')
-    .pipe gulp.dest 'public/js'
-  gulp.src 'src/js/*.js'
-    .pipe gulp.dest 'public/js'
-  .pipe reload {stream:true}
-
-
 # Copy the fonts using streams.
 gulp.task 'copy', ->
   gulp.src 'src/fonts/**'
@@ -88,6 +89,6 @@ gulp.task 'browser-sync', ->
 gulp.task 'default', ['css', 'html', 'img', 'js', 'copy', 'browser-sync'], ->
   gulp.watch 'src/css/*.styl', ['css']
   gulp.watch 'src/*.jade', ['html']
-  gulp.watch 'src/js/*.coffee', ['js']
+  gulp.watch 'src/js/**/*.coffee', ['js']
   gulp.watch 'src/js/*.js', ['js']
   gulp.watch 'src/img/*', ['img']
