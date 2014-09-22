@@ -35,6 +35,7 @@
     "jquery": "^2.1.1",
     "npm": "^2.0.0",
     "react": "^0.11.2",
+    "snapsvg": "git://github.com/sethvincent/Snap.svg#a34b8af69b",
     "underscore": "^1.7.0"
   }
 }
