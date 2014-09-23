@@ -1,1 +1,0 @@
-{"version":3,"file":"main.js","names":[],"mappings":"","sources":["main.coffee"],"sourcesContent":["React = require 'react'\nHeader = require './components/header'\n$ = require 'browserify-zepto'\n$ ->\n  React.renderComponent (Header {}), $('header.main .bounds')[0]\n"],"sourceRoot":"/source/"}
