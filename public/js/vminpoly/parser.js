@@ -118,7 +118,7 @@ function parse(tokens) {
 			switch(token.tokenType) {
 			case "{": switchto('declaration'); break;
 			case "EOF": discard() && finish(); return stylesheet;
-			default: rule.appendSelector(consumeAPrimitive());
+			default: rule.appendSelector(consumeAPrimitive()); 
 			}
 			break;
 

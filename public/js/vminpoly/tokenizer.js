@@ -284,7 +284,7 @@ function tokenize(str, options) {
 			else if(code == 0x28) {
 				if(currtoken.ASCIImatch('url')) switchto('url');
 				else emit(new FunctionToken(currtoken)) && switchto('data');
-			}
+			} 
 			else if(whitespace(code) && options.transformFunctionWhitespace) switchto('transform-function-whitespace') && reconsume();
 			else emit() && switchto('data') && reconsume();
 			break;
