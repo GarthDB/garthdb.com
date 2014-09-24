@@ -1,20 +1,22 @@
-var browserSync, coffeeify, filter, gulp, gutil, imagemin, jade, minifyHTML, pngcrush, prefix, reload, sourcemaps, stylus, reactify, browserify, source;
-
-gulp = require('gulp');
-stylus = require('gulp-stylus');
-prefix = require('gulp-autoprefixer');
-jade = require('gulp-jade');
-minifyHTML = require('gulp-minify-html');
-imagemin = require('gulp-imagemin');
-pngcrush = require('imagemin-pngcrush');
-sourcemaps = require('gulp-sourcemaps');
-browserSync = require('browser-sync');
-reload = browserSync.reload;
-filter = require('gulp-filter');
-gutil = require('gulp-util');
-reactify = require('reactify');
-browserify = require('gulp-browserify');
-source = require('vinyl-source-stream');
+var gulp = require('gulp');
+var stylus = require('gulp-stylus');
+var prefix = require('gulp-autoprefixer');
+var jade = require('gulp-jade');
+var minifyHTML = require('gulp-minify-html');
+var imagemin = require('gulp-imagemin');
+var pngcrush = require('imagemin-pngcrush');
+var sourcemaps = require('gulp-sourcemaps');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+var filter = require('gulp-filter');
+var gutil = require('gulp-util');
+var reactify = require('reactify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer  = require('vinyl-buffer');
+var path = require('path');
+var extractor = require('gulp-extract-sourcemap');
+var uglify = require('gulp-uglifyjs');
 
 gulp.task('css', function() {
   return gulp.src('src/css/*.styl').pipe(stylus({
@@ -32,18 +34,35 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src('src/js/main.js')
-    .pipe(browserify({
-      transform: ['reactify'],
-      debug: true
-    }))
-    .pipe(gulp.dest('./public/js'))
+  var bundler = browserify({
+    entries: ['./src/js/main.js'],
+    debug: true,
+    transform: 'reactify'
+  });
+
+  var bundle = function() {
+    return bundler
+      .bundle()
+      .pipe(source('bundle.js'))
+      .pipe(buffer())
+      .pipe(sourcemaps.init({loadMaps: true}))
+        // Add transformation tasks to the pipeline here.
+        // .pipe(uglify())
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest('./public/js/'))
+      .pipe(reload({stream: true}));
+  };
+
+  return bundle();
 });
 
+
 gulp.task('html', function() {
-  return gulp.src('src/*.jade').pipe(jade()).pipe(minifyHTML()).pipe(gulp.dest('public')).pipe(reload({
-    stream: true
-  }));
+  return gulp.src('src/*.jade')
+    .pipe(jade({pretty: true}))
+    // .pipe(minifyHTML())
+    .pipe(gulp.dest('public'))
+    .pipe(reload({stream: true}));
 });
 
 gulp.task('img', function() {
