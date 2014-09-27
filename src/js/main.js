@@ -27,7 +27,7 @@ var Site = React.createClass({
       <div>
         <Header/>
         <main>
-          <MaxSection/>
+          <MaxSection closed=""/>
           <section className="convergerva">
             <div className="bounds">
               <svg id="convergerva">
@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
       output = 'top';
     } else if (y >= maxTop && y <= convergervatop){
       output = 'max';
+      $('section.max')
     } else if(y >= convergervatop && y <= allthingsopentop){
       output = 'convergerva';
     } else if(y >= allthingsopentop){
@@ -97,11 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
       return
     }, false);
 
-    React.renderComponent(<div id='wrapper'><Site mobile="true"/></div>, $('body')[0]);
+    React.renderComponent(<div id='wrapper'><Site mobile="true"/></div>, document.body);
   } else {
 
     window.onscroll = updatePositionHandler;
 
-    React.renderComponent(<Site/>, $('body')[0]);
+    React.renderComponent(<Site/>, document.body);
   }
 }, false);

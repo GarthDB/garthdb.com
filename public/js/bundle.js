@@ -28,7 +28,7 @@ var Site = React.createClass({displayName: 'Site',
       React.DOM.div(null, 
         Header(null), 
         React.DOM.main(null, 
-          MaxSection(null), 
+          MaxSection({closed: ""}), 
           React.DOM.section({className: "convergerva"}, 
             React.DOM.div({className: "bounds"}, 
               React.DOM.svg({id: "convergerva"}, 
@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
       output = 'top';
     } else if (y >= maxTop && y <= convergervatop){
       output = 'max';
+      $('section.max')
     } else if(y >= convergervatop && y <= allthingsopentop){
       output = 'convergerva';
     } else if(y >= allthingsopentop){
@@ -98,12 +99,12 @@ document.addEventListener('DOMContentLoaded', function() {
       return
     }, false);
 
-    React.renderComponent(React.DOM.div({id: "wrapper"}, Site({mobile: "true"})), $('body')[0]);
+    React.renderComponent(React.DOM.div({id: "wrapper"}, Site({mobile: "true"})), document.body);
   } else {
 
     window.onscroll = updatePositionHandler;
 
-    React.renderComponent(Site(null), $('body')[0]);
+    React.renderComponent(Site(null), document.body);
   }
 }, false);
 
