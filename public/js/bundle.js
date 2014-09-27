@@ -13,33 +13,78 @@ var Header = require('./components/header');
 var MaxSection = require('./components/maxsection');
 
 var Site = React.createClass({displayName: 'Site',
-  componentDidMount: function() {
-    if(this.props.mobile){
-      var wrapper = $('#wrapper').children()[0];
-      $(wrapper).attr('id', 'scroller');
-      console.log($(wrapper).attr('id'));
-      var pageScroll = new IScroll('#wrapper', { click: true, probeType: 3, mouseWheel: true });
-      pageScroll.on('scroll', window.updatePositionMobileHandler);
-      pageScroll.on('scrollEnd', window.updatePositionMobileHandler);
+  maxTop: '',
+  convergervatop: '',
+  allthingsopentop: '',
+  transitionPadding: '',
+  maxOpen: false,
+  updatePosition: function(y) {
+    var output = 'top';
+    if(y < this.maxTop){
+      output = 'top';
+    } else if (y >= this.maxTop && y <= this.convergervatop){
+      output = 'max';
+      this.setState({maxOpen: true});
+    } else if(y >= this.convergervatop && y <= this.allthingsopentop){
+      output = 'convergerva';
+    } else if(y >= this.allthingsopentop){
+      output = 'allthingsopen';
     }
+    if(!$('body').hasClass(output)){
+      $('body').removeClass();
+      $('body').addClass(output);
+    }
+  },
+  updatePositionMobileHandler: function() {
+    var y = (this.pageScroll.y * -1) + this.transitionPadding;
+    this.updatePosition(y);
+  },
+  updatePositionHandler: function() {
+    var y = $(window).scrollTop() + this.transitionPadding;
+    this.updatePosition(y);
+  },
+  resize: function(){
+    this.maxTop = $('section.max').position().top
+    this.convergervatop = $('section.convergerva').position().top
+    this.allthingsopentop = $('section.allthingsopen').position().top
+    this.transitionPadding = 0.25 * $(window).height()
+  },
+  componentDidMount: function() {
+    window.onresize = this.resize;
+    if(this.props.mobile){
+      $('#wrapper').addClass('mobile');
+      $('#scroller').addClass('mobile');
+      this.pageScroll = new IScroll('#wrapper', { click: true, probeType: 3, mouseWheel: true });
+      this.pageScroll.on('scroll', this.updatePositionMobileHandler);
+      this.pageScroll.on('scrollEnd', this.updatePositionMobileHandler);
+    } else {
+      window.onscroll = this.updatePositionHandler;
+    }
+  },
+  getInitialState: function() {
+    return({
+      maxOpen: false
+    });
   },
   render: function() {
     return(
-      React.DOM.div(null, 
-        Header(null), 
-        React.DOM.main(null, 
-          MaxSection({closed: ""}), 
-          React.DOM.section({className: "convergerva"}, 
-            React.DOM.div({className: "bounds"}, 
-              React.DOM.svg({id: "convergerva"}, 
-                React.DOM.defs(null)
+      React.DOM.div({id: "wrapper"}, 
+        React.DOM.div({id: "scroller"}, 
+          Header(null), 
+          React.DOM.main(null, 
+            MaxSection({open: this.state.maxOpen}), 
+            React.DOM.section({className: "convergerva"}, 
+              React.DOM.div({className: "bounds"}, 
+                React.DOM.svg({id: "convergerva"}, 
+                  React.DOM.defs(null)
+                )
               )
-            )
-          ), 
-          React.DOM.section({className: "allthingsopen"}, 
-            React.DOM.div({className: "bounds"}, 
-              React.DOM.svg({id: "allthingsopen"}, 
-                React.DOM.defs(null)
+            ), 
+            React.DOM.section({className: "allthingsopen"}, 
+              React.DOM.div({className: "bounds"}, 
+                React.DOM.svg({id: "allthingsopen"}, 
+                  React.DOM.defs(null)
+                )
               )
             )
           )
@@ -52,58 +97,17 @@ var Site = React.createClass({displayName: 'Site',
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  var maxTop, convergervatop, allthingsopentop, transitionPadding, mobileFlag;
-  mobileFlag = false;
-
-  var updatePosition = function(y) {
-    var output = 'top';
-    if(y < maxTop){
-      output = 'top';
-    } else if (y >= maxTop && y <= convergervatop){
-      output = 'max';
-      $('section.max')
-    } else if(y >= convergervatop && y <= allthingsopentop){
-      output = 'convergerva';
-    } else if(y >= allthingsopentop){
-      output = 'allthingsopen';
-    }
-    if(!$('body').hasClass(output)){
-      $('body').removeClass();
-      $('body').addClass(output);
-    }
-  };
-  var updatePositionHandler = function() {
-    var y = $(window).scrollTop() + transitionPadding;
-    updatePosition(y);
-    console.log($('body').attr("class"));
-  }
-
-  window.updatePositionMobileHandler = function() {
-    var y = (this.y * -1) + transitionPadding;
-    updatePosition(y);
-  }
-
-  window.onresize = function(){
-    maxTop = $('section.max').position().top
-    convergervatop = $('section.convergerva').position().top
-    allthingsopentop = $('section.allthingsopen').position().top
-    transitionPadding = 0.25 * $(window).height()
-  }
 
   var md = new MobileDetect(window.navigator.userAgent);
+  var mobileFlag = false;
   mobileFlag = md.mobile();
   if(mobileFlag) {
-    console.log('mobile');
     document.addEventListener("touchmove", function(e){
       e.preventDefault();
       return
     }, false);
-
-    React.renderComponent(React.DOM.div({id: "wrapper"}, Site({mobile: "true"})), document.body);
+    React.renderComponent(Site({mobile: "true"}), document.body);
   } else {
-
-    window.onscroll = updatePositionHandler;
-
     React.renderComponent(Site(null), document.body);
   }
 }, false);
@@ -36223,11 +36227,56 @@ var React = require('react');
 var Snap = require('snapsvg');
 
 var MaxSection = React.createClass({displayName: 'MaxSection',
+  loadSVG: function(f){
+    var g = this.max.group()
+    var maxmap = f;
+    this.prem = f.select('#prem');
+    this.prea = f.select('#prea');
+    this.prex = f.select('#prex');
+    this.statemap = f.select('#state');
+    g.append(this.statemap);
+    this.postm = f.select('#postm').attr('d');
+    this.posta = f.select('#posta').attr('d');
+    this.postx = f.select("#postx").attr('d');
+    // max.click ->
+    //   g.append(prem)
+    //   g.append(prea)
+    //   g.append(prex)
+    //   state.remove()
+    //   prem.animate {d: postm}, 1000, mina.elastic
+    //   prea.animate {d: posta}, 1000, mina.elastic
+    //   prex.animate {d: postx}, 1000, mina.elastic
+  },
+  mapMouseoverHandler: function(){
+    console.log('hover');
+  },
+  mapMouseoutHandler: function(){
+    if(this.props.open){
+      this.openState();
+    }
+  },
+  openState: function(){
+    var g = this.max.select('g');
+    g.append(this.prem);
+    g.append(this.prea);
+    g.append(this.prex);
+    this.statemap.remove();
+    this.prem.animate({d: this.postm}, 1000, mina.elastic);
+    this.prea.animate({d: this.posta}, 1000, mina.elastic);
+    this.prex.animate({d: this.postx}, 1000, mina.elastic);
+  },
+  componentDidMount: function(){
+    this.max = Snap("#max");
+    var maxmap = Snap.load("../img/max_map.svg", this.loadSVG);
+  },
   render: function() {
+    if(this.props.open){
+      this.openState();
+    }
     return (
       React.DOM.section({className: "max"}, 
         React.DOM.div({className: "bounds"}, 
-          React.DOM.svg({id: "max"}, 
+          React.DOM.svg({id: "max", onmouseover: this.mapMouseoverHandler, onmouseout: this.mapMouseoutHandler}, 
             React.DOM.defs(null)
           )
         )
