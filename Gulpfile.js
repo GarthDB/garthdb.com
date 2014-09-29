@@ -2,20 +2,16 @@ var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var prefix = require('gulp-autoprefixer');
 var jade = require('gulp-jade');
-var minifyHTML = require('gulp-minify-html');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('imagemin-pngcrush');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var filter = require('gulp-filter');
-var gutil = require('gulp-util');
-var reactify = require('reactify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer  = require('vinyl-buffer');
 var path = require('path');
-var extractor = require('gulp-extract-sourcemap');
 var uglify = require('gulp-uglifyjs');
 
 gulp.task('css', function() {
@@ -60,7 +56,6 @@ gulp.task('js', function() {
 gulp.task('html', function() {
   return gulp.src('src/*.jade')
     .pipe(jade({pretty: true}))
-    // .pipe(minifyHTML())
     .pipe(gulp.dest('public'))
     .pipe(reload({stream: true}));
 });
