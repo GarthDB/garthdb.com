@@ -11,6 +11,7 @@ var MobileDetect = require('mobile-detect');
 
 var Header = require('./components/header');
 var MaxSection = require('./components/maxsection');
+var ConvergeSection = require('./components/convergesection');
 
 var Site = React.createClass({displayName: 'Site',
   maxTop: '',
@@ -73,13 +74,7 @@ var Site = React.createClass({displayName: 'Site',
           Header(null), 
           React.DOM.main(null, 
             MaxSection({open: this.state.maxOpen}), 
-            React.DOM.section({className: "convergerva"}, 
-              React.DOM.div({className: "bounds"}, 
-                React.DOM.svg({id: "convergerva"}, 
-                  React.DOM.defs(null)
-                )
-              )
-            ), 
+            ConvergeSection({open: this.state.maxOpen}), 
             React.DOM.section({className: "allthingsopen"}, 
               React.DOM.div({className: "bounds"}, 
                 React.DOM.svg({id: "allthingsopen"}, 
@@ -112,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }, false);
 
-},{"./components/header":151,"./components/maxsection":153,"./iscroll-probe":154,"jquery":3,"mobile-detect":4,"react":148}],2:[function(require,module,exports){
+},{"./components/convergesection":151,"./components/header":152,"./components/maxsection":154,"./iscroll-probe":155,"jquery":3,"mobile-detect":4,"react":148}],2:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -36140,6 +36135,75 @@ return Snap;
 'use strict';
 
 var React = require('react');
+var Snap = require('snapsvg');
+
+var ConvergeSection = React.createClass({displayName: 'ConvergeSection',
+  loadSVG: function(f){
+    var g = this.max.group()
+    var maxmap = f;
+    this.prem = f.select('#prem');
+    this.prea = f.select('#prea');
+    this.prex = f.select('#prex');
+    this.statemap = f.select('#state');
+    g.append(this.statemap);
+    this.postm = f.select('#postm').attr('d');
+    this.posta = f.select('#posta').attr('d');
+    this.postx = f.select("#postx").attr('d');
+  },
+  mapMouseoverHandler: function(){
+    console.log('hover');
+  },
+  mapMouseoutHandler: function(){
+    if(this.props.open){
+      this.openState();
+    }
+  },
+  openState: function(){
+    var g = this.max.select('g');
+    g.append(this.prem);
+    g.append(this.prea);
+    g.append(this.prex);
+    this.statemap.remove();
+    this.prem.animate({d: this.postm}, 1000, mina.elastic);
+    this.prea.animate({d: this.posta}, 1000, mina.elastic);
+    this.prex.animate({d: this.postx}, 1000, mina.elastic);
+  },
+  componentDidMount: function(){
+    this.max = Snap("#converge");
+    var maxmap = Snap.load("../img/max_map.svg", this.loadSVG);
+  },
+  render: function() {
+    if(this.props.open){
+      this.openState();
+    }
+    return (
+      React.DOM.section({className: "convergerva"}, 
+        React.DOM.div({className: "bounds"}, 
+          React.DOM.svg({id: "converge", onmouseover: this.mapMouseoverHandler, onmouseout: this.mapMouseoutHandler}, 
+            React.DOM.defs(null)
+          ), 
+          React.DOM.h2(null, "Designers Can Open Source"), 
+          React.DOM.div({itemscope: true, itemtype: "http://schema.org/Event", class: "details"}, 
+            React.DOM.div({itemprop: "name", class: "title"}, "ConvergeRVA"), 
+            React.DOM.div({itemprop: "startDate", datetime: "2014-10-10T09:00", class: "time"}, "Oct 10, 2014"), 
+            React.DOM.div({itemprop: "location", itemscope: true, itemtype: "http://schema.org/Place", class: "location"}, React.DOM.span({itemprop: "name"}, "Richmond, VA")), 
+            React.DOM.div({class: "link"}, React.DOM.a({href: "http://convergerva.com/speakers.php#garth-braithwaite", itemprop: "description"}, "Details"))
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = ConvergeSection;
+
+},{"react":148,"snapsvg":149}],152:[function(require,module,exports){
+/**
+ * @jsx React.DOM
+ */
+'use strict';
+
+var React = require('react');
 var MapNavItem = require('./mapnav')
 
 var Header = React.createClass({displayName: 'Header',
@@ -36177,7 +36241,7 @@ var Header = React.createClass({displayName: 'Header',
 
 module.exports = Header;
 
-},{"./mapnav":152,"react":148}],152:[function(require,module,exports){
+},{"./mapnav":153,"react":148}],153:[function(require,module,exports){
 /**
  * @jsx React.DOM
  */
@@ -36217,7 +36281,7 @@ var MapNavItem = React.createClass({displayName: 'MapNavItem',
 
 module.exports = MapNavItem;
 
-},{"react":148,"snapsvg":149}],153:[function(require,module,exports){
+},{"react":148,"snapsvg":149}],154:[function(require,module,exports){
 /**
  * @jsx React.DOM
  */
@@ -36238,14 +36302,6 @@ var MaxSection = React.createClass({displayName: 'MaxSection',
     this.postm = f.select('#postm').attr('d');
     this.posta = f.select('#posta').attr('d');
     this.postx = f.select("#postx").attr('d');
-    // max.click ->
-    //   g.append(prem)
-    //   g.append(prea)
-    //   g.append(prex)
-    //   state.remove()
-    //   prem.animate {d: postm}, 1000, mina.elastic
-    //   prea.animate {d: posta}, 1000, mina.elastic
-    //   prex.animate {d: postx}, 1000, mina.elastic
   },
   mapMouseoverHandler: function(){
     console.log('hover');
@@ -36278,6 +36334,13 @@ var MaxSection = React.createClass({displayName: 'MaxSection',
         React.DOM.div({className: "bounds"}, 
           React.DOM.svg({id: "max", onmouseover: this.mapMouseoverHandler, onmouseout: this.mapMouseoutHandler}, 
             React.DOM.defs(null)
+          ), 
+          React.DOM.h2(null, "Collaborative Design in the Open"), 
+          React.DOM.div({className: "details"}, 
+            React.DOM.div({className: "title"}, "Adobe MAX"), 
+            React.DOM.div({datetime: "2014-10-07T08:30", className: "time"}, "Oct 7, 2014"), 
+            React.DOM.div({className: "location"}, React.DOM.span({itemprop: "name"}, "Los Angeles, CA")), 
+            React.DOM.div({className: "link"}, React.DOM.a({href: "https://www.adobe-max.com/connect/sessionDetail.ww?SESSION_ID=2708", itemprop: "description"}, "Details"))
           )
         )
       )
@@ -36287,7 +36350,7 @@ var MaxSection = React.createClass({displayName: 'MaxSection',
 
 module.exports = MaxSection;
 
-},{"react":148,"snapsvg":149}],154:[function(require,module,exports){
+},{"react":148,"snapsvg":149}],155:[function(require,module,exports){
 /*! iScroll v5.1.2 ~ (c) 2008-2014 Matteo Spinelli ~ http://cubiq.org/license */
 (function (window, document, Math) {
 var rAF = window.requestAnimationFrame	||

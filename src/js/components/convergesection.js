@@ -6,7 +6,7 @@
 var React = require('react');
 var Snap = require('snapsvg');
 
-var MaxSection = React.createClass({
+var ConvergeSection = React.createClass({
   loadSVG: function(f){
     var g = this.max.group()
     var maxmap = f;
@@ -38,7 +38,7 @@ var MaxSection = React.createClass({
     this.prex.animate({d: this.postx}, 1000, mina.elastic);
   },
   componentDidMount: function(){
-    this.max = Snap("#max");
+    this.max = Snap("#converge");
     var maxmap = Snap.load("../img/max_map.svg", this.loadSVG);
   },
   render: function() {
@@ -46,17 +46,17 @@ var MaxSection = React.createClass({
       this.openState();
     }
     return (
-      <section className="max">
+      <section className="convergerva">
         <div className="bounds">
-          <svg id="max" onmouseover={this.mapMouseoverHandler} onmouseout={this.mapMouseoutHandler}>
+          <svg id="converge" onmouseover={this.mapMouseoverHandler} onmouseout={this.mapMouseoutHandler}>
             <defs></defs>
           </svg>
-          <h2>Collaborative Design in the Open</h2>
-          <div className="details">
-            <div className="title">Adobe MAX</div>
-            <div datetime="2014-10-07T08:30" className="time">Oct 7, 2014</div>
-            <div className="location"><span itemprop="name">Los Angeles, CA</span></div>
-            <div className="link"><a href="https://www.adobe-max.com/connect/sessionDetail.ww?SESSION_ID=2708" itemprop="description">Details</a></div>
+          <h2>Designers Can Open Source</h2>
+          <div itemscope itemtype="http://schema.org/Event" class="details">
+            <div itemprop="name" class="title">ConvergeRVA</div>
+            <div itemprop="startDate" datetime="2014-10-10T09:00" class="time">Oct 10, 2014</div>
+            <div itemprop="location" itemscope itemtype="http://schema.org/Place" class="location"><span itemprop="name">Richmond, VA</span></div>
+            <div class="link"><a href="http://convergerva.com/speakers.php#garth-braithwaite" itemprop="description">Details</a></div>
           </div>
         </div>
       </section>
@@ -64,4 +64,4 @@ var MaxSection = React.createClass({
   }
 });
 
-module.exports = MaxSection;
+module.exports = ConvergeSection;

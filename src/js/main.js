@@ -10,6 +10,7 @@ var MobileDetect = require('mobile-detect');
 
 var Header = require('./components/header');
 var MaxSection = require('./components/maxsection');
+var ConvergeSection = require('./components/convergesection');
 
 var Site = React.createClass({
   maxTop: '',
@@ -72,13 +73,7 @@ var Site = React.createClass({
           <Header/>
           <main>
             <MaxSection open={this.state.maxOpen}/>
-            <section className="convergerva">
-              <div className="bounds">
-                <svg id="convergerva">
-                  <defs></defs>
-                </svg>
-              </div>
-            </section>
+            <ConvergeSection open={this.state.maxOpen}/>
             <section className="allthingsopen">
               <div className="bounds">
                 <svg id="allthingsopen">
