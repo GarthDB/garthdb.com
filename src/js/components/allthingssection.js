@@ -6,7 +6,7 @@
 var React = require('react');
 var Snap = require('snapsvg');
 
-var ConvergeSection = React.createClass({
+var AllThingsSection = React.createClass({
   loadSVG: function(f){
     var g = this.max.group()
     var maxmap = f;
@@ -59,7 +59,7 @@ var ConvergeSection = React.createClass({
     }).bind(this));
   },
   componentDidMount: function(){
-    this.max = Snap("#converge");
+    this.max = Snap("#allthings");
     var maxmap = Snap.load("../img/max_map.svg", this.loadSVG);
     this.max.hover(this.mapMouseoverHandler,this.mapMouseoutHandler);
   },
@@ -68,18 +68,18 @@ var ConvergeSection = React.createClass({
       this.openMap();
     }
     return (
-      <section className="converge">
+      <section className="allthings">
         <div className="bounds">
-          <svg id="converge" onmouseover={this.mapMouseoverHandler} onmouseout={this.mapMouseoutHandler}>
+          <svg id="allthings" onmouseover={this.mapMouseoverHandler} onmouseout={this.mapMouseoutHandler}>
             <defs></defs>
           </svg>
           <div className="content">
-            <h2>Designers Can<br/>Open Source</h2>
+            <h2>Open Source<br/>Needs Design</h2>
             <div className="details">
-              <div className="title">ConvergeRVA</div>
-              <div dateTime="2014-10-10T09:00" className="time">Oct 10, 2014</div>
-              <div className="location"><span>Richmond, VA</span></div>
-              <div className="link"><a href="http://convergerva.com/speakers.php#garth-braithwaite">Details</a></div>
+              <div className="title">All Things Open</div>
+              <div dateTime="2014-10-22T09:00" className="time">Oct 22, 2014</div>
+              <div className="location"><span>Raleigh, NC</span></div>
+              <div className="link"><a href="http://allthingsopen.org/speakers/garth-braithwaite/">Details</a></div>
             </div>
           </div>
         </div>
@@ -88,4 +88,4 @@ var ConvergeSection = React.createClass({
   }
 });
 
-module.exports = ConvergeSection;
+module.exports = AllThingsSection;

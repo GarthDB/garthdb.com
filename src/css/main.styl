@@ -86,21 +86,64 @@ header.main
     font-size 18px
     line-height 20px
 section
-  box-sizing border-box
-  padding 30px
   min-height 100vh
-  border-top 1px solid black
+  color white
+  font-size 30px
+  .bounds
+    height 100vh
+    box-sizing border-box
+    padding 30px
+  svg
+    position absolute
+    z-index 1
+    top 50%
+    margin-top -250px
+  h2
+    font-size 60px
+    margin-bottom 80px
+  .content
+    position absolute
+    z-index 2
+  a
+    text-decoration none
+    &:hover
+      text-decoration underline
 body.top
   background white
 body.max
   background #f45358
-body.convergerva
+body.converge
   background #00B5B5
-body.allthingsopen
+body.allthings
   background #F78409
 #max
   width 300px
   height 500px
-#convergerva, #allthings
+#converge
+  width 520px
+  height 300px
+section.max
+  h2
+    margin-bottom 80px
+  .content
+    margin-left 200px
+    top 50%
+    margin-top -180px
+section.converge
+  .content
+    margin-left 0
+    top 50%
+    margin-top -250px
+section.converge
+  .content
+    margin-left 0
+    top 50%
+    margin-top -250px
+section.allthings
+  .content
+    margin-left 0
+    top 50%
+    margin-top -250px
+#converge, #allthings
   width 500px
   height 500px

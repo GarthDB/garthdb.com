@@ -11,6 +11,7 @@ var MobileDetect = require('mobile-detect');
 var Header = require('./components/header');
 var MaxSection = require('./components/maxsection');
 var ConvergeSection = require('./components/convergesection');
+var AllThingsSection = require('./components/allthingssection');
 
 var Site = React.createClass({
   maxTop: '',
@@ -26,10 +27,13 @@ var Site = React.createClass({
       output = 'max';
       this.setState({maxOpen: true});
     } else if(y >= this.convergervatop && y <= this.allthingsopentop){
-      output = 'convergerva';
+      output = 'converge';
+      this.setState({convergeOpen: true});
     } else if(y >= this.allthingsopentop){
-      output = 'allthingsopen';
+      output = 'allthings';
+      this.setState({allthingsOpen: true});
     }
+    console.log(output);
     if(!$('body').hasClass(output)){
       $('body').removeClass();
       $('body').addClass(output);
@@ -45,8 +49,8 @@ var Site = React.createClass({
   },
   resize: function(){
     this.maxTop = $('section.max').position().top
-    this.convergervatop = $('section.convergerva').position().top
-    this.allthingsopentop = $('section.allthingsopen').position().top
+    this.convergervatop = $('section.converge').position().top
+    this.allthingsopentop = $('section.allthings').position().top
     this.transitionPadding = 0.25 * $(window).height()
   },
   componentDidMount: function() {
@@ -63,7 +67,9 @@ var Site = React.createClass({
   },
   getInitialState: function() {
     return({
-      maxOpen: false
+      maxOpen: false,
+      convergeOpen: false,
+      allthingsOpen: false
     });
   },
   render: function() {
@@ -73,14 +79,8 @@ var Site = React.createClass({
           <Header/>
           <main>
             <MaxSection open={this.state.maxOpen}/>
-            <ConvergeSection open={this.state.maxOpen}/>
-            <section className="allthingsopen">
-              <div className="bounds">
-                <svg id="allthingsopen">
-                  <defs></defs>
-                </svg>
-              </div>
-            </section>
+            <ConvergeSection open={this.state.convergeOpen}/>
+            <AllThingsSection open={this.state.allthingsOpen}/>
           </main>
         </div>
       </div>

@@ -12,6 +12,7 @@ var MobileDetect = require('mobile-detect');
 var Header = require('./components/header');
 var MaxSection = require('./components/maxsection');
 var ConvergeSection = require('./components/convergesection');
+var AllThingsSection = require('./components/allthingssection');
 
 var Site = React.createClass({displayName: 'Site',
   maxTop: '',
@@ -27,10 +28,13 @@ var Site = React.createClass({displayName: 'Site',
       output = 'max';
       this.setState({maxOpen: true});
     } else if(y >= this.convergervatop && y <= this.allthingsopentop){
-      output = 'convergerva';
+      output = 'converge';
+      this.setState({convergeOpen: true});
     } else if(y >= this.allthingsopentop){
-      output = 'allthingsopen';
+      output = 'allthings';
+      this.setState({allthingsOpen: true});
     }
+    console.log(output);
     if(!$('body').hasClass(output)){
       $('body').removeClass();
       $('body').addClass(output);
@@ -46,8 +50,8 @@ var Site = React.createClass({displayName: 'Site',
   },
   resize: function(){
     this.maxTop = $('section.max').position().top
-    this.convergervatop = $('section.convergerva').position().top
-    this.allthingsopentop = $('section.allthingsopen').position().top
+    this.convergervatop = $('section.converge').position().top
+    this.allthingsopentop = $('section.allthings').position().top
     this.transitionPadding = 0.25 * $(window).height()
   },
   componentDidMount: function() {
@@ -64,7 +68,9 @@ var Site = React.createClass({displayName: 'Site',
   },
   getInitialState: function() {
     return({
-      maxOpen: false
+      maxOpen: false,
+      convergeOpen: false,
+      allthingsOpen: false
     });
   },
   render: function() {
@@ -74,14 +80,8 @@ var Site = React.createClass({displayName: 'Site',
           Header(null), 
           React.DOM.main(null, 
             MaxSection({open: this.state.maxOpen}), 
-            ConvergeSection({open: this.state.maxOpen}), 
-            React.DOM.section({className: "allthingsopen"}, 
-              React.DOM.div({className: "bounds"}, 
-                React.DOM.svg({id: "allthingsopen"}, 
-                  React.DOM.defs(null)
-                )
-              )
-            )
+            ConvergeSection({open: this.state.convergeOpen}), 
+            AllThingsSection({open: this.state.allthingsOpen})
           )
         )
       )
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }, false);
 
-},{"./components/convergesection":151,"./components/header":152,"./components/maxsection":154,"./iscroll-probe":155,"jquery":3,"mobile-detect":4,"react":148}],2:[function(require,module,exports){
+},{"./components/allthingssection":151,"./components/convergesection":152,"./components/header":153,"./components/maxsection":155,"./iscroll-probe":156,"jquery":3,"mobile-detect":4,"react":148}],2:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -36137,6 +36137,99 @@ return Snap;
 var React = require('react');
 var Snap = require('snapsvg');
 
+var AllThingsSection = React.createClass({displayName: 'AllThingsSection',
+  loadSVG: function(f){
+    var g = this.max.group()
+    var maxmap = f;
+    this.prem = f.select('#prem');
+    this.prea = f.select('#prea');
+    this.prex = f.select('#prex');
+    this.premD = f.select('#prem').attr('d');
+    this.preaD = f.select('#prea').attr('d');
+    this.prexD = f.select('#prex').attr('d');
+    this.statemap = f.select('#state');
+    g.append(this.statemap);
+    this.postmD = f.select('#postm').attr('d');
+    this.postaD = f.select('#posta').attr('d');
+    this.postxD = f.select("#postx").attr('d');
+  },
+  mapMouseoverHandler: function(){
+    if(this.props.open){
+      this.closeMap();
+    }
+  },
+  mapMouseoutHandler: function(){
+    if(this.props.open){
+      this.openMap();
+    }
+  },
+  openMap: function(){
+    var g = this.max.select('g');
+    g.attr({"fill-opacity": 1});
+    this.prem.stop();
+    this.prea.stop();
+    this.prex.stop();
+    g.append(this.prem);
+    g.append(this.prea);
+    g.append(this.prex);
+    this.statemap.attr({"fill-opacity": 0});
+    this.prem.animate({d: this.postmD}, 1000, mina.elastic);
+    this.prea.animate({d: this.postaD}, 1000, mina.elastic);
+    this.prex.animate({d: this.postxD}, 1000, mina.elastic);
+  },
+  closeMap: function(){
+    var g = this.max.select('g');
+    this.prem.stop();
+    this.prea.stop();
+    this.prex.stop();
+    this.prem.animate({d: this.premD}, 1000, mina.elastic);
+    this.prea.animate({d: this.preaD}, 1000, mina.elastic);
+    this.prex.animate({d: this.prexD}, 1000, mina.elastic, (function(){
+      this.statemap.attr({"fill-opacity": 1});
+      g.attr({"fill-opacity": 0});
+    }).bind(this));
+  },
+  componentDidMount: function(){
+    this.max = Snap("#allthings");
+    var maxmap = Snap.load("../img/max_map.svg", this.loadSVG);
+    this.max.hover(this.mapMouseoverHandler,this.mapMouseoutHandler);
+  },
+  render: function() {
+    if(this.props.open){
+      this.openMap();
+    }
+    return (
+      React.DOM.section({className: "allthings"}, 
+        React.DOM.div({className: "bounds"}, 
+          React.DOM.svg({id: "allthings", onmouseover: this.mapMouseoverHandler, onmouseout: this.mapMouseoutHandler}, 
+            React.DOM.defs(null)
+          ), 
+          React.DOM.div({className: "content"}, 
+            React.DOM.h2(null, "Open Source", React.DOM.br(null), "Needs Design"), 
+            React.DOM.div({className: "details"}, 
+              React.DOM.div({className: "title"}, "All Things Open"), 
+              React.DOM.div({dateTime: "2014-10-22T09:00", className: "time"}, "Oct 22, 2014"), 
+              React.DOM.div({className: "location"}, React.DOM.span(null, "Raleigh, NC")), 
+              React.DOM.div({className: "link"}, React.DOM.a({href: "http://allthingsopen.org/speakers/garth-braithwaite/"}, "Details"))
+            )
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = AllThingsSection;
+
+},{"react":148,"snapsvg":149}],152:[function(require,module,exports){
+/**
+ * @jsx React.DOM
+ */
+'use strict';
+
+var React = require('react');
+var Snap = require('snapsvg');
+
 var ConvergeSection = React.createClass({displayName: 'ConvergeSection',
   loadSVG: function(f){
     var g = this.max.group()
@@ -36144,50 +36237,74 @@ var ConvergeSection = React.createClass({displayName: 'ConvergeSection',
     this.prem = f.select('#prem');
     this.prea = f.select('#prea');
     this.prex = f.select('#prex');
+    this.premD = f.select('#prem').attr('d');
+    this.preaD = f.select('#prea').attr('d');
+    this.prexD = f.select('#prex').attr('d');
     this.statemap = f.select('#state');
     g.append(this.statemap);
-    this.postm = f.select('#postm').attr('d');
-    this.posta = f.select('#posta').attr('d');
-    this.postx = f.select("#postx").attr('d');
+    this.postmD = f.select('#postm').attr('d');
+    this.postaD = f.select('#posta').attr('d');
+    this.postxD = f.select("#postx").attr('d');
   },
   mapMouseoverHandler: function(){
-    console.log('hover');
+    if(this.props.open){
+      this.closeMap();
+    }
   },
   mapMouseoutHandler: function(){
     if(this.props.open){
-      this.openState();
+      this.openMap();
     }
   },
-  openState: function(){
+  openMap: function(){
     var g = this.max.select('g');
+    g.attr({"fill-opacity": 1});
+    this.prem.stop();
+    this.prea.stop();
+    this.prex.stop();
     g.append(this.prem);
     g.append(this.prea);
     g.append(this.prex);
-    this.statemap.remove();
-    this.prem.animate({d: this.postm}, 1000, mina.elastic);
-    this.prea.animate({d: this.posta}, 1000, mina.elastic);
-    this.prex.animate({d: this.postx}, 1000, mina.elastic);
+    this.statemap.attr({"fill-opacity": 0});
+    this.prem.animate({d: this.postmD}, 1000, mina.elastic);
+    this.prea.animate({d: this.postaD}, 1000, mina.elastic);
+    this.prex.animate({d: this.postxD}, 1000, mina.elastic);
+  },
+  closeMap: function(){
+    var g = this.max.select('g');
+    this.prem.stop();
+    this.prea.stop();
+    this.prex.stop();
+    this.prem.animate({d: this.premD}, 1000, mina.elastic);
+    this.prea.animate({d: this.preaD}, 1000, mina.elastic);
+    this.prex.animate({d: this.prexD}, 1000, mina.elastic, (function(){
+      this.statemap.attr({"fill-opacity": 1});
+      g.attr({"fill-opacity": 0});
+    }).bind(this));
   },
   componentDidMount: function(){
     this.max = Snap("#converge");
     var maxmap = Snap.load("../img/max_map.svg", this.loadSVG);
+    this.max.hover(this.mapMouseoverHandler,this.mapMouseoutHandler);
   },
   render: function() {
     if(this.props.open){
-      this.openState();
+      this.openMap();
     }
     return (
-      React.DOM.section({className: "convergerva"}, 
+      React.DOM.section({className: "converge"}, 
         React.DOM.div({className: "bounds"}, 
           React.DOM.svg({id: "converge", onmouseover: this.mapMouseoverHandler, onmouseout: this.mapMouseoutHandler}, 
             React.DOM.defs(null)
           ), 
-          React.DOM.h2(null, "Designers Can Open Source"), 
-          React.DOM.div({itemscope: true, itemtype: "http://schema.org/Event", class: "details"}, 
-            React.DOM.div({itemprop: "name", class: "title"}, "ConvergeRVA"), 
-            React.DOM.div({itemprop: "startDate", datetime: "2014-10-10T09:00", class: "time"}, "Oct 10, 2014"), 
-            React.DOM.div({itemprop: "location", itemscope: true, itemtype: "http://schema.org/Place", class: "location"}, React.DOM.span({itemprop: "name"}, "Richmond, VA")), 
-            React.DOM.div({class: "link"}, React.DOM.a({href: "http://convergerva.com/speakers.php#garth-braithwaite", itemprop: "description"}, "Details"))
+          React.DOM.div({className: "content"}, 
+            React.DOM.h2(null, "Designers Can", React.DOM.br(null), "Open Source"), 
+            React.DOM.div({className: "details"}, 
+              React.DOM.div({className: "title"}, "ConvergeRVA"), 
+              React.DOM.div({dateTime: "2014-10-10T09:00", className: "time"}, "Oct 10, 2014"), 
+              React.DOM.div({className: "location"}, React.DOM.span(null, "Richmond, VA")), 
+              React.DOM.div({className: "link"}, React.DOM.a({href: "http://convergerva.com/speakers.php#garth-braithwaite"}, "Details"))
+            )
           )
         )
       )
@@ -36197,7 +36314,7 @@ var ConvergeSection = React.createClass({displayName: 'ConvergeSection',
 
 module.exports = ConvergeSection;
 
-},{"react":148,"snapsvg":149}],152:[function(require,module,exports){
+},{"react":148,"snapsvg":149}],153:[function(require,module,exports){
 /**
  * @jsx React.DOM
  */
@@ -36241,7 +36358,7 @@ var Header = React.createClass({displayName: 'Header',
 
 module.exports = Header;
 
-},{"./mapnav":153,"react":148}],153:[function(require,module,exports){
+},{"./mapnav":154,"react":148}],154:[function(require,module,exports){
 /**
  * @jsx React.DOM
  */
@@ -36281,7 +36398,7 @@ var MapNavItem = React.createClass({displayName: 'MapNavItem',
 
 module.exports = MapNavItem;
 
-},{"react":148,"snapsvg":149}],154:[function(require,module,exports){
+},{"react":148,"snapsvg":149}],155:[function(require,module,exports){
 /**
  * @jsx React.DOM
  */
@@ -36357,12 +36474,14 @@ var MaxSection = React.createClass({displayName: 'MaxSection',
           React.DOM.svg({id: "max"}, 
             React.DOM.defs(null)
           ), 
-          React.DOM.h2(null, "Collaborative Design in the Open"), 
-          React.DOM.div({className: "details"}, 
-            React.DOM.div({className: "title"}, "Adobe MAX"), 
-            React.DOM.div({datetime: "2014-10-07T08:30", className: "time"}, "Oct 7, 2014"), 
-            React.DOM.div({className: "location"}, React.DOM.span({itemprop: "name"}, "Los Angeles, CA")), 
-            React.DOM.div({className: "link"}, React.DOM.a({href: "https://www.adobe-max.com/connect/sessionDetail.ww?SESSION_ID=2708", itemprop: "description"}, "Details"))
+          React.DOM.div({className: "content"}, 
+            React.DOM.h2(null, "Collaborative", React.DOM.br(null), "Design in the Open"), 
+            React.DOM.div({className: "details"}, 
+              React.DOM.div({className: "title"}, "Adobe MAX"), 
+              React.DOM.div({dateTime: "2014-10-07T08:30", className: "time"}, "Oct 7, 2014"), 
+              React.DOM.div({className: "location"}, React.DOM.span(null, "Los Angeles, CA")), 
+              React.DOM.div({className: "link"}, React.DOM.a({href: "https://www.adobe-max.com/connect/sessionDetail.ww?SESSION_ID=2708"}, "Details"))
+            )
           )
         )
       )
@@ -36372,7 +36491,7 @@ var MaxSection = React.createClass({displayName: 'MaxSection',
 
 module.exports = MaxSection;
 
-},{"react":148,"snapsvg":149}],155:[function(require,module,exports){
+},{"react":148,"snapsvg":149}],156:[function(require,module,exports){
 /*! iScroll v5.1.2 ~ (c) 2008-2014 Matteo Spinelli ~ http://cubiq.org/license */
 (function (window, document, Math) {
 var rAF = window.requestAnimationFrame	||

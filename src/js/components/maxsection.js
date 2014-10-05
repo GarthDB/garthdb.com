@@ -73,12 +73,14 @@ var MaxSection = React.createClass({
           <svg id="max">
             <defs></defs>
           </svg>
-          <h2>Collaborative Design in the Open</h2>
-          <div className="details">
-            <div className="title">Adobe MAX</div>
-            <div datetime="2014-10-07T08:30" className="time">Oct 7, 2014</div>
-            <div className="location"><span itemprop="name">Los Angeles, CA</span></div>
-            <div className="link"><a href="https://www.adobe-max.com/connect/sessionDetail.ww?SESSION_ID=2708" itemprop="description">Details</a></div>
+          <div className="content">
+            <h2>Collaborative<br/>Design in the Open</h2>
+            <div className="details">
+              <div className="title">Adobe MAX</div>
+              <div dateTime="2014-10-07T08:30" className="time">Oct 7, 2014</div>
+              <div className="location"><span>Los Angeles, CA</span></div>
+              <div className="link"><a href="https://www.adobe-max.com/connect/sessionDetail.ww?SESSION_ID=2708">Details</a></div>
+            </div>
           </div>
         </div>
       </section>
