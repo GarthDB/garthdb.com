@@ -66,7 +66,7 @@ var ConvergeSection = React.createClass({
   },
   componentDidMount: function(){
     this.converge = Snap("#converge");
-    var convergemap = Snap.load("../img/converge_map.svg", this.loadSVG);
+    var convergemap = Snap.load("img/converge_map.svg", this.loadSVG);
     this.converge.hover(this.mapMouseoverHandler,this.mapMouseoutHandler);
   },
   render: function() {

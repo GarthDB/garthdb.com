@@ -66,7 +66,7 @@ var AllThingsSection = React.createClass({
   },
   componentDidMount: function(){
     this.allthings = Snap("#allthings");
-    var allthingsmap = Snap.load("../img/allthings_map.svg", this.loadSVG);
+    var allthingsmap = Snap.load("img/allthings_map.svg", this.loadSVG);
     this.allthings.hover(this.mapMouseoverHandler,this.mapMouseoutHandler);
   },
   render: function() {

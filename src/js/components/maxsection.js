@@ -66,7 +66,7 @@ var MaxSection = React.createClass({
     },
     componentDidMount: function(){
       this.max = Snap("#max");
-      var maxmap = Snap.load("../img/max_map.svg", this.loadSVG);
+      var maxmap = Snap.load("img/max_map.svg", this.loadSVG);
       this.max.hover(this.mapMouseoverHandler,this.mapMouseoutHandler);
     },
     render: function() {
