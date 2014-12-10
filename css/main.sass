@@ -1,19 +1,53 @@
 ---
 ---
 @import reset.sass
+@import fonts/opensans/stylesheet.sass
+@import colors.sass
 
-.home
-  header
+a
+  text-decoration: none
+  color: $secondary-accent
+  &:hover
+    color: $tertiary-accent
+
+body
+  font-family: 'open_sans'
+  background: $background-color
+  padding: 0 0 0 300px
+  box-sizing: border-box
+  font-size: 1rem
+.site-header
+  position: absolute
+  width: 300px
+  top: 0
+  left: 0
+  background: $primary-accent
+  bottom: 0
+
+
+.post-list
+  padding: 40px 50px
+  ul
+    padding-left: 20px
+  li
+    list-style: none
+  h1
+    text-transform: uppercase
+    font-size: 40px
+    color: $primary-accent
+    margin-bottom: 20px
+  time
+    color: $subdued
+    font-size: 0.8rem
+
+.videoWrapper
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 25px
+  height: 0
+  iframe
+    position: absolute
+    top: 0
+    left: 0
     width: 100%
-    height: 600px
-    background: url('../img/hidden_lake.jpg')
-    background-size: cover
-    position: relative
-    box-sizing: border-box
-    padding: 30px
-    & > div
-      width: 100%
-      height: 100%
-      background: hsla(205, 83%, 25%, .6)
-      position: relative
-      margin: 0 auto
+    height: 100%
