@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Designers Can Open Source"
+event:  Blend Conf
 date:   2013-09-07
 ---
 <div class="videoWrapper">
