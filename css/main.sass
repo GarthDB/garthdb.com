@@ -17,14 +17,31 @@ body
   box-sizing: border-box
   font-size: 1rem
 .site-header
-  position: absolute
+  color: $background-color
+  position: fixed
   width: 300px
   top: 0
   left: 0
   background: $primary-accent
   bottom: 0
-
-
+  box-sizing: border-box
+  padding: 40px
+  .logo
+    text-align: center
+.site-footer
+  position: fixed
+  width: 300px
+  left: 0
+  bottom: 0
+  box-sizing: border-box
+  padding: 20px
+.site-header, .site-footer
+  & a
+    color: $background-color
+    &:hover
+      color: $tertiary-accent
+  & path
+    fill: currentColor
 .post-list
   padding: 40px 50px
   ul
@@ -39,7 +56,13 @@ body
   time
     color: $subdued
     font-size: 0.8rem
-
+.social-links
+  text-align: center
+  ul
+    list-style: none
+  li
+    display: inline-block
+    margin: 0 10px
 .videoWrapper
   position: relative
   padding-bottom: 56.25%
